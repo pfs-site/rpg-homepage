@@ -146,6 +146,17 @@ geben.&lt;/p&gt;
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>145320f8-bb37-4c4a-b8d8-7285188b1d64</sv:value>
     </sv:property>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Was ist PFS?</sv:value>
+      </sv:property>
+    </sv:node>
     <sv:node sv:name="was-ist-pfs">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>website:textdocument</sv:value>
@@ -155,7 +166,7 @@ geben.&lt;/p&gt;
         <sv:value>hippotranslation:translated</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>96d60d0c-8dfe-478f-a0d4-3528e9a141b5</sv:value>
+        <sv:value>25ae7147-2076-4b4e-b073-1787843b5ee4</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
@@ -180,13 +191,13 @@ geben.&lt;/p&gt;
         <sv:value>2013-12-29T12:56:37.424+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-02-15T15:44:14.304+01:00</sv:value>
+        <sv:value>2014-05-03T14:31:21.574+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-02-15T15:49:01.717+01:00</sv:value>
+        <sv:value>2014-05-03T14:31:24.526+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>5e3ce1d9-4558-46eb-85d6-845db61be442</sv:value>
@@ -198,7 +209,7 @@ geben.&lt;/p&gt;
         <sv:value>[no summary]</sv:value>
       </sv:property>
       <sv:property sv:name="website:title" sv:type="String">
-        <sv:value>Was ist die Pathfiner Society?</sv:value>
+        <sv:value>Was ist die Pathfinder Society?</sv:value>
       </sv:property>
       <sv:node sv:name="hippotranslation:translations">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -251,17 +262,6 @@ set in a variety of exotic locations across Golarion.&lt;/p&gt;
           <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
         </sv:node>
       </sv:node>
-    </sv:node>
-    <sv:node sv:name="hippo:translation">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippo:translation</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Was ist PFS?</sv:value>
-      </sv:property>
     </sv:node>
   </sv:node>
   <sv:node sv:name="links">
@@ -491,7 +491,7 @@ oder etwas anderes um mit uns Kontakt aufzunehmen.&lt;/p&gt;
         <sv:value>hippotranslation:translated</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>6901a2b3-c79c-4a41-a417-f18bf5e8666d</sv:value>
+        <sv:value>64bb9ad1-cae4-44f1-9eaf-b7b5b9f878a9</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
@@ -516,13 +516,13 @@ oder etwas anderes um mit uns Kontakt aufzunehmen.&lt;/p&gt;
         <sv:value>2013-12-29T12:59:52.112+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-02-15T15:54:09.055+01:00</sv:value>
+        <sv:value>2014-05-03T14:30:02.869+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-02-15T15:54:13.374+01:00</sv:value>
+        <sv:value>2014-05-03T14:30:08.519+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>8a3d0bc1-9ef2-4d82-8b92-b82f9fd75b41</sv:value>
@@ -534,7 +534,7 @@ oder etwas anderes um mit uns Kontakt aufzunehmen.&lt;/p&gt;
         <sv:value>[no summary]</sv:value>
       </sv:property>
       <sv:property sv:name="website:title" sv:type="String">
-        <sv:value>Veranstaltungen</sv:value>
+        <sv:value>Spielrunden</sv:value>
       </sv:property>
       <sv:node sv:name="hippotranslation:translations">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -549,8 +549,9 @@ oder etwas anderes um mit uns Kontakt aufzunehmen.&lt;/p&gt;
           <sv:value>&lt;html&gt;
 &lt;body&gt;
 
-&lt;p&gt;Hier wird es bald eine Übersicht unserer Runden geben. Terminkalender,
-Anmeldung, Übersicht, wie voll die Runde ist, etc.&lt;/p&gt;
+&lt;p&gt;Unsere Angebote für die nächsten Spielrunden.&lt;/p&gt;
+
+&lt;iframe frameborder="0" height="400" scrolling="no" width="630" src="https://www.google.com/calendar/embed?showTitle=0&amp;amp;showCalendars=0&amp;amp;showTz=0&amp;amp;mode=AGENDA&amp;amp;height=600&amp;amp;wkst=2&amp;amp;hl=de&amp;amp;bgcolor=%23F5F5F5&amp;amp;src=meguk16ve66qlfrcjlltlc8fr8%40group.calendar.google.com&amp;amp;color=%232952A3&amp;amp;ctz=Europe%2FBerlin"/&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;</sv:value>
