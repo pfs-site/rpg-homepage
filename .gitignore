@@ -24,6 +24,12 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
+# Ignores for Eclipse
+
+.project
+.classpath
+.settings/
+
 # Ignores for SVN
 .svn
 .svnignore
