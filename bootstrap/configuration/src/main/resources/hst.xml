@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="hst:hst" h:merge="combine">
+  <sv:property sv:name="jcr:predecessors" sv:type="Reference" h:merge="override" sv:multiple="true">
+    <sv:value>c2b7dec8-d5ff-4687-b32f-332f2ff6d551</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:baseVersion" sv:type="Reference" h:merge="override">
+    <sv:value>c2b7dec8-d5ff-4687-b32f-332f2ff6d551</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:isCheckedOut" sv:type="Boolean" h:merge="override">
+    <sv:value>true</sv:value>
+  </sv:property>
+</sv:node>

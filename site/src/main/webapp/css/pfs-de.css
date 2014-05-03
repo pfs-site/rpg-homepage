@@ -1,0 +1,234 @@
+.pfs-de {
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    background-color: #3f3f3f;
+    margin: 0;
+}
+
+.pfs-de .banner,
+.pfs-de .navigation,
+.pfs-de .subnavigation,
+.pfs-de .main {
+    width: 1024px;
+    margin: auto;
+}
+
+.pfs-de .banner {
+    height: 163px;
+    background: url('../images/background-b1.png') no-repeat;
+    position: relative;
+    margin-top: 30px;
+}
+
+.pfs-de .banner .logo,
+.pfs-de .banner .box {
+    display: inline-block;
+    position: absolute;
+}
+
+.pfs-de .banner .login-box,
+.pfs-de .banner .languages {
+    display: inline-block;
+}
+
+.pfs-de .banner .logo {
+    background: url('../images/pfs-de-ka-logo.png') no-repeat 0px 0px / 441px 137px;
+    width: 441px;
+    height: 137px;
+    top: 14px;
+    left: 0px;
+}
+
+.pfs-de .banner .box {
+    background: url('../images/box-b1.png') no-repeat 0px 0px;
+    top: 38px;
+    left: 729px;
+    width: 226px;
+    height: 68px;
+    padding: 22px;
+}
+
+.pfs-de .banner .box > * {
+    margin-bottom: 6px;
+}
+
+.pfs-de .banner .login-box *:after {
+   content: " |";
+}
+
+.pfs-de .banner .login-box *:last-child:after {
+   content: " "; 
+}
+
+.pfs-de .banner .login-box .login,
+.pfs-de .banner .login-box .register {
+   color: white;
+   font-weight: bold;
+}
+
+.pfs-de .banner .search {
+    clear: both;
+}
+
+.pfs-de .banner .search input[type="text"] {
+    width: 125px;
+}
+
+.pfs-de .banner .languages {
+    float: right;
+    border-bottom: 0px;
+}
+
+.pfs-de .banner .languages > * {
+    display: inline-block;
+}
+
+.pfs-de .banner .languages .de { }
+
+.pfs-de .banner .languages .en {
+    background: url('../images/en.png') 0px 0px / 36px 24px;
+    width: 36px;
+    height: 24px;
+}
+
+.pfs-de .navigation {
+    padding-top: 4px;
+    box-shadow: inset 0px 3px 3px darkgray;
+}
+
+.pfs-de .navigation,
+.pfs-de .subnavigation {
+    background-color: white;
+    display: table;
+    border-spacing: 2px;
+    table-layout: fixed;
+}
+
+.pfs-de .navigation .item,
+.pfs-de .subnavigation .item {
+    display: table-cell;
+    font-style: italic;
+    text-align: center;
+}    
+
+.pfs-de .navigation .item {
+    background-color: #746149;
+    padding: 8px;
+    font-size: 20px;
+    color: black;
+}
+
+.pfs-de .navigation .active,
+.pfs-de .navigation .item:hover {
+    font-weight: bold;
+    background-color: #bebebe;
+}
+
+.pfs-de .subnavigation .item {
+    background-color: #bb504a;
+    padding: 4px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.pfs-de .subnavigation .active,
+.pfs-de .subnavigation .item:hover {
+    color: black;
+}
+
+.pfs-de .main {
+    background: url('../images/background-b2.png') 0 0 no-repeat, url('../images/background-b3.png') right no-repeat;
+    box-shadow: inset 0px 4px 4px black, 0px 6px 6px black;
+    margin-bottom: 30px;
+}
+
+.pfs-de .main .content {
+    background-color: white;
+    margin: 0px 161px 0px 184px;
+    height: 590px;
+    box-shadow: 4px 4px 3px black, -4px 4px 3px black;
+    overflow: auto;
+}
+
+.pfs-de .main .content .leftbar,
+.pfs-de .main .content .contentarea {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pfs-de .main .content .leftbar {
+    min-height: 585px;
+    width: 162px;
+    background: url('../images/leftbar-missingborder.png') right top no-repeat, url('../images/leftbar-missingborder.png') right bottom no-repeat, url('../images/leftbar-border.png') right repeat-y;
+}
+
+.pfs-de .main .content .contentarea {
+    width: 500px;
+}
+
+.pfs-de a {
+    text-decoration: none;
+    color: #0088CC;
+}
+
+.pfs-de input[type="button"], 
+.pfs-de input[type="reset"], 
+.pfs-de input[type="submit"] {
+    height: auto;
+    width: auto;
+}
+
+.pfs-de button, 
+.pfs-de input[type="button"], 
+.pfs-de input[type="reset"], 
+.pfs-de input[type="submit"] {
+    cursor: pointer;
+}
+
+.pfs-de input, 
+.pfs-de textarea {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+
+.pfs-de input, 
+.pfs-de textarea, 
+.pfs-de select {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    color: #555555;
+    display: inline-block;
+    height: 18px;
+    padding: 4px;
+    width: 210px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.pfs-de button, 
+.pfs-de input, 
+.pfs-de select, 
+.pfs-de textarea {
+    margin: 0;
+    vertical-align: middle;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.pfs-de input[type="button"] {
+    background-color: #941616;
+    border-color: white;
+    border-radius: 12px;
+    border-width: 2px;
+    color: white;
+    font-weight: bold;
+    padding: 3px 14px;
+}
+
+.pfs-de .grey {
+    color: darkgray;
+}
+

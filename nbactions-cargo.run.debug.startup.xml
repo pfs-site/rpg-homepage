@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <properties>
+                <cargo.debug.suspend>y</cargo.debug.suspend>
+            </properties>
+            <activatedProfiles>
+                <activatedProfile>cargo.run</activatedProfile>
+            </activatedProfiles>
+        </action>
+    </actions>
