@@ -40,5 +40,7 @@
       <hst:html hippohtml="${document.html}"/>
     </article>
 
+	<hst:include ref="commentList"/>
+	<hst:include ref="commentForm"/>
   </c:otherwise>
 </c:choose>

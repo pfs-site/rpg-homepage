@@ -1,20 +1,13 @@
 package org.pfs.de.components;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.logging.Level;
-import org.hippoecm.hst.content.beans.query.HstQuery;
-import org.hippoecm.hst.content.beans.query.HstQueryResult;
-import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
-import org.hippoecm.hst.content.beans.query.filter.Filter;
-import org.pfs.de.componentsinfo.PageableListInfo;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
+
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.pfs.de.beans.BlogDocument;
+import org.hippoecm.hst.core.parameters.ParametersInfo;
+import org.pfs.de.componentsinfo.PageableListInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,25 +28,6 @@ public class BlogDetail extends BaseComponent {
       response.setStatus(404);
       throw new HstComponentException(msg);
     }
-
-    try {
-     //Read comments for the selected document
-     HstQuery query = getQueryManager(request).createQuery(document, BlogDocument.class);
-     query.addOrderByDescending("hippostdpubwf:publicationDate");
-     Filter filter = query.createFilter();
-     filter.addEqualTo("website:reference/@hippo:docbase", document.getCanonicalUUID().toLowerCase());
-     query.setFilter(filter);
-     HstQueryResult result = query.execute();
-     
-     //Set up pagination
-     request.setAttribute("comments", result);
-     
-    } catch (QueryException ex) {
-      java.util.logging.Logger.getLogger(BlogDetail.class.getName()).log(Level.SEVERE, null, ex);
-      response.setStatus(404);
-      throw new HstComponentException("Error while creating query. Message: " + ex.getMessage());
-    }
-    
   }
 
 }
