@@ -179,6 +179,7 @@
     <defaultGoal>package</defaultGoal>
     <pluginManagement>
       <plugins>
+      <!-- 
         <plugin>
           <groupId>com.googlecode.mavenfilesync</groupId>
           <artifactId>maven-filesync-plugin</artifactId>
@@ -194,6 +195,7 @@
             </execution>
           </executions>
         </plugin>
+        -->
       </plugins>
     </pluginManagement>
     <plugins>
