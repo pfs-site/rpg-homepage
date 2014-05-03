@@ -11,8 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body class="pfs-de">
+    <div class="page-container">
     <hst:include ref="header"/>
     <hst:include ref="main"/>
+    </div>
     <hst:headContributions categoryIncludes="scripts" xhtml="true"/>
   </body>
 </html>
