@@ -18,7 +18,7 @@
           <sv:value>hst:component</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>hst:components/blogOverview</sv:value>
+          <sv:value>hst:components/overview</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>blogOverview.main.smallContent</sv:value>

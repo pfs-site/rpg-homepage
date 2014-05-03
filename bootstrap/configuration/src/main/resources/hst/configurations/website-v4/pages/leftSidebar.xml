@@ -19,22 +19,22 @@
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>leftSidebar.main.content</sv:value>
       </sv:property>
-      <sv:node sv:name="smallContent">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:component</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:template" sv:type="String">
-          <sv:value>leftSidebar.main.content.smallContent</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="leftSidebar">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:component</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:template" sv:type="String">
-          <sv:value>leftSidebar.main.content.leftSidebar</sv:value>
-        </sv:property>
-      </sv:node>
+    </sv:node>
+    <sv:node sv:name="smallContent">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>leftSidebar.main.smallContent</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="leftSidebar">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>leftSidebar.main.leftSidebar</sv:value>
+      </sv:property>
     </sv:node>
   </sv:node>
 </sv:node>
