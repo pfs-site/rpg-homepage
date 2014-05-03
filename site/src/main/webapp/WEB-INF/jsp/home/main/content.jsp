@@ -23,8 +23,9 @@
       <hst:html hippohtml="${document.html}"/>
       <br />
       <div class="small">
-	<fmt:message key="createdOn.text"/>
-	<c:out value="${document.publicationDate}"/>
+	<fmt:message key="createdOn.text">
+	  <fmt:param value="${document.date}" />
+	</fmt:message>
       </div>
     </article>
 

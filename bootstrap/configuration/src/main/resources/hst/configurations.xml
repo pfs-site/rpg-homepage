@@ -10,22 +10,6 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemap</sv:value>
       </sv:property>
-      <sv:node sv:name="feed">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:sitemapitem</sv:value>
-        </sv:property>
-        <sv:node sv:name="_any_.xml">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:sitemapitem</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:namedpipeline" sv:type="String">
-            <sv:value>JaxrsRestFeedPipeline</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-            <sv:value>${1}</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
     </sv:node>
     <sv:node sv:name="hst:pages">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -63,14 +47,20 @@
       <sv:value>hst:configuration</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="website">
+  <sv:node sv:name="website-v2">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:configuration</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="website-v6">
+  <sv:node sv:name="website-v3">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:configuration</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:lockedby" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:lockedon" sv:type="Date">
+      <sv:value>2014-05-03T13:56:20.456+02:00</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
