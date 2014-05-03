@@ -26,9 +26,10 @@ public class BlogDetail extends BaseComponent {
   @Override
   public void doBeforeRender(final HstRequest request, final HstResponse response) throws HstComponentException {
 
-    HippoBean scope = getContentBean(request);
-
-    if(scope == null) {
+    HippoBean document = getContentBean(request);
+    request.setAttribute("document", document);
+    
+    if(document == null) {
       String msg = "For a BlogDetail component there must be a content bean available to search below. Cannot create an detail page";
       java.util.logging.Logger.getLogger(BlogDetail.class.getName()).log(Level.SEVERE, msg);
       response.setStatus(404);
@@ -36,13 +37,16 @@ public class BlogDetail extends BaseComponent {
     }
 
     try {
-     //Read all blog entries
-     HstQuery query = getQueryManager(request).createQuery(scope, BlogDocument.class);
+     //Read comments for the selected document
+     HstQuery query = getQueryManager(request).createQuery(document, BlogDocument.class);
      query.addOrderByDescending("hippostdpubwf:publicationDate");
+     Filter filter = query.createFilter();
+     filter.addEqualTo("website:reference/@hippo:docbase", document.getCanonicalUUID().toLowerCase());
+     query.setFilter(filter);
      HstQueryResult result = query.execute();
      
      //Set up pagination
-     request.setAttribute("result", result);
+     request.setAttribute("comments", result);
      
     } catch (QueryException ex) {
       java.util.logging.Logger.getLogger(BlogDetail.class.getName()).log(Level.SEVERE, null, ex);
