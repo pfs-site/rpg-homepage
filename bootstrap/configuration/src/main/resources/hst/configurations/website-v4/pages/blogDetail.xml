@@ -27,6 +27,9 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:component</sv:value>
           </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:components/comments</sv:value>
+          </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">
             <sv:value>blogDetail.main.smallContent.commentForm</sv:value>
           </sv:property>
@@ -34,6 +37,9 @@
         <sv:node sv:name="commentList">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:components/comments</sv:value>
           </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">
             <sv:value>blogDetail.main.smallContent.commentList</sv:value>
