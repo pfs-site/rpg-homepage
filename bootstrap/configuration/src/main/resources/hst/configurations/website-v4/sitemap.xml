@@ -7,10 +7,21 @@
       <sv:value>hst:sitemapitem</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/standard</sv:value>
+      <sv:value>hst:pages/home</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>common/what-is-pfs</sv:value>
+      <sv:value>common/was-ist-pfs</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="events">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/textpage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>common/veranstaltungen</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="blog">
@@ -23,17 +34,6 @@
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>blog</sv:value>
     </sv:property>
-    <sv:node sv:name="_any_">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemapitem</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-        <sv:value>hst:pages/blogDetail</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>${parent}/${1}</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="_any_.html">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemapitem</sv:value>
@@ -45,38 +45,27 @@
         <sv:value>${parent}/${1}</sv:value>
       </sv:property>
     </sv:node>
+    <sv:node sv:name="_any_">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/blogOverview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>${parent}/${1}</sv:value>
+      </sv:property>
+    </sv:node>
   </sv:node>
   <sv:node sv:name="team">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemapitem</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/standard</sv:value>
+      <sv:value>hst:pages/home</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>common/the-team</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="events">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:sitemapitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/standard</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>common/events</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="contact">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:sitemapitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/standard</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>common/contact</sv:value>
+      <sv:value>common/das-team</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="links">
@@ -84,7 +73,7 @@
       <sv:value>hst:sitemapitem</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/standard</sv:value>
+      <sv:value>hst:pages/home</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>common/links</sv:value>
@@ -96,6 +85,14 @@
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
       <sv:value>hst:pages/pagenotfound</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="search">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/search</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
