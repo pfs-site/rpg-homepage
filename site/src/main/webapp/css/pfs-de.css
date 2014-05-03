@@ -76,11 +76,13 @@ html, body {
 }
 
 .pfs-de .navigation {
+    height: 32px;
     padding-top: 7px;
     background: #ded2ca url('../images/navigation-border-top.png') no-repeat 0px 0px / 1024px 7px;
 }
 
 .pfs-de .subnavigation {
+    height: 26px;
     padding-bottom: 8px;
     background: white url('../images/subnavigation-border-bottom.png') no-repeat bottom;
 }
