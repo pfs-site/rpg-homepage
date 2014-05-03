@@ -9,9 +9,6 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
-    <sv:property sv:name="hst:template" sv:type="String">
-      <sv:value>standard.main</sv:value>
-    </sv:property>
     <sv:node sv:name="content">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
@@ -35,6 +32,14 @@
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>leftSidebar.main.leftSidebar</sv:value>
       </sv:property>
+      <sv:node sv:name="leftSidebarContainer">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.vBox</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
 </sv:node>
