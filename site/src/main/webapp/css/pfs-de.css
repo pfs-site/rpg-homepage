@@ -1,154 +1,136 @@
+html, body {
+    height: 100%;
+}
+
 .pfs-de {
     color: #333333;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "calibri", Garamond, Arial,sans-serif;
     font-size: 13px;
     line-height: 18px;
     background-color: #3f3f3f;
     margin: 0;
+    width: 100%;
+    height: calc(100% - 30px);
 }
 
 .pfs-de .banner,
-.pfs-de .navigation,
 .pfs-de .subnavigation,
-.pfs-de .main {
+.pfs-de .main,
+.pfs-de .page-container {
     width: 1024px;
-    margin: auto;
+}
+
+.pfs-de .page-container {
+    box-shadow: 0px 6px 6px black;
+    display: block;
+    margin: 15px auto;
+    border-top: solid 1px #333333;
+    height: calc(100% - 5px);
 }
 
 .pfs-de .banner {
-    height: 163px;
+    height: 142px;
     background: url('../images/background-b1.png') no-repeat;
     position: relative;
-    margin-top: 30px;
 }
 
 .pfs-de .banner .logo,
-.pfs-de .banner .box {
+.pfs-de .banner .login,
+.pfs-de .banner .contact
+{
     display: inline-block;
     position: absolute;
-}
-
-.pfs-de .banner .login-box,
-.pfs-de .banner .languages {
-    display: inline-block;
 }
 
 .pfs-de .banner .logo {
     background: url('../images/pfs-de-ka-logo.png') no-repeat 0px 0px / 441px 137px;
     width: 441px;
     height: 137px;
-    top: 14px;
+    top: 0px;
     left: 0px;
 }
 
-.pfs-de .banner .box {
-    background: url('../images/box-b1.png') no-repeat 0px 0px;
-    top: 38px;
-    left: 729px;
-    width: 226px;
-    height: 68px;
-    padding: 22px;
+.pfs-de .banner .login {
+    background: url('../images/login-de.png') no-repeat 0px 0px / 67px 31px;
+    width: 67px;
+    height: 27px;
+    top: 110px;
+    left: 706px;
 }
 
-.pfs-de .banner .box > * {
-    margin-bottom: 6px;
-}
-
-.pfs-de .banner .login-box *:after {
-   content: " |";
-}
-
-.pfs-de .banner .login-box *:last-child:after {
-   content: " "; 
-}
-
-.pfs-de .banner .login-box .login,
-.pfs-de .banner .login-box .register {
-   color: white;
-   font-weight: bold;
-}
-
-.pfs-de .banner .search {
-    clear: both;
-}
-
-.pfs-de .banner .search input[type="text"] {
-    width: 125px;
-}
-
-.pfs-de .banner .languages {
-    float: right;
-    border-bottom: 0px;
-}
-
-.pfs-de .banner .languages > * {
-    display: inline-block;
-}
-
-.pfs-de .banner .languages .de { }
-
-.pfs-de .banner .languages .en {
-    background: url('../images/en.png') 0px 0px / 36px 24px;
-    width: 36px;
-    height: 24px;
-}
-
-.pfs-de .navigation {
-    padding-top: 4px;
-    box-shadow: inset 0px 3px 3px darkgray;
+.pfs-de .banner .contact {
+    background: url('../images/contact-de.png') no-repeat 0px 0px / 79px 27px;
+    width: 79px;
+    height: 27px;
+    top: 110px;
+    left: 790px;
 }
 
 .pfs-de .navigation,
 .pfs-de .subnavigation {
-    background-color: white;
+    width: 678px;
+    padding: 0px 162px 0px 184px;
     display: table;
-    border-spacing: 2px;
+    border-spacing: 0px;
     table-layout: fixed;
+}
+
+.pfs-de .navigation {
+    padding-top: 7px;
+    background: #ded2ca url('../images/navigation-border-top.png') no-repeat 0px 0px / 1024px 7px;
+}
+
+.pfs-de .subnavigation {
+    padding-bottom: 8px;
+    background: white url('../images/subnavigation-border-bottom.png') no-repeat bottom;
 }
 
 .pfs-de .navigation .item,
 .pfs-de .subnavigation .item {
     display: table-cell;
-    font-style: italic;
     text-align: center;
 }    
 
 .pfs-de .navigation .item {
-    background-color: #746149;
+    background-color: #8e8781;
     padding: 8px;
-    font-size: 20px;
+    font-size: 31px;
+    line-height: 32px;
     color: black;
+    border-right: white 2px solid;
+}
+
+.pfs-de .navigation .item:first-child {
+    border-left: white 2px solid;
 }
 
 .pfs-de .navigation .active,
 .pfs-de .navigation .item:hover {
-    font-weight: bold;
-    background-color: #bebebe;
+    background-color: white;
 }
 
 .pfs-de .subnavigation .item {
-    background-color: #bb504a;
     padding: 4px;
+    color: black;
     font-size: 15px;
-    color: white;
-    font-weight: bold;
 }
 
 .pfs-de .subnavigation .active,
 .pfs-de .subnavigation .item:hover {
-    color: black;
+    text-decoration: underline;
 }
 
 .pfs-de .main {
-    background: url('../images/background-b2.png') 0 0 no-repeat, url('../images/background-b3.png') right no-repeat;
-    box-shadow: inset 0px 4px 4px black, 0px 6px 6px black;
-    margin-bottom: 30px;
+    height: calc(100% - 142px - 55px - 34px);
+    max-height: 580px;
+    background: url('../images/background-b2.png') 0px 0px no-repeat, url('../images/background-b3.png') 860px 0px no-repeat;
+    box-shadow: inset 0px 4px 4px black;
 }
 
 .pfs-de .main .content {
+    height: 100%;
     background-color: white;
     margin: 0px 161px 0px 184px;
-    height: 590px;
     box-shadow: 4px 4px 3px black, -4px 4px 3px black;
     overflow: auto;
 }
@@ -231,4 +213,3 @@
 .pfs-de .grey {
     color: darkgray;
 }
-
