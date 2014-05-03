@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jspf/htmlTags.jspf" %>
-
+    
+    <div class="navigation">
 <c:if test="${not empty mainMenu}">
-  <div class="navigation">
     
     <c:forEach var="item" items="${mainMenu}">
       
@@ -21,12 +21,11 @@
       <a href="${link}" class="${css}">${name}</a>
 	   
     </c:forEach>
-    
-  </div>
-  
-  <c:if test="${not empty subMenu}">
+  </c:if>
+    </div>
     <div class="subnavigation">
-
+  <c:if test="${not empty subMenu}">
+    
       <c:forEach var="item" items="${subMenu}">
 
 	<hst:link var="link" link="${item.hstLink}"/>
@@ -45,7 +44,6 @@
 
       </c:forEach>
 
-    </div>
   </c:if>
 
-</c:if>
+  </div>
