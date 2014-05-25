@@ -2,5 +2,5 @@
 
 leftSidebar main leftSidebar
 start
-<hst:include ref=leftSidebarContainer />
+<%-- <hst:include ref=leftSidebarContainer /> --%>
 end
