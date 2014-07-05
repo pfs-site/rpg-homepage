@@ -106,6 +106,17 @@
         <scope>compile</scope>
     </dependency>
 
+    <dependency>
+		<groupId>org.onehippo.forge</groupId>
+		<artifactId>feed-hst</artifactId>
+		<type>jar</type>
+	</dependency>
+
+	<dependency>
+		<groupId>rome</groupId>
+		<artifactId>rome</artifactId>
+	</dependency>
+
   </dependencies>
 
   <build>

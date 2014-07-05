@@ -71,6 +71,8 @@
     <freemarker.version>2.3.18</freemarker.version>
     <slf4j.version>1.7.7</slf4j.version>
     <log4j.version>1.2.16</log4j.version>
+    
+    <forge.feed.version>2.02.00</forge.feed.version>
      
     <filesync.override>false</filesync.override>
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
@@ -173,11 +175,11 @@
         <artifactId>hst-jaxrs</artifactId>
         <version>${hippo.hst.version}</version>
       </dependency>
-			<dependency>
-	      <groupId>javax.jcr</groupId>
-  		  <artifactId>jcr</artifactId>
-  		  <version>2.0</version>
-	    </dependency>
+	  <dependency>
+      	<groupId>javax.jcr</groupId>
+ 		<artifactId>jcr</artifactId>
+ 		<version>2.0</version>
+	  </dependency>
 			<dependency>
 	      <groupId>javax.jdo</groupId>
   		  <artifactId>jdo-api</artifactId>
@@ -226,21 +228,44 @@
   		  <artifactId>jcl-over-slf4j</artifactId>
   		  <version>${slf4j.version}</version>
 	    </dependency>
-			<dependency>
+	    
+		<dependency>
 	      <groupId>org.slf4j</groupId>
   		  <artifactId>slf4j-log4j12</artifactId>
   		  <version>${slf4j.version}</version>
 	    </dependency>
-			<dependency>
+	    
+		<dependency>
 	      <groupId>log4j</groupId>
   		  <artifactId>log4j</artifactId>
   		  <version>${log4j.version}</version>
 	    </dependency>
-			<dependency>
+	    
+		<dependency>
 	      <groupId>org.onehippo.cms7.hst.client-modules</groupId>
   		  <artifactId>hst-cms-rest</artifactId>
   		  <version>${hippo.cms.version}</version>
 	    </dependency>
+	    
+	    <dependency>
+			<groupId>org.onehippo.forge</groupId>
+			<artifactId>feed-cms-addon</artifactId>
+			<version>${forge.feed.version}</version>
+	    </dependency>
+	    
+	    <dependency>
+			<groupId>org.onehippo.forge</groupId>
+			<artifactId>feed-hst</artifactId>
+			<version>${forge.feed.version}</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<groupId>rome</groupId>
+			<artifactId>rome</artifactId>
+			<version>1.0</version>
+		</dependency>
+
     </dependencies>
   </dependencyManagement>
   

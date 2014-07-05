@@ -66,6 +66,11 @@
       </exclusions>
     </dependency>
    
+    <dependency>
+		<groupId>org.onehippo.forge</groupId>
+		<artifactId>feed-cms-addon</artifactId>
+    </dependency>
+    
   </dependencies>
 
   <build>
