@@ -239,7 +239,7 @@
 			<dependency>
 	      <groupId>org.onehippo.cms7.hst.client-modules</groupId>
   		  <artifactId>hst-cms-rest</artifactId>
-  		  <version>${hippo.cms.version}</version>
+  		  <version>${hippo.hst.version}</version>
 	    </dependency>
     </dependencies>
   </dependencyManagement>
