@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="hst:sitemap" h:merge="combine">
+  <sv:node sv:name="feed">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:node sv:name="_any_.xml">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:namedpipeline" sv:type="String">
+        <sv:value>JaxrsRestFeedPipeline</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>${1}</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>
