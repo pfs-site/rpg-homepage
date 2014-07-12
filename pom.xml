@@ -173,74 +173,6 @@
         <artifactId>hst-jaxrs</artifactId>
         <version>${hippo.hst.version}</version>
       </dependency>
-			<dependency>
-	      <groupId>javax.jcr</groupId>
-  		  <artifactId>jcr</artifactId>
-  		  <version>2.0</version>
-	    </dependency>
-			<dependency>
-	      <groupId>javax.jdo</groupId>
-  		  <artifactId>jdo-api</artifactId>
-  		  <version>3.0.1</version>
-	    </dependency>
-			<dependency>
-	      <groupId>org.apache.geronimo.specs</groupId>
-  		  <artifactId>geronimo-jta_1.1_spec</artifactId>
-  		  <version>1.1.1</version>
-	    </dependency>
-			<dependency>
-	      <groupId>javax.mail</groupId>
-  		  <artifactId>mail</artifactId>
-  		  <version>1.4.7</version>
-	    </dependency>
-		  <!-- Hippo dependencies -->
-			<dependency>
-	      <groupId>org.onehippo.cms7</groupId>
-  		  <artifactId>hippo-cms7-commons</artifactId>
-  		  <version>${hippo.commons.version}</version>
-	    </dependency>
-			<dependency>
-	      <groupId>org.onehippo.cms7</groupId>
-  		  <artifactId>hippo-services</artifactId>
-  		  <version>${hippo.services.version}</version>
-	    </dependency>
-			<dependency>
-	      <groupId>org.onehippo.cms7</groupId>
-  		  <artifactId>hippo-repository-api</artifactId>
-  		  <version>${hippo.repository.version}</version>
-	    </dependency>
-			<dependency>
-	      <groupId>org.onehippo.cms7</groupId>
-  		  <artifactId>hippo-repository-builtin</artifactId>
-  		  <version>${hippo.repository.version}</version>
-	    </dependency>
-
-			<!-- Logging API -->
-			<dependency>
-	      <groupId>org.slf4j</groupId>
-  		  <artifactId>slf4j-api</artifactId>
-  		  <version>${slf4j.version}</version>
-	    </dependency>
-			<dependency>
-	      <groupId>org.slf4j</groupId>
-  		  <artifactId>jcl-over-slf4j</artifactId>
-  		  <version>${slf4j.version}</version>
-	    </dependency>
-			<dependency>
-	      <groupId>org.slf4j</groupId>
-  		  <artifactId>slf4j-log4j12</artifactId>
-  		  <version>${slf4j.version}</version>
-	    </dependency>
-			<dependency>
-	      <groupId>log4j</groupId>
-  		  <artifactId>log4j</artifactId>
-  		  <version>${log4j.version}</version>
-	    </dependency>
-			<dependency>
-	      <groupId>org.onehippo.cms7.hst.client-modules</groupId>
-  		  <artifactId>hst-cms-rest</artifactId>
-  		  <version>${hippo.hst.version}</version>
-	    </dependency>
     </dependencies>
   </dependencyManagement>
   
@@ -430,16 +362,5 @@
         </plugins>
       </build>
     </profile>
-
-  	<profile>
-		  <!-- Additional dependencies for build on openshift -->
-  		<id>openshift</id>
-      <modules>
-        <module>bootstrap</module>
-        <module>cms</module>
-        <module>site</module>
-      </modules>
-    </profile>
   </profiles>
-
 </project>
