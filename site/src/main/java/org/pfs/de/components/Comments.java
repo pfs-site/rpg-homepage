@@ -30,6 +30,7 @@ public class Comments extends BaseComponent {
     HippoBean document = getContentBean(request);
     if (document instanceof BlogDocument) {
     	request.setAttribute("commentsAllowed", ((BlogDocument)document).getCommentsAllowed());
+    	request.setAttribute("referenceDocument", document.getCanonicalUUID());
     } else {
     	request.setAttribute("commentsAllowed", false);
     }
