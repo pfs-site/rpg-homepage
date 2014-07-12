@@ -105,6 +105,13 @@
              when your application container provides javax.annotation.security package. -->
         <scope>compile</scope>
     </dependency>
+    
+    <dependency>
+	  <groupId>javax.servlet.jsp</groupId>
+	  <artifactId>jsp-api</artifactId>
+	  <version>2.1</version>
+	  <scope>provided</scope>
+	</dependency>
 
   </dependencies>
 
