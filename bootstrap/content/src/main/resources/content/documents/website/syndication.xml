@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="syndication">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippostd:folder</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>hippo:harddocument</sv:value>
+    <sv:value>hippotranslation:translated</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>9bc663b2-8e57-44ba-b147-0fcf6808a16a</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:value>new-translated-folder</sv:value>
+    <sv:value>new-document</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippotranslation:id" sv:type="String">
+    <sv:value>a494d2aa-c9ed-422c-a025-47fe67cb7103</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippotranslation:locale" sv:type="String">
+    <sv:value>en</sv:value>
+  </sv:property>
+  <sv:node sv:name="hippotranslation:translations">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippotranslation:translations</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="rss">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>hippo:hardhandle</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>b67ba7de-d598-405d-bf94-03c6cb023d74</sv:value>
+    </sv:property>
+    <sv:node sv:name="rss">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>feed:rss20descriptor</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>hippo:harddocument</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>19306815-c34f-434c-8936-72368f52ef35</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
+        <sv:value>rollenspiel</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:copyright" sv:type="String">
+        <sv:value>wir</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:description" sv:type="String">
+        <sv:value>My RSS feed</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:documentType" sv:type="String">
+        <sv:value>website:blogdocument</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:excludeItems" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="feed:generator" sv:type="String">
+        <sv:value>generator:hippo</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:itemCount" sv:type="Long">
+        <sv:value>10</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:language" sv:type="String">
+        <sv:value>de</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:managingEditor" sv:type="String">
+        <sv:value>mail@post.de</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:scope" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="feed:sortByField" sv:type="String">
+        <sv:value>hippostdpubwf:publicationDate</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:title" sv:type="String">
+        <sv:value>Rss Feed</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:webMaster" sv:type="String">
+        <sv:value>der Webmaster</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>syndication/rss</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:holder" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-07-12T17:05:14.429+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-08-28T14:48:25.078+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2014-08-28T15:05:51.524+02:00</sv:value>
+      </sv:property>
+      <sv:node sv:name="feed:image">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Artikel-RSS</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>

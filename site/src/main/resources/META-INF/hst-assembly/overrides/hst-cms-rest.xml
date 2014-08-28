@@ -11,5 +11,6 @@
 
   <import resource="classpath:/org/hippoecm/hst/site/optional/jaxrs/SpringComponentManager-rest-jackson.xml" />
   <import resource="classpath:/org/hippoecm/hst/cmsrest/SpringComponentManager-cmsrest.xml" />
+  <import resource="classpath:/org/onehippo/forge/feed/site/jaxrs/feed-rest-services.xml"/>
 
 </beans>

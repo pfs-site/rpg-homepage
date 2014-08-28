@@ -1,16 +1,22 @@
 package org.pfs.de.beans;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+
 import javax.jcr.RepositoryException;
 
+import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSetBean;
-import org.htmlcleaner.HtmlCleaner;
+import org.hippoecm.hst.core.request.HstRequestContext;
 import org.jsoup.Jsoup;
+import org.onehippo.forge.feed.api.FeedType;
+import org.onehippo.forge.feed.api.annot.SyndicationElement;
 import org.pfs.de.services.model.BaseDocumentRepresentation;
+
+import com.sun.syndication.feed.rss.Description;
+import com.sun.syndication.feed.rss.Guid;
 
 @Node(jcrType="website:blogdocument")
 public class BlogDocument extends BaseDocument{
@@ -21,6 +27,7 @@ public class BlogDocument extends BaseDocument{
      */
     private int SUMMARY_LENGTH = 100;
 
+    @SyndicationElement(type = FeedType.RSS, name = "title")
     public String getTitle() {
         return getProperty("website:title");
     }
@@ -29,6 +36,7 @@ public class BlogDocument extends BaseDocument{
         return getHippoHtml("website:body");    
     }
 
+    @SyndicationElement(type = FeedType.RSS, name = "author")
     public String getAuthor() {
         return getProperty("website:author");
     }
@@ -55,8 +63,11 @@ public class BlogDocument extends BaseDocument{
      * at {@link AbstractMethodError#SUMMARY_LENGTH}.
      * @return Summarized blog content.
      */
-    public String getSummary() {
+    @SyndicationElement(type = FeedType.RSS, name = "description")
+    public Description getSummary() {
+    	Description ret = new Description();
         String parsedContent = Jsoup.parse(getHippoHtml("website:body").getContent()).text();
+        String summary = "";
         
         if (parsedContent.length() > SUMMARY_LENGTH) {
             int indexOfLastSpace = parsedContent.lastIndexOf(' ', SUMMARY_LENGTH);
@@ -65,11 +76,16 @@ public class BlogDocument extends BaseDocument{
                 indexOfLastSpace = 10;
             }
             
-            return parsedContent.substring(0, indexOfLastSpace) + "...";
+            summary = parsedContent.substring(0, indexOfLastSpace) + "...";
             
         } else {
-            return parsedContent;
+        	summary = parsedContent;
         }
+        
+        ret.setValue(summary);
+        ret.setType(null);
+        
+        return ret;
     }
     
     /**
@@ -77,9 +93,26 @@ public class BlogDocument extends BaseDocument{
      * the entry.
      * @return The publication date of the blog entry.
      */
+    @SyndicationElement(type = FeedType.RSS, name = "pubDate")
     public Date getDate() {
         GregorianCalendar cal = getProperty("hippostdpubwf:publicationDate");
         return cal.getTime();
+    }
+    
+    @SyndicationElement(type = FeedType.RSS, name = "link")
+    public String getSyndicationLink() {
+    	final HstRequestContext hstRequestContext = RequestContextProvider.get();
+        return hstRequestContext.getHstLinkCreator().create(this, hstRequestContext).toUrlForm(hstRequestContext, true);
+    }
+
+    @SyndicationElement(type = FeedType.RSS, name = "guid")
+    public Guid getGuid() {
+    	Guid ret = new Guid();
+    	
+    	ret.setPermaLink(true);
+    	ret.setValue(this.getSyndicationLink());
+    	
+    	return ret;
     }
 
     @Override

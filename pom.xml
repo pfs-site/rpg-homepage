@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-release</artifactId>
-    <version>7.8.3</version>
+    <version>7.8.8</version>
   </parent>
 
   <name>Pathfinder's Society Germany Website</name>
@@ -72,7 +72,7 @@
     <slf4j.version>1.7.7</slf4j.version>
     <log4j.version>1.2.16</log4j.version>
     
-    <forge.feed.version>2.02.00</forge.feed.version>
+    <forge.feed.version>2.01.03</forge.feed.version>
      
     <filesync.override>false</filesync.override>
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
