@@ -5,10 +5,13 @@
 package org.pfs.de.services.model;
 
 import java.util.Date;
+
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.xml.bind.annotation.XmlRootElement;
+
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoDocument;
 import org.hippoecm.hst.content.rewriter.ContentRewriter;
 import org.hippoecm.hst.core.container.ContainerConstants;
 import org.hippoecm.hst.core.request.HstRequestContext;
@@ -25,14 +28,14 @@ public class CommentDocumentRepresentation extends BaseDocumentRepresentation {
     private Date date;
     private String text;
     private String link;
-    private String referencedDocument;
+    private HippoDocument referencedDocument;
     
     public CommentDocumentRepresentation() {
         
     }
     
-    public CommentDocumentRepresentation(HstRequestContext requestContext, ContentRewriter<String> contentRewriter){
- 	super(requestContext, contentRewriter);
+    public CommentDocumentRepresentation(HstRequestContext requestContext, ContentRewriter<String> contentRewriter) {
+    	super(requestContext, contentRewriter);
     }
     
     /**
@@ -49,6 +52,7 @@ public class CommentDocumentRepresentation extends BaseDocumentRepresentation {
         setDate(document.getDate());
         setLink(document.getLink());
         setText(document.getText());
+        setReferenceDocument(document.getReferencedDocument());
         
         return this;
     }
@@ -111,5 +115,13 @@ public class CommentDocumentRepresentation extends BaseDocumentRepresentation {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public HippoDocument getReferenceDocument() {
+        return referencedDocument;
+    }
+
+    public void setReferenceDocument(HippoDocument referencedDocument) {
+        this.referencedDocument = referencedDocument;
     }
 }

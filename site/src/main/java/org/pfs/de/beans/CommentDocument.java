@@ -84,15 +84,16 @@ public class CommentDocument extends BaseDocument{
             this.getNode().setProperty(FIELD_AUTHOR, commentRepresentation.getAuthor());
             this.getNode().setProperty(FIELD_LINK, commentRepresentation.getLink());
             this.getNode().setProperty(FIELD_TEXT, commentRepresentation.getText());
+            this.getNode().getNode(FIELD_REFERENCE).setProperty("hippo:docbase", commentRepresentation.getReferenceDocument().getIdentifier());
         }
     }
     
-    /**
-     * Set the referenced document.
-     * @param document The document that this comment was written for.
-     * @see #update(org.pfs.de.services.model.CommentDocumentRepresentation) 
-     */
-    public void setReferencedDocument(HippoDocument document) throws RepositoryException, ContentNodeBindingException {
-        addMirrorNode(this.getNode(), FIELD_REFERENCE, document.getCanonicalHandleUUID());
-    }
+//    /**
+//     * Set the referenced document.
+//     * @param document The document that this comment was written for.
+//     * @see #update(org.pfs.de.services.model.CommentDocumentRepresentation) 
+//     */
+//    public void setReferencedDocument(HippoDocument document) throws RepositoryException, ContentNodeBindingException {
+//        addMirrorNode(this.getNode(), FIELD_REFERENCE, document.getCanonicalHandleUUID());
+//    }
 }

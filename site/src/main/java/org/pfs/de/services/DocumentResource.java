@@ -42,7 +42,7 @@ public class DocumentResource extends BaseResource {
     
     /**
      * Get a single document. As this service is not (yet) provided, this method
-     * redirects to the comments of the selected documen.
+     * redirects to the comments of the selected document.
      * @param servletRequest Request object.
      * @param servletResponse Response object.
      * @param documentId The UUID of the document.
@@ -50,8 +50,10 @@ public class DocumentResource extends BaseResource {
      */
     @GET
     @Path("/{documentId}")
-    public void getDocument(@Context HttpServletRequest servletRequest, @Context HttpServletResponse servletResponse,
-            @PathParam("documentId") String documentId) throws ServletException {
+    public void getDocument(@Context HttpServletRequest servletRequest, 
+    						@Context HttpServletResponse servletResponse,
+							@PathParam("documentId") String documentId) 
+									throws ServletException {
         try {
             servletResponse.sendRedirect(String.format("comments", documentId));
         } catch (IOException ex) {
@@ -74,8 +76,9 @@ public class DocumentResource extends BaseResource {
     @GET
     @Path("/{documentId}/comments")
     public List<CommentDocumentRepresentation> getComments(@Context HttpServletRequest servletRequest, 
-            @Context HttpServletResponse servletResponse,
-            @PathParam("documentId") String documentId) throws ServletException {
+												            @Context HttpServletResponse servletResponse,
+												            @PathParam("documentId") String documentId) 
+												            		throws ServletException {
         try {
             //Assert that document exists
             BaseDocument baseDoc = getDocumentById(servletRequest, BaseDocument.class, documentId);
@@ -121,9 +124,10 @@ public class DocumentResource extends BaseResource {
     @GET
     @Path("/{documentId}/comments/{commentId}")
     public CommentDocumentRepresentation getComment(@Context HttpServletRequest servletRequest, 
-            @Context HttpServletResponse servletResponse,
-            @PathParam("documentId") String documentId,
-            @PathParam("commentId") String commentId) throws ServletException {
+										            @Context HttpServletResponse servletResponse,
+										            @PathParam("documentId") String documentId,
+										            @PathParam("commentId") String commentId) 
+										            		throws ServletException {
         try {
             //Assert that document exists
             BaseDocument baseDoc = getDocumentById(servletRequest, BaseDocument.class, documentId);
@@ -170,8 +174,11 @@ public class DocumentResource extends BaseResource {
     @Persistable
     @POST
     @Path("/{documentId}/comments")
-    public CommentDocumentRepresentation createComment(@Context HttpServletRequest servletRequest, @Context HttpServletResponse servletResponse, @Context UriInfo uriInfo,
-            @PathParam("documentId") String documentId, CommentDocumentRepresentation commentRepresentation) {
+    public CommentDocumentRepresentation createComment(@Context HttpServletRequest servletRequest, 
+    													@Context HttpServletResponse servletResponse, 
+    													@Context UriInfo uriInfo,
+														@PathParam("documentId") String documentId, 
+														CommentDocumentRepresentation commentRepresentation) {
 
             
         try {
@@ -214,6 +221,9 @@ public class DocumentResource extends BaseResource {
             } else {
                 name = String.format("%s-comment-ts-%d", document.getName(), new Date().getTime());
             }
+            
+            commentRepresentation.setReferenceDocument(document);
+            
             CommentDocument newComment = createNewDocument(servletRequest, "/comments", "website:commentdocument", name, commentRepresentation);
             return new CommentDocumentRepresentation(getRequestContext(servletRequest), getContentRewriter()).represent(newComment);
 

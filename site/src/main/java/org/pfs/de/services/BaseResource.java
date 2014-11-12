@@ -7,9 +7,11 @@ package org.pfs.de.services;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.servlet.http.HttpServletRequest;
+
 import org.hippoecm.hst.content.annotations.Persistable;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.manager.ObjectBeanManager;
@@ -21,11 +23,13 @@ import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
+import org.hippoecm.hst.content.beans.standard.HippoDocument;
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.jaxrs.services.AbstractResource;
 import org.hippoecm.hst.util.PathUtils;
 import org.pfs.de.beans.BaseDocument;
+import org.pfs.de.beans.BlogDocument;
 import org.pfs.de.beans.CommentDocument;
 import org.pfs.de.services.model.BaseDocumentRepresentation;
 
@@ -172,7 +176,14 @@ public abstract class BaseResource extends AbstractResource {
      * @throws ObjectBeanManagerException Error getting the bean manager.
      * @throws RepositoryException Error storing the data.
      */
-    protected <T extends BaseDocument> T createNewDocument(HttpServletRequest request, String path, String documentType, String name, BaseDocumentRepresentation representation) throws ObjectBeanManagerException, RepositoryException {
+    protected <T extends BaseDocument> T createNewDocument(HttpServletRequest request, 
+    														String path, 
+    														String documentType, 
+    														String name, 
+    														BaseDocumentRepresentation representation) 
+    																throws ObjectBeanManagerException, 
+    																	RepositoryException {
+    	
         HstRequestContext requestContext = getRequestContext(request);
         WorkflowPersistenceManager persistanceManager = (WorkflowPersistenceManager) getPersistenceManager(requestContext);
         
@@ -188,6 +199,10 @@ public abstract class BaseResource extends AbstractResource {
 
         //Save bean in repository
         persistanceManager.update(document);
+        String tmp1 = ((CommentDocument)document).getAuthor();
+        String tmp2 = ((CommentDocument)document).getText();
+        HippoDocument tmp3 = ((CommentDocument)document).getReferencedDocument();
+        if(tmp3 != null) { String tmp4 = tmp3.getName(); }
         persistanceManager.save();
 
         //Read back complete bean instance for return
