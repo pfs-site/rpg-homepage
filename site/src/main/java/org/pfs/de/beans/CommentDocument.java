@@ -84,16 +84,22 @@ public class CommentDocument extends BaseDocument{
             this.getNode().setProperty(FIELD_AUTHOR, commentRepresentation.getAuthor());
             this.getNode().setProperty(FIELD_LINK, commentRepresentation.getLink());
             this.getNode().setProperty(FIELD_TEXT, commentRepresentation.getText());
-            this.getNode().getNode(FIELD_REFERENCE).setProperty("hippo:docbase", commentRepresentation.getReferenceDocument().getIdentifier());
+            try {
+				this.setReferencedDocument(commentRepresentation.getReferenceDocument());
+			} catch (ContentNodeBindingException e) {
+				String msg = "Unable to set reference document for comment \"" + commentRepresentation.getName() + "\".";
+				RepositoryException repoEx = new RepositoryException(msg, e);
+				throw repoEx;
+			}
         }
     }
     
-//    /**
-//     * Set the referenced document.
-//     * @param document The document that this comment was written for.
-//     * @see #update(org.pfs.de.services.model.CommentDocumentRepresentation) 
-//     */
-//    public void setReferencedDocument(HippoDocument document) throws RepositoryException, ContentNodeBindingException {
-//        addMirrorNode(this.getNode(), FIELD_REFERENCE, document.getCanonicalHandleUUID());
-//    }
+    /**
+     * Set the referenced document.
+     * @param document The document that this comment was written for.
+     * @see #update(org.pfs.de.services.model.CommentDocumentRepresentation) 
+     */
+    public void setReferencedDocument(HippoDocument document) throws RepositoryException, ContentNodeBindingException {
+        addMirrorNode(this.getNode(), FIELD_REFERENCE, document.getCanonicalHandleUUID());
+    }
 }

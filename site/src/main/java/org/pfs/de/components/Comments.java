@@ -48,8 +48,8 @@ public class Comments extends BaseComponent {
         query.addOrderByDescending("hippostdpubwf:publicationDate");
         Filter filter = query.createFilter();
          
-    	//Comments are linked to parent of current node. Jan: No they're not, I hope.
-        String linkedNodeId = document.getNode().getIdentifier();
+    	//Comments are linked to parent of current node/blog document.
+        String linkedNodeId = document.getNode().getParent().getIdentifier();
 	    filter.addEqualTo("website:reference/@hippo:docbase", linkedNodeId.toLowerCase());
 	    query.setFilter(filter);
 	    HstQueryResult result = query.execute();
