@@ -6,12 +6,17 @@ package org.pfs.de.services.model;
 
 import java.util.Date;
 import java.util.UUID;
+
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.nodetype.NodeType;
+
 import org.easymock.EasyMock;
+import org.hippoecm.hst.content.beans.standard.HippoDocument;
 import org.junit.Test;
+import org.pfs.de.beans.BlogDocument;
 import org.pfs.de.beans.CommentDocument;
+
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.replay;
 import static org.junit.Assert.*;
@@ -34,10 +39,11 @@ public class CommentDocumentRepresentationTest {
         String link = "http://www.example.com";
         String text = "Comment text.";
         Date creationDate = new Date();
+        BlogDocument referenceDocument = new BlogDocument();
         
         //Create instance under test
         CommentDocumentRepresentation rep = new CommentDocumentRepresentation();
-        CommentDocument doc = createCommentDocumentMock(author, link, text, creationDate);
+        CommentDocument doc = createCommentDocumentMock(author, link, text, creationDate, referenceDocument);
         replay(doc);
         
         //Perform test
@@ -58,7 +64,7 @@ public class CommentDocumentRepresentationTest {
      * @param date Creation date.
      * @return The mocked comment document. This mock is not switched to replay yet.
      */
-    protected CommentDocument createCommentDocumentMock(String author, String link, String text, Date date) throws RepositoryException {
+    protected CommentDocument createCommentDocumentMock(String author, String link, String text, Date date, HippoDocument refrenceDocument) throws RepositoryException {
         CommentDocument doc = EasyMock.createMock(CommentDocument.class);
         
         //Mock for the node
@@ -85,6 +91,7 @@ public class CommentDocumentRepresentationTest {
         expect(doc.getLink()).andReturn(link);
         expect(doc.getText()).andReturn(text);
         expect(doc.getDate()).andReturn(date);
+        expect(doc.getReferencedDocument()).andReturn(refrenceDocument);
         
         return doc;
     }
