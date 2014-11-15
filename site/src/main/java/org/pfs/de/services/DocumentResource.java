@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.jcr.RepositoryException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +23,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
+
 import org.hippoecm.hst.content.annotations.Persistable;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
@@ -219,7 +221,7 @@ public class DocumentResource extends BaseResource {
             if (! isEmpty(commentRepresentation.getName())) {
                 name = commentRepresentation.getName();
             } else {
-                name = String.format("%s-comment-ts-%d", document.getName(), new Date().getTime());
+                name = String.format("%s-comment-at-%2$tY%2$tm%2$td-%2$tH%2$tM%2$tS-%2$tL", "test", new Date());
             }
             
             commentRepresentation.setReferenceDocument(document);
