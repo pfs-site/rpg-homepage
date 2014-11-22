@@ -41,6 +41,8 @@
     </article>
 
 	<hst:include ref="commentList"/>
-	<hst:include ref="commentForm"/>
+	<c:if test="${document.commentsAllowed}">
+		<hst:include ref="commentForm"/>
+	</c:if>
   </c:otherwise>
 </c:choose>

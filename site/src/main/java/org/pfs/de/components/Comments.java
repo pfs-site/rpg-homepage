@@ -30,13 +30,14 @@ public class Comments extends BaseComponent {
     HippoBean document = getContentBean(request);
     if (document instanceof BlogDocument) {
     	request.setAttribute("commentsAllowed", ((BlogDocument)document).getCommentsAllowed());
+    	request.setAttribute("referenceDocument", document.getCanonicalUUID());
     } else {
     	request.setAttribute("commentsAllowed", false);
     }
     
     if(document == null) {
-      String msg = "For a BlogDetail component there must be a content bean available to search below. Cannot create an detail page";
-      java.util.logging.Logger.getLogger(Comments.class.getName()).log(Level.SEVERE, msg);
+      String msg = "For a Comments component there must be a content bean (BlogDocument) available to search below. Cannot create comments";
+      java.util.logging.Logger.getLogger(Comments.class.getName()).log(Level.WARNING, msg);
       response.setStatus(404);
       throw new HstComponentException(msg);
     }
@@ -47,7 +48,7 @@ public class Comments extends BaseComponent {
         query.addOrderByDescending("hippostdpubwf:publicationDate");
         Filter filter = query.createFilter();
          
-    	//Comments are linked to parent of current node
+    	//Comments are linked to parent of current node/blog document.
         String linkedNodeId = document.getNode().getParent().getIdentifier();
 	    filter.addEqualTo("website:reference/@hippo:docbase", linkedNodeId.toLowerCase());
 	    query.setFilter(filter);
@@ -59,7 +60,7 @@ public class Comments extends BaseComponent {
 		//Failed search for query is not a fatal error, log and continue
 		java.util.logging.Logger.getLogger(Comments.class.getName()).log(Level.WARNING, null, ex);
     } catch (QueryException ex) {
-      java.util.logging.Logger.getLogger(Comments.class.getName()).log(Level.SEVERE, null, ex);
+      java.util.logging.Logger.getLogger(Comments.class.getName()).log(Level.WARNING, null, ex);
       response.setStatus(404);
       throw new HstComponentException("Error while creating query. Message: " + ex.getMessage());
     }

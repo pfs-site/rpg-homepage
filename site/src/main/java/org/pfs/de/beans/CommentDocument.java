@@ -2,13 +2,16 @@ package org.pfs.de.beans;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import javax.jcr.RepositoryException;
 
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.ContentNodeBindingException;
 import org.hippoecm.hst.content.beans.Node;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoDocument;
+import org.hippoecm.hst.content.beans.standard.HippoMirror;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.forge.feed.api.FeedType;
 import org.onehippo.forge.feed.api.annot.SyndicationElement;
@@ -88,7 +91,20 @@ public class CommentDocument extends BaseDocument{
      * @return The document that the comment was written in reference to.
      */
     public HippoDocument getReferencedDocument() {
-        return getProperty(FIELD_REFERENCE);
+    	HippoDocument ret = null;
+    	List<Object> docs = getChildBeansByName(FIELD_REFERENCE);
+    	HippoMirror mirror = null;
+    	HippoBean bean = null;
+    	if((docs !=  null) && (docs.size() > 0) && (docs.get(0) instanceof HippoMirror)) {
+    		mirror = (HippoMirror) docs.get(0);
+    		if(mirror != null) {
+        		bean = mirror.getReferencedBean();
+    		}
+    	}
+    	if((bean != null) && (bean.isHippoDocumentBean())) {
+    		ret = (HippoDocument)bean;
+    	}
+        return ret;
     }
     
     /**
@@ -133,6 +149,13 @@ public class CommentDocument extends BaseDocument{
             this.getNode().setProperty(FIELD_AUTHOR, commentRepresentation.getAuthor());
             this.getNode().setProperty(FIELD_LINK, commentRepresentation.getLink());
             this.getNode().setProperty(FIELD_TEXT, commentRepresentation.getText());
+            try {
+				this.setReferencedDocument(commentRepresentation.getReferenceDocument());
+			} catch (ContentNodeBindingException e) {
+				String msg = "Unable to set reference document for comment \"" + commentRepresentation.getName() + "\".";
+				RepositoryException repoEx = new RepositoryException(msg, e);
+				throw repoEx;
+			}
         }
     }
     
