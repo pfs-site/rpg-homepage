@@ -53,7 +53,7 @@
       <artifactId>website-bootstrap-content</artifactId>
       <version>${project.version}</version>
     </dependency>
-
+    
     <!--  Gallery picker dependency -->
     <dependency>
       <groupId>org.onehippo.addon.frontend.gallerypicker</groupId>
@@ -65,6 +65,11 @@
         </exclusion>
       </exclusions>
     </dependency>
+    
+    <dependency>
+	  <groupId>org.onehippo.forge.repository-event-listener</groupId>
+	  <artifactId>repository-event-listener-repository</artifactId>
+	</dependency>
    
   </dependencies>
 
@@ -112,6 +117,23 @@
           </mappings>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.datanucleus</groupId>
+        <artifactId>maven-datanucleus-plugin</artifactId>
+        <configuration>
+            <api>JDO</api>
+            <verbose>true</verbose>
+            <fork>false</fork>
+        </configuration>
+        <executions>
+            <execution>
+                <phase>process-classes</phase>
+                <goals>
+                    <goal>enhance</goal>
+                </goals>
+            </execution>
+        </executions>
+    	</plugin>
     </plugins>
   </build>
 </project>

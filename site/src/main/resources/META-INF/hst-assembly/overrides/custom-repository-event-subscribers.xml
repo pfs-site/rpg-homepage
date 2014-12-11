@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <!-- Import the core repository event listener components configuration first! -->
+  <import resource="classpath:/org/onehippo/forge/repositoryeventlistener/hst/repository-event-listener.xml" />
+
+  <!--
+    Add your event subscriber beans inside 'customHstEventsSubscribers' list bean,
+    which is automatically picked up by the the core repository event listener components.
+  -->
+  <bean id="org.onehippo.forge.repositoryeventlistener.hst.events.customHstEventsSubscribers"
+        class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+
+        <!-- Add your event subscriber beans here! -->
+        <bean class="org.pfs.de.events.AkismetPublicationSubscriber"
+              parent="org.onehippo.forge.repositoryeventlistener.hst.events.BaseHippoEventSubscriber">
+          <!-- If you want to use Content Beans mapping, you need to set this annotated bean path pattern. -->
+          <property name="beansAnnotatedClasses" value="classpath*:org/pfs/de/events/**/*.class" />
+          <property name="hstQueryManagerFactory" ref="org.hippoecm.hst.core.search.HstQueryManagerFactory" />
+        </bean>
+
+      </list>
+    </property>
+  </bean>
+
+</beans>
+        

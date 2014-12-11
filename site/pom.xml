@@ -112,6 +112,11 @@
 	  <version>2.1</version>
 	  <scope>provided</scope>
 	</dependency>
+	
+	<dependency>
+	  <groupId>org.onehippo.forge.repository-event-listener</groupId>
+	  <artifactId>repository-event-listener-hst</artifactId>
+	</dependency>
 
   </dependencies>
 

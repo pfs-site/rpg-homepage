@@ -71,10 +71,14 @@
     <freemarker.version>2.3.18</freemarker.version>
     <slf4j.version>1.7.7</slf4j.version>
     <log4j.version>1.2.16</log4j.version>
+    <org.datanucleus.version>2.2.2</org.datanucleus.version>
+    <org.datanucleus.maven.version>2.2.1</org.datanucleus.maven.version>
      
     <filesync.override>false</filesync.override>
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
     <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+    
+    <forge.repository-event-listener.version>1.02.00</forge.repository-event-listener.version>
   </properties>
 
   <repositories>
@@ -173,6 +177,31 @@
         <artifactId>hst-jaxrs</artifactId>
         <version>${hippo.hst.version}</version>
       </dependency>
+      
+      <dependency>
+        <groupId>org.datanucleus</groupId>
+        <artifactId>maven-datanucleus-plugin</artifactId>
+        <version>${org.datanucleus.maven.version}</version>
+      </dependency>
+      
+     <dependency>
+	   	<groupId>org.datanucleus</groupId>
+	 	<artifactId>datanucleus-core</artifactId>
+	 	<version>${org.datanucleus.version}</version>
+	 	<scope>compile</scope>
+ 	 </dependency>
+      
+      <dependency>
+		  <groupId>org.onehippo.forge.repository-event-listener</groupId>
+		  <artifactId>repository-event-listener-repository</artifactId>
+		  <version>${forge.repository-event-listener.version}</version>
+	  </dependency>
+
+		<dependency>
+			<groupId>org.onehippo.forge.repository-event-listener</groupId>
+			<artifactId>repository-event-listener-hst</artifactId>
+			<version>${forge.repository-event-listener.version}</version>
+		</dependency>
     </dependencies>
   </dependencyManagement>
   
@@ -197,6 +226,33 @@
           </executions>
         </plugin>
         -->
+        <plugin>
+	        <groupId>org.datanucleus</groupId>
+	        <artifactId>maven-datanucleus-plugin</artifactId>
+	        <version>${org.datanucleus.maven.version}</version>
+	        <dependencies>
+			 	<dependency>
+				 	<groupId>org.datanucleus</groupId>
+				 	<artifactId>datanucleus-core</artifactId>
+				 	<version>${org.datanucleus.version}</version>
+			 	</dependency>
+			 	<dependency>
+				 	<groupId>javax.jcr</groupId>
+				 	<artifactId>jcr</artifactId>
+				 	<version>${javax.jcr.version}</version>
+			 	</dependency>
+			 	<dependency>
+				 	<groupId>org.onehippo.cms7</groupId>
+				 	<artifactId>hippo-repository-api</artifactId>
+				 	<version>${hippo.repository.version}</version>
+			 	</dependency>
+			 	<dependency>
+				 	<groupId>org.onehippo.cms7</groupId>
+				 	<artifactId>hippo-repository-builtin</artifactId>
+				 	<version>${hippo.repository.version}</version>
+			 	</dependency>
+		 	</dependencies>
+    	</plugin>
       </plugins>
     </pluginManagement>
     <plugins>
