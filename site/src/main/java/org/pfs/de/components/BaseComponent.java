@@ -2,7 +2,6 @@ package org.pfs.de.components;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import org.pfs.de.componentsinfo.GeneralListInfo;
 import org.pfs.de.componentsinfo.PageableListInfo;

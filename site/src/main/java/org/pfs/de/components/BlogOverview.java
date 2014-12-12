@@ -3,6 +3,7 @@ package org.pfs.de.components;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
+
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
@@ -37,7 +38,8 @@ public class BlogOverview extends BaseComponent {
 
     try {
      //Read all blog entries
-     HstQuery query = getQueryManager(request).createQuery(scope, BlogDocument.class);
+     @SuppressWarnings("unchecked")
+	 HstQuery query = getQueryManager(request).createQuery(scope, BlogDocument.class);
      query.addOrderByDescending("hippostdpubwf:publicationDate");
      HstQueryResult result = query.execute();
      

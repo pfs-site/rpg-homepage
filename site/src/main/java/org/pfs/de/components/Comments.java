@@ -44,7 +44,8 @@ public class Comments extends BaseComponent {
 
     try {
         //Read comments for the selected document
-        HstQuery query = getQueryManager(request).createQuery(getSiteContentBaseBean(request), CommentDocument.class);
+        @SuppressWarnings("unchecked")
+		HstQuery query = getQueryManager(request).createQuery(getSiteContentBaseBean(request), CommentDocument.class);
         query.addOrderByDescending("hippostdpubwf:publicationDate");
         Filter filter = query.createFilter();
          

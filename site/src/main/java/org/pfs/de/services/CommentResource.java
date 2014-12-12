@@ -4,8 +4,6 @@
  */
 package org.pfs.de.services;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
@@ -39,8 +37,6 @@ public class CommentResource extends BaseResource {
     @Path("/{commentId}")
     public CommentDocumentRepresentation getComment(@Context HttpServletRequest servletRequest, @Context HttpServletResponse servletResponse,
             @Context UriInfo uriInfo, @PathParam("commentId") String commentId) {
-
-        List<CommentDocumentRepresentation> comments = new ArrayList<CommentDocumentRepresentation>();
 
         try {
             CommentDocument comment = getDocumentById(servletRequest, CommentDocument.class, commentId);

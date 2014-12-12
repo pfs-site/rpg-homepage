@@ -23,7 +23,6 @@ import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
-import org.hippoecm.hst.content.beans.standard.HippoDocument;
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.jaxrs.services.AbstractResource;
@@ -87,7 +86,8 @@ public abstract class BaseResource extends AbstractResource {
      * @throws RepositoryException An error occurred retrieving the document
      * from the repository.
      */
-    protected <T> T getDocumentById(HttpServletRequest servletRequest, Class<T> documentClass, String documentId) throws RepositoryException, ObjectBeanManagerException {
+    @SuppressWarnings("unchecked")
+	protected <T> T getDocumentById(HttpServletRequest servletRequest, Class<T> documentClass, String documentId) throws RepositoryException, ObjectBeanManagerException {
         if (documentId == null) {
             return null;
         }
@@ -129,7 +129,8 @@ public abstract class BaseResource extends AbstractResource {
         Node mountContentNode = requestContext.getSession().getRootNode().getNode(PathUtils.normalizePath(mountContentPath));
 
         //Create and execute query
-        HstQuery hstQuery = hstQueryManager.createQuery(mountContentNode, CommentDocument.class);
+        @SuppressWarnings("unchecked")
+		HstQuery hstQuery = hstQueryManager.createQuery(mountContentNode, CommentDocument.class);
         Filter filter = hstQuery.createFilter();
         filter.addEqualTo("website:reference/@hippo:docbase", documentId.toLowerCase());
         hstQuery.setFilter(filter);
@@ -236,7 +237,8 @@ public abstract class BaseResource extends AbstractResource {
      * @throws ObjectBeanManagerException Error getting the bean manager.
      * @throws RepositoryException Error storing the data.
      */
-    protected <T extends BaseDocument> T createNewDocument(HttpServletRequest request, 
+    @SuppressWarnings("unchecked")
+	protected <T extends BaseDocument> T createNewDocument(HttpServletRequest request, 
     														String path, 
     														String documentType, 
     														String name, 
@@ -269,10 +271,6 @@ public abstract class BaseResource extends AbstractResource {
         	}
         }
         
-        String tmp1 = ((CommentDocument)document).getAuthor();
-        String tmp2 = ((CommentDocument)document).getText();
-        HippoDocument tmp3 = ((CommentDocument)document).getReferencedDocument();
-        if(tmp3 != null) { String tmp4 = tmp3.getName(); }
         persistanceManager.save();
 
         //Read back complete bean instance for return
