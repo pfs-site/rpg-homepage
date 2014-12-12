@@ -16,7 +16,7 @@
       <list>
 
         <!-- Add your event subscriber beans here! -->
-        <bean class="org.pfs.de.events.AkismetPublicationSubscriber"
+        <bean class="org.pfs.de.events.AutomaticPublicationSubscriber"
               parent="org.onehippo.forge.repositoryeventlistener.hst.events.BaseHippoEventSubscriber">
           <!-- If you want to use Content Beans mapping, you need to set this annotated bean path pattern. -->
           <property name="beansAnnotatedClasses" value="classpath*:org/pfs/de/**/*.class" />

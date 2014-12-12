@@ -34,8 +34,8 @@ import org.pfs.de.akismet.AkismetConfiguration;
 import org.pfs.de.akismet.AkismetException;
 import org.pfs.de.beans.BaseDocument;
 import org.pfs.de.beans.CommentDocument;
-import org.pfs.de.events.AkismetPublicationSubscriber;
-import org.pfs.de.events.AkismetPublicationSubscriber.PublishAction;
+import org.pfs.de.events.AutomaticPublicationSubscriber;
+import org.pfs.de.events.AutomaticPublicationSubscriber.PublishAction;
 import org.pfs.de.services.model.BaseDocumentRepresentation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -362,13 +362,13 @@ public abstract class BaseResource extends AbstractResource {
 				}
 			}
 			//Set desired action on the document handle (parent node of current document)
-			AkismetPublicationSubscriber.setAutoPublishAction(getRequestContext(request).getSession().getNodeByIdentifier(document.getCanonicalHandleUUID()), action);
+			AutomaticPublicationSubscriber.setAutoPublishAction(getRequestContext(request).getSession().getNodeByIdentifier(document.getCanonicalHandleUUID()), action);
 			
 			return true;
 			
 		} catch (AkismetException e) {
 			log.error("Akismet check failed", e);
-			AkismetPublicationSubscriber.setAutoPublishAction(document.getNode(), PublishAction.IGNORE);
+			AutomaticPublicationSubscriber.setAutoPublishAction(document.getNode(), PublishAction.IGNORE);
 			return true;
 		}
     }

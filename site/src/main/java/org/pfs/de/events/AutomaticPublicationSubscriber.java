@@ -23,7 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Event subscriber for automatic spam check and publishing.
+ * Event subscriber for automatic publishing.
  * 
  * <p>This subscriber requires the 
  * <a href="http://repo_event_list.forge.onehippo.org">Repository Event Listener</a>
@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
  * @author Martin Dreier <martin@martindreier.de>
  *
  */
-public class AkismetPublicationSubscriber extends BaseHippoEventSubscriber {
+public class AutomaticPublicationSubscriber extends BaseHippoEventSubscriber {
 
 	/**
 	 * Node type for automatic publishing configuration.
@@ -56,7 +56,7 @@ public class AkismetPublicationSubscriber extends BaseHippoEventSubscriber {
 	/**
 	 * Enum constants for possible actions. The {@link String} values must be
 	 * used as the attribute value for the node property 
-	 * {@link AkismetPublicationSubscriber#PROP_PUBLISH_ACTION}.
+	 * {@link AutomaticPublicationSubscriber#PROP_PUBLISH_ACTION}.
 	 * 
 	 * @author Martin Dreier <martin@martindreier.de>
 	 *
@@ -66,7 +66,7 @@ public class AkismetPublicationSubscriber extends BaseHippoEventSubscriber {
 		
 		/**
 		 * Value of the action. This is the value of the node property 
-		 * {@link AkismetPublicationSubscriber#PROP_PUBLISH_ACTION}.
+		 * {@link AutomaticPublicationSubscriber#PROP_PUBLISH_ACTION}.
 		 */
 		private String value;
 
@@ -98,14 +98,14 @@ public class AkismetPublicationSubscriber extends BaseHippoEventSubscriber {
 	/**
 	 * Logger instance.
 	 */
-	private static final Logger log = LoggerFactory.getLogger(AkismetPublicationSubscriber.class);
+	private static final Logger log = LoggerFactory.getLogger(AutomaticPublicationSubscriber.class);
 	
 	/**
 	 * @see org.onehippo.forge.repositoryeventlistener.hst.hippo.HippoEventSubscriber#getName()
 	 */
 	@Override
 	public String getName() {
-		return AkismetPublicationSubscriber.class.getName();
+		return AutomaticPublicationSubscriber.class.getName();
 	}
 
 	/**
@@ -218,7 +218,7 @@ public class AkismetPublicationSubscriber extends BaseHippoEventSubscriber {
 	 * @throws RepositoryException General error.
 	 */
 	protected boolean ignoreNode(Node documentHandle) throws RepositoryException {
-		return AkismetPublicationSubscriber.setAutoPublishAction(documentHandle, PublishAction.IGNORE);
+		return AutomaticPublicationSubscriber.setAutoPublishAction(documentHandle, PublishAction.IGNORE);
 	}
 	
 	/**
