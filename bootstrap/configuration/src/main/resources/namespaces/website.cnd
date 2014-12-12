@@ -19,9 +19,16 @@
 [website:textdocument] > hippostd:relaxed, website:basedocument
   orderable
 
-[website:akismetpublish]
+[website:akismetcheck]
   orderable mixin
-  - website:akismetAction (string)
+  - website:akismetApiKey (string)
+  - website:akismetHamAction (string)
+    < 'publish', 'request'
+  - website:akismetSpamAction (string)
+    < 'ignore', 'reject'
+  
+[website:autopublish]
+  orderable mixin
+  - website:publishAction (string)
   = 'ignore'
     < 'publish', 'request', 'ignore'
-  - website:akismetApiKey (string)

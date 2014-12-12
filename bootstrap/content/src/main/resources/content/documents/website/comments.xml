@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="comments" h:merge="combine">
-  <sv:property sv:name="website:akismetAction" sv:type="String">
-    <sv:value>publish</sv:value>
-  </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" h:merge="override" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
     <sv:value>hippo:harddocument</sv:value>
-    <sv:value>website:akismetpublish</sv:value>
+    <sv:value>website:akismetcheck</sv:value>
     <sv:value>hippo:translated</sv:value>
+  </sv:property>
+  <sv:property sv:name="website:akismetHamAction" sv:type="String">
+    <sv:value>publish</sv:value>
   </sv:property>
   <sv:node sv:name="comment-1">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">

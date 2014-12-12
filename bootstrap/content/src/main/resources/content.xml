@@ -4,7 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippo:harddocument</sv:value>
-    <sv:value>website:akismetpublish</sv:value>
+    <sv:value>website:autopublish</sv:value>
+    <sv:value>website:akismetcheck</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>d864415f-3a1a-488e-b794-efd88358c5ba</sv:value>
@@ -14,7 +15,7 @@
     <sv:value>new-document</sv:value>
     <sv:value>new-folder</sv:value>
   </sv:property>
-  <sv:property sv:name="website:akismetAction" sv:type="String">
+  <sv:property sv:name="website:publishAction" sv:type="String">
     <sv:value>ignore</sv:value>
   </sv:property>
   <sv:property sv:name="website:akismetApiKey" sv:type="String">

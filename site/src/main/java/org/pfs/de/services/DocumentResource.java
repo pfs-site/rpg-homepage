@@ -28,6 +28,8 @@ import org.hippoecm.hst.content.annotations.Persistable;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.standard.HippoDocument;
+import org.hippoecm.hst.core.linking.HstLink;
+import org.pfs.de.akismet.AkismetCommentData;
 import org.pfs.de.beans.BaseDocument;
 import org.pfs.de.beans.BlogDocument;
 import org.pfs.de.beans.CommentDocument;
@@ -40,7 +42,7 @@ import org.pfs.de.services.model.CommentDocumentRepresentation;
  */
 
 @Path("/documents/")
-public class DocumentResource extends BaseResource {
+public class DocumentResource extends BaseResource implements BaseResource.AkismetConversionCallback<CommentDocument>{
     
     /**
      * Get a single document. As this service is not (yet) provided, this method
@@ -226,12 +228,43 @@ public class DocumentResource extends BaseResource {
             
             commentRepresentation.setReferenceDocument(document);
             
-            CommentDocument newComment = createNewDocument(servletRequest, "/comments", "website:commentdocument", name, commentRepresentation);
-            return new CommentDocumentRepresentation(getRequestContext(servletRequest), getContentRewriter()).represent(newComment);
+            CommentDocument newComment = createNewDocument(servletRequest, "/comments", "website:commentdocument", name, commentRepresentation, this);
+            if (newComment == null) {
+            	servletResponse.sendError(400, "Comment not accepted");
+            	return null;
+            } else {
+            	return new CommentDocumentRepresentation(getRequestContext(servletRequest), getContentRewriter()).represent(newComment);
+            }
 
         } catch (Exception e) {
             throw new WebApplicationException(e);
         }
 
     }
+    
+    /**
+     * Read data from comment and store in Aksimet data structure.
+     * @see AkismetConversionCallback#convert(org.pfs.de.beans.BaseDocument)
+     */
+	@Override
+	public AkismetCommentData convert(HttpServletRequest request, CommentDocument comment) {
+		AkismetCommentData data = new AkismetCommentData();
+		data.setAuthorName(comment.getAuthor());
+		data.setCommentDate(comment.getDate());
+		data.setIdentifier(comment.getIdentifier());
+		data.setAuthorUrl(comment.getLink());
+		data.setCommentContent(comment.getText());
+		data.setBlogUrl(getRequestContext(request).getResolvedMount().getResolvedVirtualHost().getVirtualHost().getHomePage());
+		if (comment.getReferencedDocument() != null) {
+			HippoDocument refDoc = comment.getReferencedDocument();
+			if (refDoc instanceof BlogDocument) {
+				data.setDocumentDate(((BlogDocument) refDoc).getDate());
+			}
+			HstLink refLink = getRequestContext(request).getHstLinkCreator().create(refDoc, getRequestContext(request));
+			if (refLink != null) {
+				data.setPermalink(refLink.toUrlForm(getRequestContext(request), true));
+			}
+		}
+		return data;
+	}
 }

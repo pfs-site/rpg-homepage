@@ -28,10 +28,20 @@ import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.jaxrs.services.AbstractResource;
 import org.hippoecm.hst.util.PathUtils;
+import org.pfs.de.akismet.AkismetCheckResult;
+import org.pfs.de.akismet.AkismetClient;
+import org.pfs.de.akismet.AkismetCommentData;
+import org.pfs.de.akismet.AkismetConfiguration;
+import org.pfs.de.akismet.AkismetException;
 import org.pfs.de.beans.BaseDocument;
-import org.pfs.de.beans.BlogDocument;
 import org.pfs.de.beans.CommentDocument;
+import org.pfs.de.events.AkismetPublicationSubscriber;
+import org.pfs.de.events.AkismetPublicationSubscriber.PublishAction;
 import org.pfs.de.services.model.BaseDocumentRepresentation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.net.HttpHeaders;
 
 /**
  * Base class for REST-based services. Provides utility methods to read
@@ -41,6 +51,27 @@ import org.pfs.de.services.model.BaseDocumentRepresentation;
  */
 public abstract class BaseResource extends AbstractResource {
 
+	/**
+	 * Read data required for an Akismet comment check from a document.
+	 * @author Martin Dreier <martin@martindreier.de>
+	 *
+	 * @param <T> The document type.
+	 */
+	protected interface AkismetConversionCallback<T extends BaseDocument> {
+		/**
+		 * Convert document into Akismet data.
+		 * @param servletRequest The current request.
+		 * @param document The document.
+		 * @return Akismet data.
+		 */
+		public AkismetCommentData convert(HttpServletRequest servletRequest, T document);
+	}
+	
+	/**
+	 * Logging instance.
+	 */
+	private static Logger log = LoggerFactory.getLogger(BaseResource.class);
+	
     /**
      * Retrieve a document by its ID.
      *
@@ -183,6 +214,36 @@ public abstract class BaseResource extends AbstractResource {
     														BaseDocumentRepresentation representation) 
     																throws ObjectBeanManagerException, 
     																	RepositoryException {
+    	return createNewDocument(request, path, documentType, name, representation, null);
+    }
+    
+    /**
+     * Create a new document. This method <em>must</em> be called from a
+     * method annotated with {@link Persistable @Persistable} to ensure that
+     * a writable session is used.
+     * @param <T> The type of the document which is created. This type must
+     * be annotated with {@link Node @Node(jcrType="type")}, where type is the
+     * same type as set in the parameter <code>documentType</code>.
+     * @param request Request object.
+     * @param path Path in the repository where the new document is stored.
+     * @param documentType The type of the document being created. This document
+     * type must be represented by the bean class <code>T</code>.
+     * @param name The name of the new document.
+     * @param representation The document representation holding the data.
+     * @param akismetCallback Callback instance which can read data for an Akismet spam
+     * check from the new document.
+     * @return The new document.
+     * @throws ObjectBeanManagerException Error getting the bean manager.
+     * @throws RepositoryException Error storing the data.
+     */
+    protected <T extends BaseDocument> T createNewDocument(HttpServletRequest request, 
+    														String path, 
+    														String documentType, 
+    														String name, 
+    														BaseDocumentRepresentation representation,
+    														AkismetConversionCallback<T> akismetCallback) 
+    																throws ObjectBeanManagerException, 
+    																	RepositoryException {
     	
         HstRequestContext requestContext = getRequestContext(request);
         WorkflowPersistenceManager persistanceManager = (WorkflowPersistenceManager) getPersistenceManager(requestContext);
@@ -199,6 +260,15 @@ public abstract class BaseResource extends AbstractResource {
 
         //Save bean in repository
         persistanceManager.update(document);
+        
+        //Check for spam
+        if (akismetCallback != null) {
+        	boolean continueProcessing = checkForSpam(request, document, akismetCallback.convert(request, document));
+        	if (!continueProcessing) {
+        		return null;
+        	}
+        }
+        
         String tmp1 = ((CommentDocument)document).getAuthor();
         String tmp2 = ((CommentDocument)document).getText();
         HippoDocument tmp3 = ((CommentDocument)document).getReferencedDocument();
@@ -207,5 +277,101 @@ public abstract class BaseResource extends AbstractResource {
 
         //Read back complete bean instance for return
         return (T) persistanceManager.getObject(beanPath);
+    }
+
+    /**
+     * Check a comment for spam. The document will be marked with the correct action. If an error occurred,
+     * it will be marked as {@link PublishAction#IGNORE ignore}.
+     * @param request HTTP request.
+     * @param document The checked document.
+     * @param commentData Data of the comment.
+     * @return Indicator if processing should be continued. If <code>false</code>, comment was rejected
+     * and should not be saved. If <code>true</code>, comment can be saved. 
+     * @throws RepositoryException
+     */
+    protected boolean checkForSpam(HttpServletRequest request, BaseDocument document, AkismetCommentData commentData) throws RepositoryException {
+    	//Read configuration from repository
+    	AkismetConfiguration configuration = AkismetConfiguration.readConfiguration(getRequestContext(request).getSession(), document.getNode());
+    	if (!configuration.isComplete()) {
+    		//Incomplete configuration
+    		log.warn("Akismet configuration is incomplete for document {}", commentData.getIdentifier());
+    		return true;
+    	}
+    	PublishAction hamAction = PublishAction.getAction(configuration.hamAction);
+    	if (hamAction == null) {
+    		log.error("Invalid Akismet ham actions: {} ", configuration.hamAction);
+    		return true;
+    	}
+    	
+    	//Complete comment data
+    	commentData.setIdentifier(document.getIdentifier());
+    	commentData.setUserIp(request.getRemoteAddr());
+    	commentData.setUserAgent(request.getHeader(HttpHeaders.USER_AGENT));
+    	
+    	//Create client and check key
+    	try {
+    		PublishAction action;
+			AkismetClient client = new AkismetClient(configuration.apiKey);
+			if (!client.checkApiKey()) {
+				log.error("Akismet API key is incorrect");
+				action = PublishAction.IGNORE;
+			} else {
+				//Check comment
+				AkismetCheckResult result = client.checkComment(commentData);
+				if (result.isError()) {
+					log.error("Akismet spam check failed for comment {}", commentData.getIdentifier());
+					if (log.isDebugEnabled() && result.getAdditionalInformation().containsKey(AkismetCheckResult.INFO_DEBUG)) {
+						//Write additional debug information
+						log.debug("Error from Akismet server {}: {}", 
+								result.getAdditionalInformation().get(AkismetCheckResult.INFO_SERVER),
+								result.getAdditionalInformation().get(AkismetCheckResult.INFO_DEBUG));
+					}
+					return true;
+				}
+				
+				//Process result
+				switch (result.getResult()) {
+				case HAM:
+					action = hamAction;
+					break;
+				case SPAM:
+				{
+					if (configuration.spamAction == null) {
+						//Default to ignore if not configured
+						action = PublishAction.IGNORE;
+					} else if (configuration.spamAction.equals(AkismetConfiguration.PROP_VALUE_SPAM_ACTION_REJECT)) {
+						//Reject spam comment
+						return false;
+					} else {
+						PublishAction spamAction = PublishAction.getAction(configuration.spamAction);
+						if (spamAction == null) {
+							log.error("Invalid Akismet spam action: {} ; defaulting to ignore", configuration.hamAction);
+							action =  PublishAction.IGNORE;
+						} else {
+							action = spamAction;
+						}
+					}
+					break;
+				}
+				case INVALID:
+					//We should never reach this block, because errors are handled before (in block if (result.isError())...)
+					// However, handle this situation gracefully in case of future changes influencing this behavior
+					log.error("Akismet spam check failed for comment {}", commentData.getIdentifier());
+					action = PublishAction.IGNORE;
+				default:
+					log.error("Akismet spam check returned unknown result type {}", result.getResult());
+					action = PublishAction.IGNORE;
+				}
+			}
+			//Set desired action on the document handle (parent node of current document)
+			AkismetPublicationSubscriber.setAutoPublishAction(getRequestContext(request).getSession().getNodeByIdentifier(document.getCanonicalHandleUUID()), action);
+			
+			return true;
+			
+		} catch (AkismetException e) {
+			log.error("Akismet check failed", e);
+			AkismetPublicationSubscriber.setAutoPublishAction(document.getNode(), PublishAction.IGNORE);
+			return true;
+		}
     }
 }

@@ -19,7 +19,7 @@
         <bean class="org.pfs.de.events.AkismetPublicationSubscriber"
               parent="org.onehippo.forge.repositoryeventlistener.hst.events.BaseHippoEventSubscriber">
           <!-- If you want to use Content Beans mapping, you need to set this annotated bean path pattern. -->
-          <property name="beansAnnotatedClasses" value="classpath*:org/pfs/de/events/**/*.class" />
+          <property name="beansAnnotatedClasses" value="classpath*:org/pfs/de/**/*.class" />
           <property name="hstQueryManagerFactory" ref="org.hippoecm.hst.core.search.HstQueryManagerFactory" />
         </bean>
 
