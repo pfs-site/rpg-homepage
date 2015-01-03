@@ -12,6 +12,7 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.servlet.http.HttpServletRequest;
 
+import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.annotations.Persistable;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.manager.ObjectBeanManager;
@@ -24,6 +25,7 @@ import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
+import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.jaxrs.services.AbstractResource;
 import org.hippoecm.hst.util.PathUtils;
@@ -312,7 +314,11 @@ public abstract class BaseResource extends AbstractResource {
     	//Create client and check key
     	try {
     		PublishAction action;
-			AkismetClient client = new AkismetClient(configuration.apiKey);
+    		//Current context is REST API, links must be created relative to the main site (root mount)
+    		Mount rootMount = getRequestContext(request).getResolvedMount().getMount().getParent();
+    		//Site home page
+    		HstLink homepageLink = getRequestContext(request).getHstLinkCreator().create(rootMount.getHomePage(), rootMount);
+			AkismetClient client = new AkismetClient(configuration.apiKey, homepageLink.toUrlForm(getRequestContext(request), true));
 			if (!client.checkApiKey()) {
 				log.error("Akismet API key is incorrect");
 				action = PublishAction.IGNORE;

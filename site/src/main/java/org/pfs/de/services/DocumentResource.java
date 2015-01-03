@@ -32,6 +32,7 @@ import org.hippoecm.hst.content.beans.standard.HippoDocument;
 import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.linking.HstLinkCreator;
 import org.pfs.de.akismet.AkismetCommentData;
+import org.pfs.de.akismet.AkismetCommentType;
 import org.pfs.de.beans.BaseDocument;
 import org.pfs.de.beans.BlogDocument;
 import org.pfs.de.beans.CommentDocument;
@@ -258,6 +259,7 @@ public class DocumentResource extends BaseResource implements BaseResource.Akism
 		data.setIdentifier(comment.getIdentifier());
 		data.setAuthorUrl(comment.getLink());
 		data.setCommentContent(comment.getText());
+		data.setCommentType(AkismetCommentType.COMMENT);
 		//Create links
 		HstLinkCreator linkCreator = getRequestContext(request).getHstLinkCreator();
 		//Current context is REST API, links must be created relative to the main site (root mount)
