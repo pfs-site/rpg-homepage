@@ -35,6 +35,17 @@ public class AkismetCheckResult {
 	public static final String INFO_DEBUG = "X-akismet-debug-help";
 	
 	/**
+	 * Additional information field: Recommended action.
+	 */
+	public static final String INFO_RECOMMENDATION = "X-akismet-pro-tip";
+	
+	/**
+	 * The field {@link #INFO_RECOMMENDATION} is set to this value if the
+	 * comment should be directly discarded.
+	 */
+	public static final String INFO_RECOMMENDATION_DISCARD = "discard";
+	
+	/**
 	 * Additional information returned by the Akismet server.
 	 */
 	private Map<String, String> additionalInformation;
