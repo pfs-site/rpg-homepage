@@ -61,9 +61,11 @@ public abstract class BaseResource extends AbstractResource {
 		 * Convert document into Akismet data.
 		 * @param servletRequest The current request.
 		 * @param document The document.
+		 * @param representation Document representation. Use instead of document bean because bean does not have
+		 * reference to document before save.
 		 * @return Akismet data.
 		 */
-		public AkismetCommentData convert(HttpServletRequest servletRequest, T document);
+		public AkismetCommentData convert(HttpServletRequest servletRequest, T document, BaseDocumentRepresentation representation);
 	}
 	
 	/**
@@ -265,7 +267,7 @@ public abstract class BaseResource extends AbstractResource {
         
         //Check for spam
         if (akismetCallback != null) {
-        	boolean continueProcessing = checkForSpam(request, document, akismetCallback.convert(request, document));
+        	boolean continueProcessing = checkForSpam(request, document, akismetCallback.convert(request, document, representation));
         	if (!continueProcessing) {
         		return null;
         	}

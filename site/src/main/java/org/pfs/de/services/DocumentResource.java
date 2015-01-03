@@ -24,15 +24,18 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 
+import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.annotations.Persistable;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.standard.HippoDocument;
 import org.hippoecm.hst.core.linking.HstLink;
+import org.hippoecm.hst.core.linking.HstLinkCreator;
 import org.pfs.de.akismet.AkismetCommentData;
 import org.pfs.de.beans.BaseDocument;
 import org.pfs.de.beans.BlogDocument;
 import org.pfs.de.beans.CommentDocument;
+import org.pfs.de.services.model.BaseDocumentRepresentation;
 import org.pfs.de.services.model.CommentDocumentRepresentation;
 
 /**
@@ -243,28 +246,37 @@ public class DocumentResource extends BaseResource implements BaseResource.Akism
     }
     
     /**
-     * Read data from comment and store in Aksimet data structure.
+     * Read data from comment and store in Akismet data structure.
      * @see AkismetConversionCallback#convert(org.pfs.de.beans.BaseDocument)
      */
 	@Override
-	public AkismetCommentData convert(HttpServletRequest request, CommentDocument comment) {
+	public AkismetCommentData convert(HttpServletRequest request, CommentDocument comment, BaseDocumentRepresentation representation) {
+		//Set Akismet comment data from document data
 		AkismetCommentData data = new AkismetCommentData();
 		data.setAuthorName(comment.getAuthor());
 		data.setCommentDate(comment.getDate());
 		data.setIdentifier(comment.getIdentifier());
 		data.setAuthorUrl(comment.getLink());
 		data.setCommentContent(comment.getText());
-		data.setBlogUrl(getRequestContext(request).getResolvedMount().getResolvedVirtualHost().getVirtualHost().getHomePage());
-		if (comment.getReferencedDocument() != null) {
-			HippoDocument refDoc = comment.getReferencedDocument();
+		//Create links
+		HstLinkCreator linkCreator = getRequestContext(request).getHstLinkCreator();
+		//Current context is REST API, links must be created relative to the main site (root mount)
+		Mount rootMount = getRequestContext(request).getResolvedMount().getMount().getParent();
+		//Site home page
+		HstLink homepageLink = linkCreator.create(rootMount.getHomePage(), rootMount);
+		data.setBlogUrl(homepageLink.toUrlForm(getRequestContext(request), true));
+		//Reference document (in case of comment
+		if (representation instanceof CommentDocumentRepresentation && ((CommentDocumentRepresentation)representation).getReferenceDocument() != null) {
+			HippoDocument refDoc = ((CommentDocumentRepresentation)representation).getReferenceDocument();
 			if (refDoc instanceof BlogDocument) {
 				data.setDocumentDate(((BlogDocument) refDoc).getDate());
 			}
-			HstLink refLink = getRequestContext(request).getHstLinkCreator().create(refDoc, getRequestContext(request));
+			HstLink refLink = linkCreator.create(refDoc.getNode(), rootMount);
 			if (refLink != null) {
 				data.setPermalink(refLink.toUrlForm(getRequestContext(request), true));
 			}
 		}
 		return data;
 	}
+	
 }
