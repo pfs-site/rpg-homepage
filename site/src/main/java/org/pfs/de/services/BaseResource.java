@@ -307,6 +307,7 @@ public abstract class BaseResource extends AbstractResource {
     	commentData.setIdentifier(document.getIdentifier());
     	commentData.setUserIp(request.getRemoteAddr());
     	commentData.setUserAgent(request.getHeader(HttpHeaders.USER_AGENT));
+    	commentData.setReferrer(request.getHeader(HttpHeaders.REFERER));
     	
     	//Create client and check key
     	try {
