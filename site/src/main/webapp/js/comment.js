@@ -18,7 +18,7 @@ function addComment(commentData) {
 	var date = $('<p>', {
 		'class': 'badge badge-info'
 	});
-	date.text(commentData.date);
+	date.text(new Date(commentData.date).toLocaleString());
 	newComment.append(date);
 	
 	//Link
