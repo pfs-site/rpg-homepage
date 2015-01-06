@@ -3,8 +3,15 @@
  */
 package org.pfs.de.akismet;
 
+import java.text.MessageFormat;
 import java.util.Collections;
 import java.util.Map;
+
+import javax.jcr.Node;
+import javax.jcr.RepositoryException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Result of an Akismet spam check.
@@ -23,6 +30,21 @@ public class AkismetCheckResult {
 	public static enum ResultType {
 		SPAM, HAM, INVALID
 	}
+	
+	/**
+	 * JCR mixin node type: Akismet check result.
+	 */
+	private static final String NODE_TYPE_CHECK_RESULT = "website:akismetcheckresult";
+	
+	/**
+	 * JCR node property: Akismet check result.
+	 */
+	private static final String NODE_PROEPRTY_CHECK_RESULT = "website:akismetCheckResult";
+	
+	/**
+	 * Log instance.
+	 */
+	private static final Logger log = LoggerFactory.getLogger(AkismetCheckResult.class);
 	
 	/**
 	 * Additional information field: Akismet Server IP.
@@ -95,5 +117,42 @@ public class AkismetCheckResult {
 	 */
 	public ResultType getResult() {
 		return result;
+	}
+	
+	/**
+	 * Save the check result to a JCR node.
+	 * @param targetNode The target node.
+	 * @return <code>true</code> if the node was updated successfully, 
+	 * <code>false</code> if an error occurred. Error information is 
+	 * written to the log.
+	 */
+	public boolean save(Node targetNode) {
+		if (targetNode == null) {
+			log.error("Node is null");
+			return false;
+		}
+		try {
+			if (!targetNode.isNodeType(NODE_TYPE_CHECK_RESULT)) {
+				targetNode.addMixin(NODE_TYPE_CHECK_RESULT);
+			}
+		} catch (RepositoryException e) {
+			try {
+				log.error(MessageFormat.format("Cannot add Akismet Check Result node type to node {}", targetNode.getIdentifier()));
+			} catch (RepositoryException e1) {
+				log.error("Error reporting error", e);
+			}
+			return false;
+		}
+		try {
+			targetNode.setProperty(NODE_PROEPRTY_CHECK_RESULT, result.name().toLowerCase());
+			return true;
+		} catch (RepositoryException e) {
+			try {
+				log.error(MessageFormat.format("Cannot store Akismet Check Result on node {}", targetNode.getIdentifier()));
+			} catch (RepositoryException e1) {
+				log.error("Error reporting error", e);
+			}
+			return false;
+		}
 	}
 }

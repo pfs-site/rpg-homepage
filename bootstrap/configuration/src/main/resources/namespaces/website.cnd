@@ -19,6 +19,11 @@
 [website:textdocument] > hippostd:relaxed, website:basedocument
   orderable
 
+[website:akismetcheckresult]
+  orderable mixin
+  - website:akismetCheckResult (string)
+    < 'ham', 'spam', 'invalid'
+
 [website:akismetcheck]
   orderable mixin
   - website:akismetApiKey (string)

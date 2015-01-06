@@ -325,6 +325,7 @@ public abstract class BaseResource extends AbstractResource {
 			} else {
 				//Check comment
 				AkismetCheckResult result = client.checkComment(commentData);
+				result.save(document.getNode());
 				if (result.isError()) {
 					log.error("Akismet spam check failed for comment {}", commentData.getIdentifier());
 					if (log.isDebugEnabled() && result.getAdditionalInformation().containsKey(AkismetCheckResult.INFO_DEBUG)) {
