@@ -119,7 +119,6 @@ public class AkismetRestClient implements AkismetApi {
 	 */
 	protected void setVariableValues(Map<String, String> variableData,
 			AkismetCommentData commentData) {
-		// TODO: Implement more null checks on data
 		SimpleDateFormat dateFormat = new SimpleDateFormat(
 				"yyyy-dd-MM'T'HH-mm-ss'Z'");
 		setValueIfPresent(variableData, AkismetUrlParameters.AUTHOR_NAME,
@@ -137,7 +136,7 @@ public class AkismetRestClient implements AkismetApi {
 				dateFormat.format(commentData.getCommentDate() == null ? new Date()
 						: commentData.getCommentDate()));
 		setValueIfPresent(variableData, AkismetUrlParameters.COMMENT_TYPE,
-				commentData.getCommentType().getType());
+				commentData.getCommentType() == null ? null : commentData.getCommentType().getType());
 		setValueIfPresent(variableData, AkismetUrlParameters.CONTENT,
 				commentData.getCommentContent());
 		setValueIfPresent(variableData, AkismetUrlParameters.LANGUAGE,
@@ -161,7 +160,7 @@ public class AkismetRestClient implements AkismetApi {
 	/**
 	 * Set a value in a map if the value is not empty. This method also ensures
 	 * the value is properly encoded for transmission as a URL parameter. If the
-	 * value is empty, adds a blank string as the value to the map.
+	 * value is empty (<code>null</code>), the map is not changed.
 	 * 
 	 * @param variableData
 	 *            The target map.
