@@ -3,6 +3,10 @@
  */
 package org.pfs.de.akismet;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.pfs.de.akismet.rest.AkismetApi;
 import org.pfs.de.akismet.rest.AkismetRestClient;
 import org.pfs.de.akismet.rest.AkismetUrls;
@@ -42,6 +46,14 @@ public class AkismetClient {
 	private AkismetApi client;
 	
 	/**
+	 * Cache keys verified by the API. This prevents additional calls to the API
+	 * if the key has been previously verified. Keys where the verification failed are
+	 * not saved in case the verification failed for temporary reasons (e.g. network
+	 * issue, server downtime).
+	 */
+	private static Set<String> verifiedKeys = Collections.synchronizedSet(new HashSet<String>());
+	
+	/**
 	 * This constructor is strictly intended to be used for testing. It allows
 	 * injection of a test API implementing the {@link AkismetApi} interface.
 	 * @param api The API instance.
@@ -76,7 +88,16 @@ public class AkismetClient {
 	 * @throws AkismetException
 	 */
 	public boolean checkApiKey() throws AkismetException {
-		return client.checkApiKey(apiKey, homepage);
+		if (verifiedKeys.contains(apiKey)) {
+			//Previous check successful
+			return true;
+		}
+		boolean checkResult = client.checkApiKey(apiKey, homepage);
+		if (checkResult == true) {
+			//Cache successful check result
+			verifiedKeys.add(apiKey);
+		}
+		return checkResult;
 	}
 	
 	/**
