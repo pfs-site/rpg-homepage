@@ -55,7 +55,10 @@
   -->
   <context-param>
     <param-name>hst-beans-annotated-classes</param-name>
-    <param-value>classpath*:org/pfs/de/beans/**/*.class</param-value>
+    <param-value>
+    	classpath*:org/pfs/de/beans/**/*.class,
+        classpath*:org/onehippo/forge/feed/**/*.class
+    </param-value>
   </context-param>
 
   <filter>
