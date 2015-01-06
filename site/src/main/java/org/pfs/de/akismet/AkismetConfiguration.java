@@ -36,7 +36,11 @@ public class AkismetConfiguration {
 	 * Property value: Reject spam comments.
 	 */
 	public static final String PROP_VALUE_SPAM_ACTION_REJECT = "reject";
-
+	
+	/**
+	 * Property value: Reject spam comments.
+	 */
+	public static final String PROP_VALUE_SPAM_ACTION_RECOMMEND = "recommendation";
 	
 	/**
 	 * Akismet API key.

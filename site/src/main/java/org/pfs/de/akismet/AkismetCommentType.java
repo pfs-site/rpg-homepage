@@ -66,7 +66,7 @@ public enum AkismetCommentType {
 	 * Get the comment type.
 	 * @return
 	 */
-	String getType() {
+	public String getType() {
 		return type;
 	}
 }

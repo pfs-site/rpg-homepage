@@ -60,7 +60,7 @@ public class AkismetCheckResult {
 	 * @param result The result of the check.
 	 * @param additionalInformation Additional information from the Akismet server. 
 	 */
-	AkismetCheckResult(ResultType result, Map<String, String> additionalInformation) {
+	public AkismetCheckResult(ResultType result, Map<String, String> additionalInformation) {
 		this.additionalInformation = additionalInformation;
 		this.result = result;
 	}
@@ -69,7 +69,7 @@ public class AkismetCheckResult {
 	 * Create a new check result without additional information.
 	 * @param result The result of the check.
 	 */
-	AkismetCheckResult(ResultType result) {
+	public AkismetCheckResult(ResultType result) {
 		this(result, Collections.<String, String>emptyMap());
 	}
 
