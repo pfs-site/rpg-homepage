@@ -333,6 +333,7 @@ public abstract class BaseResource extends AbstractResource {
 								result.getAdditionalInformation().get(AkismetCheckResult.INFO_SERVER),
 								result.getAdditionalInformation().get(AkismetCheckResult.INFO_DEBUG));
 					}
+					//Continue processing
 					return true;
 				}
 				
@@ -354,6 +355,16 @@ public abstract class BaseResource extends AbstractResource {
 						if (spamAction == null) {
 							log.error("Invalid Akismet spam action: {} ; defaulting to ignore", configuration.hamAction);
 							action =  PublishAction.IGNORE;
+						} else if (AkismetConfiguration.PROP_VALUE_SPAM_ACTION_RECOMMEND.equals(spamAction)) {
+							//Follow recommendation from Akismet service
+							String akismetRecommendation = result.getAdditionalInformation().get(AkismetCheckResult.INFO_RECOMMENDATION);
+							if (AkismetCheckResult.INFO_RECOMMENDATION_DISCARD.equals(akismetRecommendation)) {
+								//Discard directly
+								return false;
+							} else {
+								//Do not publish comment
+								action = PublishAction.IGNORE;
+							}
 						} else {
 							action = spamAction;
 						}
