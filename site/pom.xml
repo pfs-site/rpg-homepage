@@ -10,7 +10,7 @@
 
   <name>RPG-Homepage Site</name>
   <description>Pathfinder's Society Germany Website Site</description>
-  <artifactId>website-site</artifactId>
+  <artifactId>site</artifactId>
   <packaging>war</packaging>
 
   <dependencies>

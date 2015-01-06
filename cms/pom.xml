@@ -10,7 +10,7 @@
 
   <name>RPG-Homepage CMS</name>
   <description>Pathfinder's Society Germany Website CMS</description>
-  <artifactId>website-cms</artifactId>
+  <artifactId>cms</artifactId>
   <packaging>war</packaging>
 
   <dependencies>
@@ -80,6 +80,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <configuration>
+          <warName>cms</warName>
           <archive>
             <manifestEntries>
               <Hippo-Release-Version>${hippo.release.version}</Hippo-Release-Version>
