@@ -184,7 +184,7 @@ public class AkismetRestClient implements AkismetApi {
 		}
 	}
 
-	/* (non-Javadoc)
+	/**
 	 * @see org.pfs.de.akismet.rest.AkismetClient#sendRequest(org.pfs.de.akismet.rest.AkismetUrls, org.pfs.de.akismet.AkismetCommentData, java.lang.String)
 	 */
 	@Override
@@ -250,7 +250,7 @@ public class AkismetRestClient implements AkismetApi {
 		return new HttpEntity<String>(content.toString(), headers);
 	}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see org.pfs.de.akismet.rest.AkismetClient#checkApiKey(java.lang.String, java.lang.String)
 	 */
 	@Override

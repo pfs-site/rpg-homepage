@@ -119,6 +119,9 @@ public class AkismetClient {
 		AkismetCheckResult result = client.sendRequest(AkismetUrls.COMMENT_CHECK, commentData, apiKey);
 		if (log.isDebugEnabled()) {
 			log.debug("Check of comment {} returned result {}", commentData.getIdentifier(), result.getResult());
+			if (!result.getAdditionalInformation().isEmpty()) {
+				log.debug("Additional information for comment {}: {}", commentData.getIdentifier(), result.getAdditionalInformation());
+			}
 		}
 		return result;
 	}
