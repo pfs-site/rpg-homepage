@@ -23,7 +23,7 @@ function addComment(commentData) {
 	
 	//Link
 	if (commentData.link && commentData.link != "") {
-		var link = $('<p>', {
+		var link = $('<a>', {
 			href: commentData.link
 		});
 		link.text(commentData.link);
