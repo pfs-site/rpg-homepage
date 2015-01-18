@@ -18,10 +18,10 @@
       <hst:headContribution keyHint="headTitle" element="${headTitle}"/>
     </c:if>
 
-    <h2>
+<%--    <h2>
       ${fn:escapeXml(info.title)}
       <c:if test="${not empty result.totalSize}"> Total results ${result.totalSize}</c:if>
-    </h2>
+    </h2>-->
 
     <c:forEach var="item" items="${result.hippoBeans}" begin="${begin}" end="${begin + info.pageSize - 1}">
       <hst:link var="link" hippobean="${item}"/>
