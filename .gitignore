@@ -40,3 +40,4 @@ nb-configuration.xml
 
 # Other
 *.iml
+site/src/main/resources/rebel.xml
