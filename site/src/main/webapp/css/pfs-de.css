@@ -125,8 +125,8 @@ html, body {
 
 .pfs-de .main {
     height: calc(100% - 142px - 55px - 34px);
-    max-height: 580px;
     background: url('../images/background-b2.png') 0px 0px no-repeat, url('../images/background-b3.png') 860px 0px no-repeat;
+    background-color: #703535;
     box-shadow: inset 0px 4px 4px black;
 }
 
