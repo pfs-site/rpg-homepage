@@ -188,7 +188,14 @@ html, body {
     color: #000000;
 }
 
-.pfs-de input[type="button"], 
+.pfs-de img.centered {
+    margin: 0 auto;
+    clear: right;
+    display: block;
+    width:  614px;
+}
+
+.pfs-de input[type="button"],
 .pfs-de input[type="reset"], 
 .pfs-de input[type="submit"] {
     height: auto;

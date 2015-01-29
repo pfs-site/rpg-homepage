@@ -3,8 +3,8 @@
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-    <sv:value>hippo:harddocument</sv:value>
     <sv:value>hippotranslation:translated</sv:value>
+    <sv:value>hippo:harddocument</sv:value>
     <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -42,8 +42,8 @@
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>7d1ca1bf-4973-47f8-a8c3-58e31ac9f5e1</sv:value>
@@ -156,8 +156,8 @@
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9c7b66f5-f554-4d9c-bad2-9a9486ca0777</sv:value>
@@ -311,8 +311,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d94afad-ba01-430d-b356-eb086f65d013</sv:value>
@@ -466,8 +466,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>1c1d6600-5140-4530-b80c-409741b50517</sv:value>
@@ -576,8 +576,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>df409265-9477-434e-8d11-542c2f1d47e2</sv:value>
@@ -699,8 +699,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>f4c4e4ff-5f63-415e-a94a-aa2a30923eff</sv:value>
@@ -854,8 +854,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>3e43a39f-c916-4d52-bfe8-69c2fdaf8fcc</sv:value>
@@ -1009,8 +1009,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>23a0e6fe-621a-4541-8410-59dbc607c750</sv:value>
@@ -1164,8 +1164,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>b83693fc-c8eb-46cd-8832-f199093fd6c4</sv:value>
@@ -1319,8 +1319,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9a652742-456b-4b79-b5c1-b45c665e1a67</sv:value>
@@ -1474,8 +1474,8 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>665199f8-fe5c-4498-905e-5c7b7ee1ce96</sv:value>
@@ -1629,12 +1629,23 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>2830a222-c32b-425a-9f0d-01cf87246b3b</sv:value>
     </sv:property>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Blogeintrag11</sv:value>
+      </sv:property>
+    </sv:node>
     <sv:node sv:name="blogeintrag11">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>website:blogdocument</sv:value>
@@ -1643,7 +1654,7 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
         <sv:value>hippo:harddocument</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>853e7427-d534-45e4-b2fd-23ddf85f7a4d</sv:value>
+        <sv:value>5c5cca4b-db04-4e40-a602-9c2b5de22079</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
@@ -1668,13 +1679,13 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
         <sv:value>2014-02-15T15:07:25.070+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-02-15T15:07:35.642+01:00</sv:value>
+        <sv:value>2015-01-23T16:56:16.617+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-02-15T15:07:37.953+01:00</sv:value>
+        <sv:value>2015-01-23T16:56:24.749+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>b6152b2b-99c5-4beb-962d-e9eb705d42d4</sv:value>
@@ -1701,7 +1712,7 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          <sv:value>31987d96-f1ec-4503-9101-fee61e79823e</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
@@ -1767,25 +1778,14 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
         </sv:property>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="hippo:translation">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippo:translation</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Blogeintrag11</sv:value>
-      </sv:property>
-    </sv:node>
   </sv:node>
   <sv:node sv:name="unveroffentlicht">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>e794f7b0-357b-462e-afa1-a50b39c6c96e</sv:value>
