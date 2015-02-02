@@ -17,11 +17,11 @@
       <hst:headContribution keyHint="headTitle" element="${headTitle}"/>
     </c:if>
 
-    <article class="well well-large">
+    <article class="well-large">
       <hst:cmseditlink hippobean="${document}"/>
       <header>
-        <h2>${fn:escapeXml(document.title)}</h2>
-        <p>
+        <h1>${fn:escapeXml(document.title)}</h1>
+        <p class="smallfont">
           <fmt:message key="publishedOn.text">
               <fmt:param value="${document.date}" />
               <fmt:param value="${document.author}" />

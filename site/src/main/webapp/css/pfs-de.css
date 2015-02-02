@@ -20,6 +20,7 @@ html, body {
     width: 1024px;
 }
 
+
 .pfs-de .page-container {
     box-shadow: 0px 6px 6px black;
     display: block;
@@ -137,6 +138,30 @@ html, body {
     overflow: auto;
 }
 
+.pfs-de .well-large-noBottomPadding {
+    padding: 24px 24px 0px 24px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.pfs-de .well-large {
+    padding: 24px 24px 24px 24px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.pfs-de h1 {
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.pfs-de .smallFont {
+    font-size: 11px;
+    line-height: 16px;
+}
+
 .pfs-de .main .content .leftbar,
 .pfs-de .main .content .contentarea {
     display: inline-block;
@@ -156,6 +181,11 @@ html, body {
 .pfs-de a {
     text-decoration: none;
     color: #0088CC;
+}
+
+.pfs-de .blackTitle a {
+    text-decoration: none;
+    color: #000000;
 }
 
 .pfs-de input[type="button"], 
