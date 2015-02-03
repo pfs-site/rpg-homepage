@@ -140,4 +140,119 @@
       </sv:property>
     </sv:node>
   </sv:node>
+  <sv:node sv:name="comments-rss">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>hippo:hardhandle</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>051a2d59-e7fb-44c8-97a5-bf75d5fdfd82</sv:value>
+    </sv:property>
+    <sv:node sv:name="comments-rss">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>feed:rss20descriptor</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>hippo:harddocument</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>7087bdf2-a4ed-4851-9de3-fa2f40809576</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
+        <sv:value>rollenspiel</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:copyright" sv:type="String">
+        <sv:value>wir</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:description" sv:type="String">
+        <sv:value>Dieser Feed enthält alle Kommentare, die auf der deutschen Seite der Pathfinder Society geschrieben wurden.</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:documentType" sv:type="String">
+        <sv:value>website:commentdocument</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:excludeItems" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="feed:generator" sv:type="String">
+        <sv:value>generator_hippo</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:itemCount" sv:type="Long">
+        <sv:value>20</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:language" sv:type="String">
+        <sv:value>de</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:managingEditor" sv:type="String">
+        <sv:value>mail@pfs.de</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:scope" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="feed:sortByField" sv:type="String">
+        <sv:value>hippostdpubwf:creationDate</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:title" sv:type="String">
+        <sv:value>Kommentare auf der deutschen Pathfinder Society</sv:value>
+      </sv:property>
+      <sv:property sv:name="feed:webMaster" sv:type="String">
+        <sv:value>Der Webmaster</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>syndication/comments-rss</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:holder" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-08-29T13:07:10.620+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-08-29T13:09:27.625+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2014-08-29T13:09:31.048+02:00</sv:value>
+      </sv:property>
+      <sv:node sv:name="feed:image">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Kommentar-RSS</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
 </sv:node>

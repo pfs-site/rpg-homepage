@@ -2,13 +2,24 @@ package org.pfs.de.beans;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
-import javax.jcr.RepositoryException;
-import org.hippoecm.hst.content.beans.ContentNodeBindingException;
+import java.util.List;
 
+import javax.jcr.RepositoryException;
+
+import org.hippoecm.hst.container.RequestContextProvider;
+import org.hippoecm.hst.content.beans.ContentNodeBindingException;
 import org.hippoecm.hst.content.beans.Node;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoDocument;
+import org.hippoecm.hst.content.beans.standard.HippoMirror;
+import org.hippoecm.hst.core.request.HstRequestContext;
+import org.onehippo.forge.feed.api.FeedType;
+import org.onehippo.forge.feed.api.annot.SyndicationElement;
 import org.pfs.de.services.model.BaseDocumentRepresentation;
 import org.pfs.de.services.model.CommentDocumentRepresentation;
+
+import com.sun.syndication.feed.rss.Description;
+import com.sun.syndication.feed.rss.Guid;
 
 /**
  * Bean representation of a comment document.
@@ -25,8 +36,18 @@ public class CommentDocument extends BaseDocument{
      * Get the author. Name of the author as given in the comment form.
      * @return The author name.
      */
+    @SyndicationElement(type = FeedType.RSS, name = "author")
     public String getAuthor() {
         return getProperty(FIELD_AUTHOR);
+    }
+    
+    /**
+     * Get the author. Name of the author as given in the comment form.
+     * @return The author name.
+     */
+    @SyndicationElement(type = FeedType.RSS, name = "title")
+    public String getTitle() {
+        return "Kommentar von " + getProperty(FIELD_AUTHOR) + " am " + getDate();
     }
     
     /**
@@ -35,6 +56,16 @@ public class CommentDocument extends BaseDocument{
      */
     public String getLink() {
         return getProperty(FIELD_LINK);
+    }
+
+    /**
+     * Get the URL pointing to the comment's article. 
+     * @return The link to the comment's article.
+     */
+    @SyndicationElement(type = FeedType.RSS, name = "link")
+    public String getSyndicationLink() {
+    	final HstRequestContext hstRequestContext = RequestContextProvider.get();
+        return hstRequestContext.getHstLinkCreator().create(this.getReferencedDocument(), hstRequestContext).toUrlForm(hstRequestContext, true);
     }
     
     /**
@@ -45,12 +76,35 @@ public class CommentDocument extends BaseDocument{
         return getProperty(FIELD_TEXT);
     }
     
+    @SyndicationElement(type = FeedType.RSS, name = "description")
+    public Description getDescription() {
+    	Description ret = new Description();
+    	
+    	ret.setValue(this.getText());
+    	ret.setType(null);
+    	
+    	return ret;
+    }
+    
     /**
      * Get the referenced document.
      * @return The document that the comment was written in reference to.
      */
     public HippoDocument getReferencedDocument() {
-        return getProperty(FIELD_REFERENCE);
+    	HippoDocument ret = null;
+    	List<Object> docs = getChildBeansByName(FIELD_REFERENCE);
+    	HippoMirror mirror = null;
+    	HippoBean bean = null;
+    	if((docs !=  null) && (docs.size() > 0) && (docs.get(0) instanceof HippoMirror)) {
+    		mirror = (HippoMirror) docs.get(0);
+    		if(mirror != null) {
+        		bean = mirror.getReferencedBean();
+    		}
+    	}
+    	if((bean != null) && (bean.isHippoDocumentBean())) {
+    		ret = (HippoDocument)bean;
+    	}
+        return ret;
     }
     
     /**
@@ -58,11 +112,22 @@ public class CommentDocument extends BaseDocument{
      * the comment.
      * @return The publication date of the blog entry.
      */
+    @SyndicationElement(type = FeedType.RSS, name = "pubDate")
     public Date getDate() {
         GregorianCalendar cal = getProperty("hippostdpubwf:creationDate");
         return cal.getTime();
     }
     
+    @SyndicationElement(type = FeedType.RSS, name = "guid")
+    public Guid getGuid() {
+    	Guid ret = new Guid();
+    	
+    	ret.setPermaLink(true);
+    	ret.setValue(this.getSyndicationLink());
+    	
+    	return ret;
+    }
+
     /**
      * Update the data in this bean from a representation. Modifies only
      * fields managed in this subclass, but not in the superclass:
