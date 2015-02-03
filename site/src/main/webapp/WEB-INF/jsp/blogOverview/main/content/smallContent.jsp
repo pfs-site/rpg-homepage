@@ -34,12 +34,10 @@
                             timeStyle="short"/>
           </p>
         </c:if>
-      <c:if test="${hst:isReadable(item, 'image.thumbnail')}">
-        <hst:link var="img" hippobean="${item.image.thumbnail}"/>
-        <figure>
-          <img src="${img}" title="${fn:escapeXml(item.image.fileName)}"
-            alt="${fn:escapeXml(item.image.fileName)}"/>
-        </figure>
+      <c:if test="${hst:isReadable(item, 'image.original')}">
+        <hst:link var="img" hippobean="${item.image.original}"/>
+        <img src="${img}" title="${fn:escapeXml(item.image.fileName)}"
+          alt="${fn:escapeXml(item.image.fileName)}" class="centered" />
       </c:if>
         <p>${fn:escapeXml(item.summary)}</p>
       </article>

@@ -30,11 +30,8 @@
       </header>
       <c:if test="${hst:isReadable(document, 'image.original')}">
         <hst:link var="img" hippobean="${document.image.original}"/>
-        <figure>
-          <img src="${img}" title="${fn:escapeXml(document.image.fileName)}"
-            alt="${fn:escapeXml(document.image.description)}"/>
-          <figcaption>${fn:escapeXml(document.image.description)}</figcaption>
-        </figure>
+        <img src="${img}" title="${fn:escapeXml(document.image.fileName)}"
+          alt="${fn:escapeXml(document.image.description)}" class="centered" />
       </c:if>
 
       <hst:html hippohtml="${document.html}"/>

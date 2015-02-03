@@ -3,8 +3,8 @@
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-    <sv:value>hippo:harddocument</sv:value>
     <sv:value>hippotranslation:translated</sv:value>
+    <sv:value>hippo:harddocument</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>9bc663b2-8e57-44ba-b147-0fcf6808a16a</sv:value>
@@ -18,7 +18,7 @@
     <sv:value>a494d2aa-c9ed-422c-a025-47fe67cb7103</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:locale" sv:type="String">
-    <sv:value>en</sv:value>
+    <sv:value>de</sv:value>
   </sv:property>
   <sv:node sv:name="hippotranslation:translations">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -30,8 +30,8 @@
       <sv:value>hippo:handle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:hardhandle</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>b67ba7de-d598-405d-bf94-03c6cb023d74</sv:value>
