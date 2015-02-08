@@ -131,11 +131,12 @@ html, body {
 }
 
 .pfs-de .main .content {
-    height: 100%;
+    height: calc(100% - 60px);
     background-color: white;
     margin: 0px 161px 0px 184px;
     box-shadow: 4px 4px 3px black, -4px 4px 3px black;
     overflow: auto;
+    padding: 30px 40px;
 }
 
 .pfs-de .well-large-noBottomPadding {
@@ -176,6 +177,28 @@ html, body {
 
 .pfs-de .main .content .contentarea {
     width: 500px;
+}
+
+.pfs-de article.blogsummary {
+    margin-bottom: 40px;
+}
+
+.pfs-de article.blogsummary p {
+    clear: both;
+}
+
+.pfs-de article.blogsummary h1 {
+    line-height: 20px;
+}
+
+.pfs-de article.blogsummary img.main-image {
+    float: left;
+    margin: 0px 10px 10px 0px;
+    max-width: 100%;
+}
+
+.pfs-de article.blogsummary div {
+    clear: both;
 }
 
 .pfs-de a {
@@ -247,6 +270,13 @@ html, body {
     color: white;
     font-weight: bold;
     padding: 3px 14px;
+}
+
+.pfs-de h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 2px;
 }
 
 .pfs-de .grey {
