@@ -159,6 +159,7 @@ html, body {
 
 .pfs-de #commentContainer .badge {
 	background-color: #ffffff;
+	color: #000000;
 	float: right;
 	border-width: 1px;
 	border-style: solid;
