@@ -69,4 +69,10 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+	
+	//Show comments form if JavaScript is enabled
+	var form = $("#website-comments-form");
+	form.css({"display": "block"});
+	var instructions = $("#website-comments-instructions");
+	instructions.css({"display": "none"});
 });

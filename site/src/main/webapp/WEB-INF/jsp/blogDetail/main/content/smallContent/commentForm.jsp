@@ -32,4 +32,5 @@
 			</td></tr>
 		</table>
 	</form>
+	<div id="website-comments-instructions"><fmt:message key="comment.enableJavaScript" /></div>
 </c:if>

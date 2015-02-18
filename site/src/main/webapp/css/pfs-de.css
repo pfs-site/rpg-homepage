@@ -173,10 +173,15 @@ html, body {
 
 .pfs-de form#website-comments-form {
 	padding: 24px;
+	display: none;
 }
 
 .pfs-de form#website-comments-form td {
 	padding-right: 15px;
+}
+
+.pfs-de #website-comments-instructions {
+	text-align: center;
 }
 
 .pfs-de h1 {
