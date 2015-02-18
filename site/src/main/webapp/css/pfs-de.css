@@ -152,6 +152,33 @@ html, body {
     border-radius: 6px;
 }
 
+
+.pfs-de #commentContainer .well {
+	background-color: #ffffff;
+}
+
+.pfs-de #commentContainer .badge {
+	background-color: #ffffff;
+	float: right;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+	font-weight: normal;
+	text-shadow: none;
+}
+
+.pfs-de #commentContainer h4 {
+	display: inline;
+}
+
+.pfs-de form#website-comments-form {
+	padding: 24px;
+}
+
+.pfs-de form#website-comments-form td {
+	padding-right: 15px;
+}
+
 .pfs-de h1 {
     font-size: 32px;
     line-height: 36px;
