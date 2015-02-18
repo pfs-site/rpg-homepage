@@ -27,8 +27,8 @@
 			<tr><td><fmt:message key="comment.text"/>*</td><td><textarea rows="5" cols="30" id="comment-text"></textarea></td></tr>
 			<tr><td colspan="2">* Mandatory fields</td></tr>
 			<tr><td colspan="2">
-				<input type="submit" id="comment-submit"/>
-				<input type="reset" />
+				<input type="submit" id="comment-submit" value="<fmt:message key="comment.post" />" />
+				<input type="reset" value="<fmt:message key="comment.resetForm" />" />
 			</td></tr>
 		</table>
 	</form>
