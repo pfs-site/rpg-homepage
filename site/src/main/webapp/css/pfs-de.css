@@ -35,9 +35,7 @@ html, body {
     position: relative;
 }
 
-.pfs-de .banner .logo,
-.pfs-de .banner .login,
-.pfs-de .banner .contact
+.pfs-de .banner .headerLink
 {
     display: inline-block;
     position: absolute;
@@ -64,7 +62,15 @@ html, body {
     width: 79px;
     height: 27px;
     top: 110px;
-    left: 790px;
+    left: 735px;
+}
+
+.pfs-de .banner .imprint {
+    background: url('../images/imprint-de.png') no-repeat 0px 0px / 104px 31px;
+    width: 104px;
+    height: 31px;
+    top: 108px;
+    left: 811px;
 }
 
 .pfs-de .navigation,

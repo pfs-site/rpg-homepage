@@ -29,7 +29,5 @@
       </div>
     </article>
 
-    <p>I18n key example: <fmt:message key="home.title"/></p>
-
   </c:otherwise>
 </c:choose>
