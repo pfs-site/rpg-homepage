@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hippo:log">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippolog:folder</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>mix:referenceable</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>ec0d0368-4803-4f19-b7d1-51963b558dab</sv:value>
+  </sv:property>
+  <sv:node sv:name="default">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippolog:folder</sv:value>
+    </sv:property>
+    <sv:node sv:name="y">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippolog:folder</sv:value>
+      </sv:property>
+      <sv:node sv:name="o">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippolog:folder</sv:value>
+        </sv:property>
+        <sv:node sv:name="9">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippolog:folder</sv:value>
+          </sv:property>
+          <sv:node sv:name="g">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippolog:item</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippolog:eventClass" sv:type="String">
+              <sv:value>null</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippolog:eventMethod" sv:type="String">
+              <sv:value>login</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippolog:eventUser" sv:type="String">
+              <sv:value>admin</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippolog:timestamp" sv:type="Long">
+              <sv:value>1427748220690</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="l">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippolog:folder</sv:value>
+      </sv:property>
+      <sv:node sv:name="t">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippolog:folder</sv:value>
+        </sv:property>
+        <sv:node sv:name="o">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippolog:folder</sv:value>
+          </sv:property>
+          <sv:node sv:name="s">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippolog:item</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippolog:eventClass" sv:type="String">
+              <sv:value>null</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippolog:eventMethod" sv:type="String">
+              <sv:value>login</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippolog:eventUser" sv:type="String">
+              <sv:value>admin</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippolog:timestamp" sv:type="Long">
+              <sv:value>1427748237685</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>

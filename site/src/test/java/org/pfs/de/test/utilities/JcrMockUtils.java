@@ -19,6 +19,7 @@
 
 package org.pfs.de.test.utilities;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -215,6 +216,26 @@ public final class JcrMockUtils {
     		collectUUIDs(nodes, child);
     	}
     }
+    
+    /**
+	 * Create a mocked JCR session from test content.
+	 * @return Mocked session with test content.
+	 * @throws RepositoryException Error creating JCR content.
+	 * @throws IOException Error reading input files.
+	 */
+	public static Session mockDefaultJcrSession() throws RepositoryException, IOException {
+		//Files containing repository content
+		List<String> jcrContentFiles = Arrays.asList("content.xml", "formdata.xml", "hippo_configuration.xml", "hippo_log.xml", "hippo_namespaces.xml", "hst_hst.xml", "jcr_system.xml");
+		
+		String[] resources = new String[jcrContentFiles.size()];
+		int index = 0;
+		
+		for (String contentFile: jcrContentFiles) {
+			resources[index++] = "/test-repository/" + contentFile;
+		}
+		
+		return JcrMockUtils.mockJcrSession(resources);
+	}
     
     /**
      * This class can answer requests to find a node by UUID.

@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hst:hst">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:hst</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>12b25b79-adc3-43b2-a8bc-c7de5e744214</sv:value>
+  </sv:property>
+  <sv:node sv:name="hst:configurations">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:configurations</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>a5f82fe1-db3b-4b6c-b1b2-6ad570b76406</sv:value>
+    </sv:property>
+    <sv:node sv:name="hst:default">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:configuration</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>969fbaf5-f84d-4ed8-a49f-1d4b771e1c2a</sv:value>
+      </sv:property>
+      <sv:node sv:name="hst:sitemap">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemap</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>12007980-a7fd-4be1-814e-4289f9e663a5</sv:value>
+        </sv:property>
+        <sv:node sv:name="feed">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemapitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>9c2b0622-5b87-4b67-9a4e-d9c4e70e9fb3</sv:value>
+          </sv:property>
+          <sv:node sv:name="_any_.xml">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemapitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>61728e05-2f30-4ca8-9a12-de6a9451069c</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:namedpipeline" sv:type="String">
+              <sv:value>JaxrsRestFeedPipeline</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+              <sv:value>${1}</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:pages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:pages</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>69d190c7-71a0-4617-95af-028d670bd2c4</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hst:components">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:components</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>44645063-dec4-4a45-9704-6a4ad7f19599</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hst:templates">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:templates</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>9949cf92-30c3-4cbb-b7b1-694cb5d641d9</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hst:sitemenus">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenus</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>2112b171-4d01-4773-ab3c-fb78b9160ebe</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hst:sitemapitemhandlers">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitemhandlers</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>d685ac39-6b93-4ba6-8df4-5232b3376b9e</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hst:catalog">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:catalog</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>1a367f05-68b7-4d1f-bea0-134f4524bd09</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="website-subsite-common">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:configuration</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>e34711ef-e402-46fc-a366-70081ddd4f5d</sv:value>
+      </sv:property>
+      <sv:node sv:name="hst:components">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:components</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>f6bc6839-21d5-4d95-a236-2587b7cedf71</sv:value>
+        </sv:property>
+        <sv:node sv:name="content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>f728a4a6-8bfb-4a38-ba59-ef65179ac7ee</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.Detail</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>subsite.standard.main.content</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="header">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>803c684b-3f5e-4fb5-912b-46aaa97fa629</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.subsite.SubsiteHeader</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>subsite.standard.header</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="leftmenu">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>44d146dc-1fd2-4ccf-9143-95f3cb84d4c2</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.LeftMenu</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>subsite.standard.main.leftmenu</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:templates">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:templates</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>f5820e84-9198-4aef-ab77-2807bbd9965b</sv:value>
+        </sv:property>
+        <sv:node sv:name="subsite.home.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>fd5952b8-01c3-40b4-a074-fe92148513e4</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/subsite/home/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="subsite.layout.webpage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>76768dd2-f0df-411d-aa91-f06ca3a7505f</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/subsite/layout/webpage.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="subsite.standard.header">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>3b53dc01-fb0d-4e41-80b9-7b96088a1989</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/subsite/standard/header.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="subsite.standard.main">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>0c2e6dd2-7b93-49cb-b3a8-0b48da5a46a1</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/subsite/standard/main.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="subsite.standard.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>1f4307cb-31eb-41ba-807f-b82b84fa858d</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/subsite/standard/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="subsite.standard.main.leftmenu">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>36c8cc65-f7f5-4ca6-9323-3c79916f4b2e</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/subsite/standard/main/leftmenu.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="subsite.standard.main.right">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>94b30d8a-a50a-4025-8fe1-ba105148a1e5</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/subsite/standard/main/right.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="website-v4">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:configuration</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>6d6eaff2-a703-4427-8aac-5b7960e66684</sv:value>
+      </sv:property>
+      <sv:node sv:name="hst:sitemap">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemap</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>cf2f1fa6-ccae-43fc-b398-b17259376ca8</sv:value>
+        </sv:property>
+        <sv:node sv:name="root">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemapitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>e67e59ba-fb1d-4991-8582-ea01ed28dc74</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+            <sv:value>hst:pages/home</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+            <sv:value>common/was-ist-pfs</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="events">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemapitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>c2aa98ec-0e5b-4a8a-a802-5424ad1a4cf0</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+            <sv:value>hst:pages/textpage</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+            <sv:value>common/veranstaltungen</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="blog">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemapitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>05802f2c-2cc6-45c2-a2e8-2494512ac633</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+            <sv:value>hst:pages/blogOverview</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+            <sv:value>blog</sv:value>
+          </sv:property>
+          <sv:node sv:name="_any_.html">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemapitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>6fecb36b-39b6-4bc2-bbfd-dea4afb7cb14</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+              <sv:value>hst:pages/blogDetail</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+              <sv:value>${parent}/${1}</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="_any_">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemapitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>e6020ccf-5631-412b-9d63-446dd06e1d4d</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+              <sv:value>hst:pages/blogOverview</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+              <sv:value>${parent}/${1}</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="team">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemapitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>5c21c404-f994-4d19-b878-e157d3e7349f</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+            <sv:value>hst:pages/home</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+            <sv:value>common/das-team</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="links">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemapitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>3f6546cc-5e76-4e1c-9c7d-236e27f81d28</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+            <sv:value>hst:pages/home</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+            <sv:value>common/links</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="_any_">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemapitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>4cf7d9be-6ef0-4fcf-bf8a-b6e67d159f9d</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+            <sv:value>hst:pages/pagenotfound</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="search">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemapitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>05d1a849-d4ae-469e-8667-14c2c80cea75</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+            <sv:value>hst:pages/search</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:pages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:pages</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>86a27126-f506-4fe3-8fb0-5615757286a1</sv:value>
+        </sv:property>
+        <sv:node sv:name="newspage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>7be12ecb-fb7c-4d4a-845b-8585faa4f2dc</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/leftSidebar</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>20dc1184-03ad-4d37-b625-3ea11e459820</sv:value>
+            </sv:property>
+            <sv:node sv:name="smallContent">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>fbab10c8-dbb1-44fd-be93-7c77a78370c7</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/content</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>news.main.content</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="blogDetail">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>c157fc85-c2c3-4e2c-98a4-839e49b98b1f</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/standard</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>3a2f98e0-4b43-4331-8c2e-5b57d4ffae27</sv:value>
+            </sv:property>
+            <sv:node sv:name="content">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>c7eb3eca-df54-43d0-824f-8c685d35cd7b</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/blogDetail</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>blogDetail.main.smallContent</sv:value>
+              </sv:property>
+              <sv:node sv:name="commentForm">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>hst:component</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>90bd3318-a665-4022-9959-58f9e564ad3f</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                  <sv:value>hst:components/comments</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:template" sv:type="String">
+                  <sv:value>blogDetail.main.smallContent.commentForm</sv:value>
+                </sv:property>
+              </sv:node>
+              <sv:node sv:name="commentList">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>hst:component</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>c1f96ae4-8c2e-421f-b82d-5d4d1d4f3775</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                  <sv:value>hst:components/comments</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:template" sv:type="String">
+                  <sv:value>blogDetail.main.smallContent.commentList</sv:value>
+                </sv:property>
+              </sv:node>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="home">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>beb09cac-05a8-401d-8f1c-cbb2ca97be5c</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/standard</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>c3bf37b9-6fd2-4f15-8460-222b7c7f0c5a</sv:value>
+            </sv:property>
+            <sv:node sv:name="content">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>856461fa-026b-4f1e-a996-3c229c0f1aa9</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/content</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>home.main.content</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="lists">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:containercomponent</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>5fb6a692-2648-4cc5-a6a7-3058363c46df</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:componentclassname" sv:type="String">
+                <sv:value>org.hippoecm.hst.pagecomposer.builtin.components.StandardContainerComponent</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:xtype" sv:type="String">
+                <sv:value>HST.vBox</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="leftSidebar">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>faca3cda-44aa-4af5-b225-5168bd0d7b01</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/standard</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>2b41c095-a954-4842-87aa-ef7fef3b4e6f</sv:value>
+            </sv:property>
+            <sv:node sv:name="content">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>ace1b364-57f4-46f2-9878-83bc2a2337c4</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>leftSidebar.main.content</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="smallContent">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>b11241cf-ac5d-4d6f-a5fa-6e3f330dae94</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>leftSidebar.main.smallContent</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="leftSidebar">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>3dabe58f-f354-409c-88bd-d358c53d907b</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>leftSidebar.main.leftSidebar</sv:value>
+              </sv:property>
+              <sv:node sv:name="leftSidebarContainer">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>hst:containercomponent</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>acadea2e-b5bb-4aac-94cd-4538de68337f</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:xtype" sv:type="String">
+                  <sv:value>HST.vBox</sv:value>
+                </sv:property>
+              </sv:node>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="search">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>9ec9c476-cd66-4561-ab5f-9ef34b0c3e43</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/standard</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>b69215eb-0397-483c-8e60-fd090fd90480</sv:value>
+            </sv:property>
+            <sv:node sv:name="content">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>0c53a082-9ef7-49f2-ba2c-bcbe9a2a22e0</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/search</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="textpage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>816205d0-36ed-46eb-8d8f-d76d4c7e18bc</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/standard</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>f98299d9-50b0-41d5-adbd-a1f54cd5c5fb</sv:value>
+            </sv:property>
+            <sv:node sv:name="content">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>5abdcd75-d5cd-46dc-99d3-17bc06d94c85</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/content</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="blogOverview">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>3a853949-328c-4ea0-86a2-b85f4b03c6bf</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/standard</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>7aba8e1c-0dc8-4ba2-88f9-40c32b8ed033</sv:value>
+            </sv:property>
+            <sv:node sv:name="content">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>a603bbce-4210-41db-a716-8edd8893a945</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/blogOverview</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>blogOverview.main.smallContent</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="newsoverview">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>7c865a66-9eb3-4627-87b4-5079f5392db5</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/overview</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="overview">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>7655e45a-5025-4a9b-b0b3-9945b0bc1353</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/leftSidebar</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>977f4126-9375-4f90-a7d1-fbb5947f3676</sv:value>
+            </sv:property>
+            <sv:node sv:name="smallContent">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>c9db7fda-ec5c-4f69-9204-1875c5067e6b</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/overview</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="pagenotfound">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>92d8920c-4d35-4f5d-b930-02115c6b22ff</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:pages/standard</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>627c37e4-a467-48d2-9ee7-8a4fd703073d</sv:value>
+            </sv:property>
+            <sv:node sv:name="content">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>b0efffbc-81b6-40e3-b253-c9b891847bfa</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/notfound</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="standard">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>1ce881e9-2a35-4691-a8f3-cbfdaba4ddfd</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>layout.webpage</sv:value>
+          </sv:property>
+          <sv:node sv:name="header">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>0c4e6af4-12e1-4b10-8eea-3c131cd5ba46</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:template" sv:type="String">
+              <sv:value>standard.header</sv:value>
+            </sv:property>
+            <sv:node sv:name="banner">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>796179cb-c7f0-4e0f-b608-1da9ab0b3a8c</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>standard.header.banner</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="navigation">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>d902260c-715f-4ec5-af12-ae16f3a195f9</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:componentclassname" sv:type="String">
+                <sv:value>org.pfs.de.components.Navigation</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>standard.header.navigation</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>305905cc-d9b8-4103-8e51-dce95f3afaa2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:template" sv:type="String">
+              <sv:value>standard.main</sv:value>
+            </sv:property>
+            <sv:node sv:name="content">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>ac8431d6-bea6-4903-b53c-5bf715c42333</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>standard.main.content</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:components">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:components</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>cf451f70-418d-411d-b100-e8031d465f03</sv:value>
+        </sv:property>
+        <sv:node sv:name="blogOverview">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>e6185861-1886-46c3-a534-e0207e231df4</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.BlogOverview</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>blogOverview.main.smallContent</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="blogDetail">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>976f82c3-ba89-4c8b-8552-c10cad20c676</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.BlogDetail</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>blogDetail.main.content</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="comments">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>e4b5126f-fa0e-4f62-8884-5cd22b551d61</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.Comments</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="notfound">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>ec3f19c9-5e69-4550-b156-972c97ea1abc</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.NotFound</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>notfound.main.content</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>2c2ca509-88db-4b8b-ad68-7848a002eb5f</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.Detail</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>standard.main.content</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="overview">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>f9fd93ad-0beb-499a-83c7-f489508da0d7</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.Overview</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>overview.main.content</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="search">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>da96d966-16ea-464c-8da8-589b5b7f13bf</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.Search</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>search.main.content</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="header">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>805c02d9-3c6c-4e02-b120-2abe292e302d</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.Header</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>standard.header</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="navigation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>6bde2b68-27ba-4ec7-b7c7-41200a3b1e81</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.pfs.de.components.Navigation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>standard.header.navigation</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:templates">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:templates</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>b0ffb67a-63d6-4b60-a3fd-985cc12e032b</sv:value>
+        </sv:property>
+        <sv:node sv:name="layout.webpage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>2550ee5c-23f8-4731-b369-2cda49426dd0</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/layout/webpage.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="home.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>47665a0d-d6ff-48e0-a3dc-94949148c2fd</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/home/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="news.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>cfd54d63-545a-4b1f-97d8-6ad27e0f9fcf</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/news/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="notfound.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>cdbe48f7-8f46-42f1-bb95-d9656640b934</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/notfound/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="overview.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>f758f8e4-96b4-4560-8e06-dcb6c54ab379</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/overview/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="search.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>11b14ae9-66ed-4a5a-9220-e38293ba1d0b</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/search/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="standard.header">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>76b9652f-211a-413e-a013-f8ec83e22ed0</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/standard/header.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="standard.header.banner">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>b30fd926-349f-4263-8489-aa5f8acaba85</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/standard/header/banner.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="standard.header.navigation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>dc0263bc-92bb-4433-8458-822fdb038f8d</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/standard/header/navigation.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="standard.main">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>ac9aac7c-c28e-47ae-bb82-25613cc3d17f</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/standard/main.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="standard.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>f1300311-df0f-429c-85cb-76c69856e2d6</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/standard/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="leftSidebar.main.content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>47ba3dfa-898f-4935-9685-161a6234ce90</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/leftSidebar/main/content.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="leftSidebar.main.leftSidebar">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>a4f0c65b-4b2c-4a8f-bceb-51557b3086ae</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/leftSidebar/main/content/leftSidebar.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="leftSidebar.main.smallContent">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>babc1a82-df8b-458b-92bc-99118cdf8067</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/leftSidebar/main/content/smallContent.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="blogOverview.main.smallContent">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>59c50530-dfdd-4260-a417-512e9fbcddd8</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/blogOverview/main/content/smallContent.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="blogDetail.main.smallContent">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>27ca654b-039c-4e4e-87ab-aa2986e2e7ed</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/blogDetail/main/content/smallContent.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="blogDetail.main.smallContent.commentList">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>73bb4b70-9810-45b9-8aed-881f4172a39f</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/blogDetail/main/content/smallContent/commentList.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="blogDetail.main.smallContent.commentForm">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:template</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>67d51fd7-452b-41d5-b39d-2ed830da3f1c</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:renderpath" sv:type="String">
+            <sv:value>jsp/blogDetail/main/content/smallContent/commentForm.jsp</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:catalog">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:catalog</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>1bd436e9-4a43-4281-b312-f87c3e929a80</sv:value>
+        </sv:property>
+        <sv:node sv:name="website-catalog">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritempackage</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>ff1bc103-fcfb-49a2-b4d2-0b14abbceb5b</sv:value>
+          </sv:property>
+          <sv:node sv:name="list">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:containeritemcomponent</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>988bfe52-ecaa-4295-9af2-2e19776fa0cd</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:componentclassname" sv:type="String">
+              <sv:value>org.pfs.de.components.ListView</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:iconpath" sv:type="String">
+              <sv:value>images/catalog-list.png</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:label" sv:type="String">
+              <sv:value>List</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+              <sv:value>title</sv:value>
+              <sv:value>pageSize</sv:value>
+              <sv:value>sortBy</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+              <sv:value>List</sv:value>
+              <sv:value>3</sv:value>
+              <sv:value>website:date</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:template" sv:type="String">
+              <sv:value>standard.main.list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:xtype" sv:type="String">
+              <sv:value>HST.Item</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:sitemenus">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenus</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>7ba0af6c-4cdc-4981-926b-4c32ac081bb9</sv:value>
+        </sv:property>
+        <sv:node sv:name="main">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenu</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>4ffc060e-27c2-4875-bc8c-bf44e7e09d63</sv:value>
+          </sv:property>
+          <sv:node sv:name="Home">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>a3ee522b-2d8f-4652-b491-cf918e9847dc</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>root</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:node sv:name="Die Pathfinder Society">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>f70b3502-95c5-479f-9ff1-c5bbc8ff1c8a</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>root</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:repobased" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="Links">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>b1b0b5d9-4dac-4e09-b140-d05a90fff784</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>links</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:repobased" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="Das Team">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>e0f6b277-6eed-45f7-b456-5f49837ae6ce</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>team</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:repobased" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="Blog">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>42ab4135-64ec-4d94-8195-c889245b565d</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>blog</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Spielrunden">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>957af1cd-f79a-4716-87c1-e774e817bf1e</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>events</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hst:blueprints">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:blueprints</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>00ebfd70-e3cc-4742-827a-20788e265e68</sv:value>
+    </sv:property>
+    <sv:node sv:name="website-subsite">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:blueprint</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>0de736ce-d8d1-4f7f-b996-835ba65ade8c</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:description" sv:type="String">
+        <sv:value>Create a new subsite</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:name" sv:type="String">
+        <sv:value>Subsite</sv:value>
+      </sv:property>
+      <sv:node sv:name="hst:channel">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:channel</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>dda24075-9c2f-462c-b422-44aac1949e10</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:channelinfoclass" sv:type="String">
+          <sv:value>org.pfs.de.channels.SubsiteInfo</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:type" sv:type="String">
+          <sv:value>website</sv:value>
+        </sv:property>
+        <sv:node sv:name="hst:channelinfo">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:channelinfo</sv:value>
+          </sv:property>
+          <sv:property sv:name="headerName" sv:type="String">
+            <sv:value>HST Subsite</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:configuration">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:configuration</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>0e479f8e-7136-40ce-9709-33880d2a3f5d</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:inheritsfrom" sv:type="String" sv:multiple="true">
+          <sv:value>../website-subsite-common</sv:value>
+        </sv:property>
+        <sv:node sv:name="hst:sitemap">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemap</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>d8077981-f818-4664-bd0a-1706a4f12014</sv:value>
+          </sv:property>
+          <sv:node sv:name="root">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemapitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>16cab949-88ad-4ade-bfdc-b1f5e842e6b7</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+              <sv:value>hst:pages/home</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+              <sv:value>homepage</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hst:pages">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:pages</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>7cb76f85-2083-4e7b-a10a-0f6e6033194b</sv:value>
+          </sv:property>
+          <sv:node sv:name="standard">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>0da2254a-2242-40f1-b7f7-2821bc452197</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:template" sv:type="String">
+              <sv:value>subsite.layout.webpage</sv:value>
+            </sv:property>
+            <sv:node sv:name="header">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>7021acfa-9c7d-43df-80ed-78fda7157452</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                <sv:value>hst:components/header</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="main">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>db794b72-2ea8-4a97-a548-7210ab858835</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>subsite.standard.main</sv:value>
+              </sv:property>
+              <sv:node sv:name="leftmenu">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>hst:component</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>8e52025c-2b33-4e05-b54e-7cdfedd782cf</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                  <sv:value>hst:components/leftmenu</sv:value>
+                </sv:property>
+              </sv:node>
+              <sv:node sv:name="right">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>hst:component</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>95498e4e-a04f-43d9-9951-e1bbb6376280</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:template" sv:type="String">
+                  <sv:value>subsite.standard.main.right</sv:value>
+                </sv:property>
+              </sv:node>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="home">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>89215150-0e4d-4d99-9a1f-0cfd44b67174</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencecomponent" sv:type="String">
+              <sv:value>hst:pages/standard</sv:value>
+            </sv:property>
+            <sv:node sv:name="main">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>19eeff4a-0f47-419f-bed7-c992def37c4d</sv:value>
+              </sv:property>
+              <sv:node sv:name="content">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                  <sv:value>hst:component</sv:value>
+                </sv:property>
+                <sv:property sv:name="jcr:uuid" sv:type="String">
+                  <sv:value>13751b58-0904-45a2-8ad1-ffffd63fa066</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:referencecomponent" sv:type="String">
+                  <sv:value>hst:components/content</sv:value>
+                </sv:property>
+                <sv:property sv:name="hst:template" sv:type="String">
+                  <sv:value>subsite.home.main.content</sv:value>
+                </sv:property>
+              </sv:node>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hst:sitemenus">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenus</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>09355e52-5f26-4405-bbe6-dafef33dc45c</sv:value>
+          </sv:property>
+          <sv:node sv:name="main">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenu</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>b23fe4b5-6ddd-44e6-b86c-1600e30c8bd5</sv:value>
+            </sv:property>
+            <sv:node sv:name="home">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>9f6cc68e-b30c-4a38-9112-aaac9f40e07a</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>root</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hst:channels">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:channels</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>b15100fb-07f1-4a92-80cf-c2e5e27e34ed</sv:value>
+    </sv:property>
+    <sv:node sv:name="website">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:channel</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>716efa75-ca18-4dfd-8693-e4de60cd495a</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:channelinfoclass" sv:type="String">
+        <sv:value>org.pfs.de.channels.WebsiteInfo</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:defaultdevice" sv:type="String">
+        <sv:value>default</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:devices" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:name" sv:type="String">
+        <sv:value>Pathfinder Society Karlsruhe</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:type" sv:type="String">
+        <sv:value>website</sv:value>
+      </sv:property>
+      <sv:node sv:name="hst:channelinfo">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:channelinfo</sv:value>
+        </sv:property>
+        <sv:property sv:name="headerName" sv:type="String">
+          <sv:value>Pathfinder Society Karlsruhe</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hst:sites">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sites</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c702131f-871f-47a8-877c-1200a7d781b6</sv:value>
+    </sv:property>
+    <sv:node sv:name="website">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:site</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>8279de8f-f084-494e-8413-46e83d072a26</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:content" sv:type="String">
+        <sv:value>/content/documents/website</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:version" sv:type="Long">
+        <sv:value>4</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="website-preview">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:site</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>2430c2b0-b920-4aa8-a5fa-f180ca65fce3</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:content" sv:type="String">
+        <sv:value>/content/documents/website</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:version" sv:type="Long">
+        <sv:value>4</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hst:hosts">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:virtualhosts</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>85ee3b7c-3861-4b0c-b126-7d3d65ecc9c3</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:channelmanagerhostgroup" sv:type="String">
+      <sv:value>dev-localhost</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:defaultcontextpath" sv:type="String">
+      <sv:value>/site</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:defaulthostname" sv:type="String">
+      <sv:value>localhost</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:diagnosticsenabled" sv:type="Boolean">
+      <sv:value>false</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:homepage" sv:type="String">
+      <sv:value>root</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:locale" sv:type="String">
+      <sv:value>de_DE</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:pagenotfound" sv:type="String">
+      <sv:value>error</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:prefixexclusions" sv:type="String" sv:multiple="true">
+      <sv:value>/images/</sv:value>
+      <sv:value>/examples/</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:scheme" sv:type="String">
+      <sv:value>http</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:showcontextpath" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:showport" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:suffixexclusions" sv:type="String" sv:multiple="true">
+      <sv:value>.do</sv:value>
+      <sv:value>.css</sv:value>
+      <sv:value>.js</sv:value>
+      <sv:value>.pdf</sv:value>
+      <sv:value>.ico</sv:value>
+      <sv:value>.gif</sv:value>
+      <sv:value>.GIF</sv:value>
+      <sv:value>.jpg</sv:value>
+      <sv:value>.jpeg</sv:value>
+      <sv:value>.JPEG</sv:value>
+      <sv:value>.JPG</sv:value>
+      <sv:value>.png</sv:value>
+      <sv:value>.PNG</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:versioninpreviewheader" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:node sv:name="dev-localhost">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:virtualhostgroup</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>c0c1c6c4-dae3-4d2b-af66-fe1bb3222707</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:cmslocation" sv:type="String">
+        <sv:value>http://localhost:8080/cms</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:defaultport" sv:type="Long">
+        <sv:value>8080</sv:value>
+      </sv:property>
+      <sv:node sv:name="localhost">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:virtualhost</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>9c8af975-0586-4227-a13a-b98771fa9fdb</sv:value>
+        </sv:property>
+        <sv:node sv:name="hst:root">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:mount</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>cfd01940-a602-4d2b-bb53-eea8c9c87042</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:channelpath" sv:type="String">
+            <sv:value>/hst:hst/hst:channels/website</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:mountpoint" sv:type="String">
+            <sv:value>/hst:hst/hst:sites/website</sv:value>
+          </sv:property>
+          <sv:node sv:name="restapi">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:mount</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>15c8954a-4c92-432c-93a3-36a388f2305a</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:alias" sv:type="String">
+              <sv:value>restapi</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:isSite" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:namedpipeline" sv:type="String">
+              <sv:value>JaxrsRestPlainPipeline</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:types" sv:type="String" sv:multiple="true">
+              <sv:value>rest</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>
