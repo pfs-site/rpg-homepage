@@ -57,20 +57,28 @@ html, body {
     left: 706px;
 }
 
+.pfs-de .banner .rss {
+    background: url('../images/rss.png') no-repeat 0px 0px / 24px 24px;
+    width: 24px;
+    height: 24px;
+    top: 113px;
+    left: 813px;
+}
+
 .pfs-de .banner .contact {
     background: url('../images/contact-de.png') no-repeat 0px 0px / 79px 27px;
     width: 79px;
     height: 27px;
-    top: 110px;
-    left: 735px;
+    top: 114px;
+    left: 840px;
 }
 
 .pfs-de .banner .imprint {
     background: url('../images/imprint-de.png') no-repeat 0px 0px / 104px 31px;
     width: 104px;
     height: 31px;
-    top: 108px;
-    left: 811px;
+    top: 112px;
+    left: 916px;
 }
 
 .pfs-de .navigation,

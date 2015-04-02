@@ -21,7 +21,7 @@
       <sv:property sv:name="hst:repobased" sv:type="Boolean">
         <sv:value>false</sv:value>
       </sv:property>
-      <sv:node sv:name="Pathfinder Society">
+      <sv:node sv:name="Die Pathfinder Society">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
@@ -31,13 +31,13 @@
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>root</sv:value>
+          <sv:value>p/was-ist-pfs</sv:value>
         </sv:property>
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="Blog">
+      <sv:node sv:name="Links">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
@@ -47,13 +47,13 @@
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>blog</sv:value>
+          <sv:value>p/links</sv:value>
         </sv:property>
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="The Team">
+      <sv:node sv:name="Das Team">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
@@ -63,14 +63,14 @@
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>team</sv:value>
+          <sv:value>p/team</sv:value>
         </sv:property>
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="Events">
+    <sv:node sv:name="Blog">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
@@ -80,13 +80,13 @@
       <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>events</sv:value>
+        <sv:value>blog</sv:value>
       </sv:property>
       <sv:property sv:name="hst:repobased" sv:type="Boolean">
         <sv:value>false</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="Contact">
+    <sv:node sv:name="Spielrunden">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
@@ -96,23 +96,7 @@
       <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>contact</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:repobased" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="Links">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemenuitem</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>links</sv:value>
+        <sv:value>p/spielrunden</sv:value>
       </sv:property>
       <sv:property sv:name="hst:repobased" sv:type="Boolean">
         <sv:value>false</sv:value>
