@@ -129,6 +129,17 @@
 		<artifactId>rome</artifactId>
 	</dependency>
 
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<scope>test</scope>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.onehippo.forge.utilities</groupId>
+		<artifactId>hippo-utilities-commons</artifactId>
+		<scope>test</scope>
+	</dependency>
   </dependencies>
 
   <build>
