@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="hstevents" h:merge="combine">
+  <sv:node sv:name="hippo:moduleconfig" h:merge="combine">
+    <sv:node sv:name="default" h:merge="combine">
+      <sv:property sv:name="hstevents:org.pfs.de.events.AutomaticPublicationSubscriber" sv:type="Long" h:merge="override">
+        <sv:value>1427995798467</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>

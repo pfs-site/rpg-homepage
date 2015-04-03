@@ -12,8 +12,8 @@
   </head>
   <body class="pfs-de">
     <div class="page-container">
-    <hst:include ref="header"/>
-    <hst:include ref="main"/>
+      <hst:include ref="header"/>
+      <hst:include ref="main"/>
     </div>
     <hst:headContributions categoryIncludes="scripts" xhtml="true"/>
   </body>

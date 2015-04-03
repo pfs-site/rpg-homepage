@@ -39,7 +39,7 @@
         <img src="${img}" title="${fn:escapeXml(item.image.fileName)}"
           alt="${fn:escapeXml(item.image.fileName)}" class="centered" />
       </c:if>
-        <p>${fn:escapeXml(item.summary)}</p>
+        <p>${fn:escapeXml(item.summary.value)}</p>
       </article>
     </c:forEach>
 

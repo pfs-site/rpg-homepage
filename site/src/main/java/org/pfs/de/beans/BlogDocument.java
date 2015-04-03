@@ -25,7 +25,7 @@ public class BlogDocument extends BaseDocument{
      * Content will be truncated for the summary after <code>SUMMARY_LENGTH</code>
      * characters of plaintext.
      */
-    private int SUMMARY_LENGTH = 100;
+    private int SUMMARY_LENGTH = 350;
 
 	@SyndicationElement(type = FeedType.RSS, name = "title")
     public String getTitle() {
@@ -63,7 +63,7 @@ public class BlogDocument extends BaseDocument{
      * at {@link AbstractMethodError#SUMMARY_LENGTH}.
      * @return Summarized blog content.
      */
-     @SyndicationElement(type = FeedType.RSS, name = "description")
+    @SyndicationElement(type = FeedType.RSS, name = "description")
     public Description getSummary() {
         String parsedContent = Jsoup.parse(getHippoHtml("website:body").getContent()).text();
         String summary;
