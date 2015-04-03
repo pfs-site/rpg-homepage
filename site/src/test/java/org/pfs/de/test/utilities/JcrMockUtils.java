@@ -223,7 +223,7 @@ public final class JcrMockUtils {
 	 * @throws RepositoryException Error creating JCR content.
 	 * @throws IOException Error reading input files.
 	 */
-	public static Session mockDefaultJcrSession() throws RepositoryException, IOException {
+	public static Session mockDefaultJcrSession() throws RepositoryException {
 		//Files containing repository content
 		List<String> jcrContentFiles = Arrays.asList("content.xml", "formdata.xml", "hippo_configuration.xml", "hippo_log.xml", "hippo_namespaces.xml", "hst_hst.xml", "jcr_system.xml");
 		
