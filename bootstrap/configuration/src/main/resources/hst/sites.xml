@@ -10,7 +10,7 @@
       <sv:value>/content/documents/website</sv:value>
     </sv:property>
     <sv:property sv:name="hst:version" sv:type="Long">
-      <sv:value>7</sv:value>
+      <sv:value>8</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="website-preview">
@@ -21,7 +21,7 @@
       <sv:value>/content/documents/website</sv:value>
     </sv:property>
     <sv:property sv:name="hst:version" sv:type="Long">
-      <sv:value>7</sv:value>
+      <sv:value>8</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>

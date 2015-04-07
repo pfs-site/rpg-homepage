@@ -2,7 +2,7 @@
   <sv:node sv:name="hippo:moduleconfig" h:merge="combine">
     <sv:node sv:name="default" h:merge="combine">
       <sv:property sv:name="hstevents:org.pfs.de.events.AutomaticPublicationSubscriber" sv:type="Long" h:merge="override">
-        <sv:value>1427995798467</sv:value>
+        <sv:value>1428081290629</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>

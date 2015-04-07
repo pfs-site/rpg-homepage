@@ -4,7 +4,24 @@
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
 <'website'='http://www.onehippo.org/website/nt/1.0'>
 
+[website:akismetcheck]
+  orderable mixin
+  - website:akismetHamAction (string) < 'publish', 'request'
+  - website:akismetApiKey (string)
+  - website:akismetSpamAction (string) < 'ignore', 'reject', 'recommendation'
+
+[website:akismetcheckresult]
+  orderable mixin
+  - website:akismetCheckResult (string) < 'ham', 'spam', 'invalid'
+
+[website:autopublish]
+  orderable mixin
+  - website:publishAction (string) = 'ignore' < 'publish', 'request', 'ignore'
+
 [website:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
+  orderable
+
+[website:bannerdocument] > hippostd:relaxed, hippotranslation:translated, website:basedocument
   orderable
 
 [website:blogdocument] > hippostd:relaxed, hippotranslation:translated, website:basedocument
@@ -19,21 +36,3 @@
 [website:textdocument] > hippostd:relaxed, website:basedocument
   orderable
 
-[website:akismetcheckresult]
-  orderable mixin
-  - website:akismetCheckResult (string)
-    < 'ham', 'spam', 'invalid'
-
-[website:akismetcheck]
-  orderable mixin
-  - website:akismetApiKey (string)
-  - website:akismetHamAction (string)
-    < 'publish', 'request'
-  - website:akismetSpamAction (string)
-    < 'ignore', 'reject', 'recommendation'
-  
-[website:autopublish]
-  orderable mixin
-  - website:publishAction (string)
-  = 'ignore'
-    < 'publish', 'request', 'ignore'

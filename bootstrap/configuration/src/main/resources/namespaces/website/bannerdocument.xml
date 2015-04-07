@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="blogdocument">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="bannerdocument">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hipposysedit:templatetype</sv:value>
   </sv:property>
@@ -7,7 +7,7 @@
     <sv:value>mix:referenceable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
-    <sv:value>b7928374-d8fb-4a78-99dd-4c7dd0f8e364</sv:value>
+    <sv:value>5cb37728-692a-4b10-9d2c-0aed4797edc3</sv:value>
   </sv:property>
   <sv:node sv:name="hipposysedit:nodetype">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -17,7 +17,7 @@
       <sv:value>hippo:hardhandle</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>bb5b25e0-8f81-4583-a30a-75ac83ffe87e</sv:value>
+      <sv:value>42ba51c3-9cc4-4128-a0e6-7580948d176c</sv:value>
     </sv:property>
     <sv:node sv:name="hipposysedit:nodetype">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -28,7 +28,7 @@
         <sv:value>hipposysedit:remodel</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>10cee19f-a6b6-4bc5-8d0c-2f4644b970ba</sv:value>
+        <sv:value>dfceb5fe-c88a-4088-9f69-023e0e3f640d</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hipposysedit:node" sv:type="Boolean">
@@ -42,7 +42,7 @@
       <sv:property sv:name="hipposysedit:uri" sv:type="String">
         <sv:value>http://www.onehippo.org/website/nt/1.0</sv:value>
       </sv:property>
-      <sv:node sv:name="title">
+      <sv:node sv:name="imprint">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -56,20 +56,16 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:title</sv:value>
+          <sv:value>website:imprint</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>String</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>non-empty</sv:value>
-          <sv:value>required</sv:value>
+          <sv:value>hippo:mirror</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="image">
+      <sv:node sv:name="contact">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -83,19 +79,16 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:image</sv:value>
+          <sv:value>website:contact</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>optional</sv:value>
+          <sv:value>hippo:mirror</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="commentsAllowed">
+      <sv:node sv:name="rss">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -109,69 +102,13 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:commentsAllowed</sv:value>
+          <sv:value>website:rss</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>Boolean</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>optional</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="author">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hipposysedit:field</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:author</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>String</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>non-empty</sv:value>
-          <sv:value>required</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hippostd_html">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hipposysedit:field</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:body</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>hippostd:html</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>required</sv:value>
+          <sv:value>hippo:mirror</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -182,13 +119,13 @@
     </sv:property>
     <sv:node sv:name="hipposysedit:prototype">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>website:blogdocument</sv:value>
+        <sv:value>website:bannerdocument</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippo:harddocument</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>33d7fb20-b870-48d9-8fe7-94bfc3fec9c6</sv:value>
+        <sv:value>c157f9f2-bea8-44b9-98ba-d45a9fc93fe0</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hippostd:holder" sv:type="String">
@@ -204,10 +141,10 @@
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2013-12-28T14:19:12.342+01:00</sv:value>
+        <sv:value>2015-04-03T14:57:27.074+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2013-12-28T14:19:12.342+01:00</sv:value>
+        <sv:value>2015-04-03T14:57:27.074+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value/>
@@ -218,37 +155,33 @@
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>document-type-locale</sv:value>
       </sv:property>
-      <sv:property sv:name="website:author" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="website:commentsAllowed" sv:type="Boolean">
-        <sv:value>true</sv:value>
-      </sv:property>
-      <sv:property sv:name="website:title" sv:type="String">
-        <sv:value/>
-      </sv:property>
       <sv:node sv:name="hippotranslation:translations">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hippotranslation:translations</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="website:image">
+      <sv:node sv:name="website:imprint">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
+          <sv:value>hippo:mirror</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
-      <sv:node sv:name="website:body">
+      <sv:node sv:name="website:contact">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
+          <sv:value>hippo:mirror</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value>&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</sv:value>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="website:rss">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:mirror</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -275,91 +208,34 @@
         <sv:value>validator.id</sv:value>
       </sv:property>
       <sv:property sv:name="type" sv:type="String">
-        <sv:value>website:blogdocument</sv:value>
+        <sv:value>website:bannerdocument</sv:value>
       </sv:property>
       <sv:node sv:name="root">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
-        <sv:property sv:name="extension.left" sv:type="String">
-          <sv:value>${cluster.id}.left</sv:value>
-        </sv:property>
-        <sv:property sv:name="extension.right" sv:type="String">
-          <sv:value>${cluster.id}.right</sv:value>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.layout.TwoColumn</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.extensions" sv:type="String" sv:multiple="true">
-          <sv:value>extension.left</sv:value>
-          <sv:value>extension.right</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="left">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
         <sv:property sv:name="item" sv:type="String">
-          <sv:value>${cluster.id}.left.item</sv:value>
+          <sv:value>${cluster.id}.field</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.service.render.ListViewPlugin</sv:value>
         </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.left</sv:value>
-        </sv:property>
       </sv:node>
-      <sv:node sv:name="right">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="item" sv:type="String">
-          <sv:value>${cluster.id}.right.item</sv:value>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.service.render.ListViewPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.right</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="title">
+      <sv:node sv:name="rss">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Title</sv:value>
+          <sv:value>Link zum RSS-Dokument</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>title</sv:value>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.left.item</sv:value>
-        </sv:property>
-        <sv:node sv:name="cluster.options">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>frontend:pluginconfig</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="image">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Article image</sv:value>
-        </sv:property>
-        <sv:property sv:name="field" sv:type="String">
-          <sv:value>image</sv:value>
+          <sv:value>rss</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
         </sv:property>
         <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.right.item</sv:value>
+          <sv:value>${cluster.id}.field</sv:value>
         </sv:property>
         <sv:node sv:name="cluster.options">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -367,43 +243,21 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="commentsAllowed">
+      <sv:node sv:name="contact">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Allow comments</sv:value>
+          <sv:value>Link zum Kontaktdokument</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>commentsAllowed</sv:value>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.right.item</sv:value>
-        </sv:property>
-        <sv:node sv:name="cluster.options">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>frontend:pluginconfig</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Body</sv:value>
-        </sv:property>
-        <sv:property sv:name="field" sv:type="String">
-          <sv:value>hippostd_html</sv:value>
+          <sv:value>contact</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
         </sv:property>
         <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.left.item</sv:value>
+          <sv:value>${cluster.id}.field</sv:value>
         </sv:property>
         <sv:node sv:name="cluster.options">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -411,21 +265,21 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="author">
+      <sv:node sv:name="imprint">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Author</sv:value>
+          <sv:value>Link zum Impressumsdokument</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>author</sv:value>
+          <sv:value>imprint</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
         </sv:property>
         <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.left.item</sv:value>
+          <sv:value>${cluster.id}.field</sv:value>
         </sv:property>
         <sv:node sv:name="cluster.options">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
