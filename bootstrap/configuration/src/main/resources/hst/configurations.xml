@@ -42,7 +42,7 @@
       <sv:value>hst:configuration</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="website-v8">
+  <sv:node sv:name="website-v9">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:configuration</sv:value>
     </sv:property>

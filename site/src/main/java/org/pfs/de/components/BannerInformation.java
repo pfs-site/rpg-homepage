@@ -15,45 +15,23 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-public class BannerInformation extends BaseHstComponent {
+public class BannerInformation extends BaseComponent {
 
     public static final Logger log = LoggerFactory.getLogger(BannerInformation.class);
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) throws HstComponentException {
 
-        int count = 0;
-        request.setAttribute("count", count);
-
         Mount mount = request.getRequestContext().getResolvedMount().getMount();
         WebsiteInfo info = mount.getChannelInfo();
 
-        //Session session = UserSession.get().getJcrSession();
-        Repository repository = null;
-        try {
-            Context initCtx = new InitialContext();
-            Context envCtx = (Context)initCtx.lookup("java:comp/env");
-            repository = (Repository) envCtx.lookup("jcr/repository");
-        } catch (NamingException e) {
-            e.printStackTrace();
-        }
         Node node = null;
         Node document = null;
-        count = 1;
-        request.setAttribute("count", count);
         try {
-            Session session = repository.login(new SimpleCredentials("admin", "admin".toCharArray()));
-            count = 2;
-            request.setAttribute("count", count);
+            Session session = request.getRequestContext().getSession();
             String bannerInfoPath = info.getBannerInformationPath();
-            count = 3;
-            request.setAttribute("count", count);
             node = session.getRootNode().getNode(bannerInfoPath);
-            count = 4;
-            request.setAttribute("count", count);
             document = node.getNode(node.getName());
-            count = 5;
-            request.setAttribute("count", count);
         } catch (RepositoryException e) {
             e.printStackTrace();
         }
@@ -66,7 +44,6 @@ public class BannerInformation extends BaseHstComponent {
             return;
         }
         request.setAttribute("document",document);
-        request.setAttribute("count", count);
 
     }
 
