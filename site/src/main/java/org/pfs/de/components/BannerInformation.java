@@ -3,9 +3,14 @@ package org.pfs.de.components;
 import org.hippoecm.frontend.session.UserSession;
 import org.hippoecm.hst.component.support.bean.BaseHstComponent;
 import org.hippoecm.hst.configuration.hosting.Mount;
+import org.hippoecm.hst.container.RequestContextProvider;
+import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
+import org.hippoecm.hst.core.request.HstRequestContext;
+import org.pfs.de.beans.BannerDocument;
 import org.pfs.de.channels.WebsiteInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,16 +30,16 @@ public class BannerInformation extends BaseComponent {
         Mount mount = request.getRequestContext().getResolvedMount().getMount();
         WebsiteInfo info = mount.getChannelInfo();
 
-        Node node = null;
-        Node document = null;
+
+        BannerDocument document = null;
         try {
-            Session session = request.getRequestContext().getSession();
             String bannerInfoPath = info.getBannerInformationPath();
-            node = session.getRootNode().getNode(bannerInfoPath);
-            document = node.getNode(node.getName());
+            document = (BannerDocument)getSiteContentBaseBean(request).getObjectConverter().getObject(getSiteContentBaseBean(request).getNode().getSession(), bannerInfoPath);
         } catch (RepositoryException e) {
             e.printStackTrace();
-        }
+        } catch (ObjectBeanManagerException e) {
+			e.printStackTrace();
+		}
 
         if (document == null) {
             log.warn("Did not find a content bean for relative content path '{}' for pathInfo '{}'", 

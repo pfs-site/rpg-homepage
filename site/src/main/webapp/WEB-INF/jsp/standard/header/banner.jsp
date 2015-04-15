@@ -6,12 +6,11 @@
     </div>
 
     <!--<a href="#" class="headerLink login"></a>-->
-    <a href="#" class="headerLink rss"></a>
-    <a href="#" class="headerLink contact"></a>
-    <a href="#" class="headerLink imprint"></a>
+    <hst:link var="rssLink" hippobean="${document.rssDocument}" />
+    <a href="<c:out value="${rssLink}"/>" class="headerLink rss"></a>
+    <hst:link var="contactLink" hippobean="${document.contactDocument}" />
+    <a href="<c:out value="${contactLink}"/>" class="headerLink contact"></a>
+    <hst:link var="imprintLink" hippobean="${document.imprintDocument}" />
+    <a href="<c:out value="${imprintLink}"/>" class="headerLink imprint"></a>
 </div>
 
-test1
-<c:out value="${document}"/>
-<%--<c:out value="${document.rssDocument}"/>--%>
-test2: <c:out value="${count}"/>

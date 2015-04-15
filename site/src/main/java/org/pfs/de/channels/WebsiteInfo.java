@@ -22,7 +22,7 @@ public interface WebsiteInfo extends ChannelInfo {
 
     @Parameter(name = "bannerInformationPath")
     @JcrPath(
-            //pickerSelectableNodeTypes = {"website:bannerdocument"},
+            pickerSelectableNodeTypes = {"hippo:document"},
             pickerInitialPath = "cms-pickers/documents"
     )
     String getBannerInformationPath();
