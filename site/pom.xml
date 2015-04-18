@@ -140,6 +140,12 @@
 		<artifactId>hippo-utilities-commons</artifactId>
 		<scope>test</scope>
 	</dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-cms-api</artifactId>
+    </dependency>
+
   </dependencies>
 
   <build>

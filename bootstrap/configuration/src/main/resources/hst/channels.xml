@@ -23,6 +23,9 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:channelinfo</sv:value>
       </sv:property>
+      <sv:property sv:name="bannerInformationPath" sv:type="String">
+        <sv:value>/content/documents/website/common/banner-information</sv:value>
+      </sv:property>
       <sv:property sv:name="headerName" sv:type="String">
         <sv:value>Pathfinder Society Karlsruhe</sv:value>
       </sv:property>

@@ -3,6 +3,7 @@ package org.pfs.de.channels;
 import org.hippoecm.hst.configuration.channel.ChannelInfo;
 import org.hippoecm.hst.core.parameters.FieldGroup;
 import org.hippoecm.hst.core.parameters.FieldGroupList;
+import org.hippoecm.hst.core.parameters.JcrPath;
 import org.hippoecm.hst.core.parameters.Parameter;
 
 /**
@@ -11,7 +12,7 @@ import org.hippoecm.hst.core.parameters.Parameter;
 @FieldGroupList({
         @FieldGroup(
                 titleKey = "fields.subsite",
-                value = { "headerName" }
+                value = { "headerName", "bannerInformationPath" }
         )
 })
 public interface SubsiteInfo extends ChannelInfo {
@@ -19,4 +20,10 @@ public interface SubsiteInfo extends ChannelInfo {
     @Parameter(name = "headerName", defaultValue = "HST Subsite")
     String getHeaderName();
 
+    @Parameter(name = "bannerInformationPath")
+    @JcrPath(
+            pickerSelectableNodeTypes = {"website:bannerdocument"},
+            pickerInitialPath = "cms-pickers/documents"
+    )
+    String getBannerInformationPath();
 }
