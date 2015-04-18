@@ -3,7 +3,7 @@
  */
 package org.pfs.de.services;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.util.Date;
@@ -57,6 +57,10 @@ public class DocumentResourceTest extends BaseSessionTest {
 				servletRequest, servletResponse, null, DOCUMENT_ID, comment);
 
 		assertNotNull("No representation created for comment response", result);
+		
+		assertEquals("Author not set correctly", "Tester", result.getAuthor());
+		//Reference document not created correctly due to mocking
+//		assertEquals("Comment created for wrong document", DOCUMENT_ID, result.getReferenceDocument().getIdentifier());
 	}
 
 }
