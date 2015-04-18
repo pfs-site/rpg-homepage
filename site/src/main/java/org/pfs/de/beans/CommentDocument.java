@@ -55,7 +55,12 @@ public class CommentDocument extends BaseDocument{
      * @return The author link.
      */
     public String getLink() {
-        return getProperty(FIELD_LINK);
+        String link = getProperty(FIELD_LINK);
+        if (link.startsWith("http://") || link.startsWith("https://")) {
+        	return link;
+        } else {
+        	return "http://" + link;
+        }
     }
 
     /**
