@@ -21,17 +21,25 @@ package org.pfs.de.test.utilities;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.jcr.Item;
+import javax.jcr.ItemNotFoundException;
 import javax.jcr.Node;
+import javax.jcr.PathNotFoundException;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 
+import org.hippoecm.repository.api.HippoNode;
+import org.hippoecm.repository.api.Localized;
 import org.mockito.Matchers;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
@@ -98,6 +106,9 @@ public final class JcrMockUtils {
             final Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             MockNode rootNode = (MockNode) unmarshaller.unmarshal(inputStream);
             rootNode.buildTree(rootNode);
+            //Enhance nodes to be an enhanced node
+            EnhancedMockNode.enhance(rootNode);
+            EnhancedMockNode.enhanceChildren(rootNode);
             return rootNode;
         } catch (Exception exception) {
             logger.error("Error occurred mocking a node for input stream: " + inputStream, exception);
@@ -108,10 +119,11 @@ public final class JcrMockUtils {
     /**
      * Create a mocked root node.
      * @return Root node mock.
+     * @throws RepositoryException 
      */
-    private static MockNode mockRootNode() {
+    private static MockNode mockRootNode() throws RepositoryException {
     	MockNode.invalidateSession();
-        final MockNode rootNode = new MockNode();
+        final MockNode rootNode = new EnhancedMockNode();
         rootNode.setMockNodeName("jcr:root");
         final MockProperty nodeTypeProperty = new MockProperty();
         nodeTypeProperty.setMockPropertyName("jcr:primaryType");
@@ -125,6 +137,8 @@ public final class JcrMockUtils {
         uuidProperty.setMockPropertyName("jcr:uuid");
         uuidProperty.setMockValues(Arrays.asList("cafebabe-cafe-babe-cafe-babecafebabe"));
         rootNode.setMockProperty(uuidProperty);
+        //Call once to initialize static rootNode variable in MockNode class
+        rootNode.getJcrMock();
         return rootNode;
     }
     
@@ -144,6 +158,7 @@ public final class JcrMockUtils {
         	MockNode childNode = mockNode(resource);
         	rootNode.addMockChildNode(childNode);
         }
+        rootNode.buildTree(null);
         
         enhanceRepository(rootNode);
         
@@ -152,7 +167,7 @@ public final class JcrMockUtils {
         return jcrRootNode.getSession();
     }
 
-    /**
+	/**
      * Create a mocked JCR session from a set of input streams. Each stream is read into
      * a mock node, and then added below the root node of the mocked repository.
      * @param inputStreams Input streams.
@@ -168,6 +183,9 @@ public final class JcrMockUtils {
         	MockNode childNode = mockNode(in);
         	rootNode.addMockChildNode(childNode);
         }
+        rootNode.buildTree(null);
+        
+        enhanceRepository(rootNode);
         
         //Generate mocked node
         final Node jcrRootNode = rootNode.getJcrMock();
@@ -180,7 +198,7 @@ public final class JcrMockUtils {
      * @throws RepositoryException
      */
     @SuppressWarnings("deprecation")
-	private static void enhanceRepository(MockNode rootNode) throws RepositoryException {
+	private static void enhanceRepository(final MockNode rootNode) throws RepositoryException {
     	Map<String, MockNode> nodes = new HashMap<>();
     	collectUUIDs(nodes, rootNode);
     	UUIDAnswer uuidAnswer = new UUIDAnswer(nodes);
@@ -188,6 +206,37 @@ public final class JcrMockUtils {
     	Session session = rootNode.getJcrMock().getSession();
     	Mockito.when(session.getNodeByUUID(Matchers.anyString())).thenAnswer(uuidAnswer);
     	Mockito.when(session.getNodeByIdentifier(Matchers.anyString())).thenAnswer(uuidAnswer);
+    	
+    	Mockito.when(session.getNode(Matchers.anyString())).thenAnswer(new Answer<Node>() {
+			@Override
+			public Node answer(InvocationOnMock invocation) throws Throwable {
+				String absPath = (String) invocation.getArguments()[0];
+				if (absPath == null) {
+					throw new RepositoryException("Path is null");
+				}
+				if (absPath.startsWith("/")) {
+					absPath = absPath.substring(1);
+				}
+				MockNode mock = rootNode.getMockChildNode(absPath);
+				if (mock == null) {
+					throw new PathNotFoundException(String.format("No node at path %s", absPath));
+				}
+				return wrap(mock.getJcrMock());
+			}
+    	});
+    	Mockito.when(session.nodeExists(Matchers.anyString())).thenAnswer(new Answer<Boolean>() {
+
+			@Override
+			public Boolean answer(InvocationOnMock invocation) throws Throwable {
+				String absPath = (String) invocation.getArguments()[0];
+				if (absPath == null) {
+					throw new RepositoryException("Path is null");
+				}
+				Item itemAtPath = ((Session)invocation.getMock()).getItem(absPath);
+				return itemAtPath != null;
+			}
+			
+		});
     }
     
     /**
@@ -237,6 +286,104 @@ public final class JcrMockUtils {
 		return JcrMockUtils.mockJcrSession(resources);
 	}
     
+	/**
+	 * Wrap a {@link Node} into a mock of a {@link HippoNode}.
+	 * 
+	 * @param node Original node.
+	 * @return Wrapped node.
+	 * @throws ItemNotFoundException
+	 * @throws RepositoryException
+	 */
+	@SuppressWarnings("deprecation")
+	public static HippoNode wrap(final Node node) throws ItemNotFoundException, RepositoryException {
+		if (node instanceof HippoNode) {
+			//Wrapping not required
+			return (HippoNode) node;
+		}
+		HippoNode wrapper = Mockito.mock(HippoNode.class, new WrapperAnswer(node));
+		
+		Answer<Boolean> compareAnswer = new Answer<Boolean>() {
+			@Override
+			public Boolean answer(InvocationOnMock invocation) throws Throwable {
+				if (invocation.getArguments().length > 0 && invocation.getArguments()[0] instanceof Node) {
+					Node other = (Node) invocation.getArguments()[0];
+					if (node == other || node.equals(other)) {
+						return true;
+					}
+					return node.getUUID().equals(other.getIdentifier());
+				}
+				return false;
+			}
+		};
+		
+		Mockito.doReturn(wrapper).when(wrapper).getCanonicalNode();
+		Mockito.doReturn(node.getUUID()).when(wrapper).getIdentifier();
+		Mockito.doAnswer(compareAnswer).when(wrapper).isSame(Matchers.any(Node.class));
+		Mockito.doReturn(node.getName()).when(wrapper).getLocalizedName();
+		Mockito.doReturn(node.getName()).when(wrapper).getLocalizedName(Matchers.any(Localized.class));
+		
+		return wrapper;
+	}
+	
+	/**
+	 * Call a method on a wrapped object and return the response.
+	 * @param invocation Original invocation.
+	 * @param wrapped The wrapped object.
+	 * @return Object returned by the wrapped method.
+	 * @throws InvocationTargetException 
+	 * @throws IllegalArgumentException 
+	 * @throws IllegalAccessException 
+	 * @throws SecurityException 
+	 * @throws NoSuchMethodException 
+	 */
+	private static Object callMethodOnWrappedInstance(InvocationOnMock invocation, Object wrapped) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+		//Get name and parameters of called method
+		String methodName = invocation.getMethod().getName();
+		Class<?>[] parameterClasses = new Class<?>[invocation.getMethod().getParameterCount()];
+		Parameter[] params = invocation.getMethod().getParameters();
+		for (int index = 0; index < params.length; index++) {
+			parameterClasses[index] = params[index].getType();
+		}
+		//Exception will be thrown if method does not exist
+		Method method = wrapped.getClass().getMethod(methodName, parameterClasses);
+		//Call method on wrapped object
+		return method.invoke(wrapped, invocation.getArguments());
+	}
+	
+	/**
+	 * Answer which passes on method calls to a wrapped object.
+	 * 
+	 * @author Martin Dreier <martin@martindreier.de>
+	 *
+	 */
+	private static class WrapperAnswer implements Answer<Object> {
+
+		/**
+		 * The wrapped node.
+		 */
+		private Node wrappedNode;
+
+		/**
+		 * @param node
+		 */
+		public WrapperAnswer(Node wrappedNode) {
+			this.wrappedNode = wrappedNode;
+		}
+
+		/**
+		 * @see org.mockito.stubbing.Answer#answer(org.mockito.invocation.InvocationOnMock)
+		 */
+		@Override
+		public Object answer(InvocationOnMock invocation) throws Throwable {
+			Object ret = callMethodOnWrappedInstance(invocation, wrappedNode);
+			if (ret instanceof Node) {
+				ret = wrap((Node)ret);
+			}
+			return ret;
+		}
+		
+	}
+	
     /**
      * This class can answer requests to find a node by UUID.
      * 

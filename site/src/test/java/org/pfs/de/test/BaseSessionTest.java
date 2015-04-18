@@ -3,11 +3,17 @@
  */
 package org.pfs.de.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.core.container.ContainerConstants;
+import org.hippoecm.hst.core.linking.HstLink;
+import org.hippoecm.hst.core.linking.HstLinkCreator;
+import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.core.request.ResolvedMount;
 import org.hippoecm.hst.jaxrs.services.AbstractResource;
 import org.hippoecm.hst.mock.core.component.MockHstRequest;
@@ -18,6 +24,8 @@ import org.hippoecm.hst.site.HstServices;
 import org.hippoecm.hst.site.container.SpringMetadataReaderClasspathResourceScanner;
 import org.hippoecm.hst.util.ClasspathResourceScanner;
 import org.mockito.Mockito;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
 import org.pfs.de.test.utilities.JcrMockUtils;
 import org.pfs.de.test.utilities.workflow.WorkflowMockUtils;
 import org.springframework.mock.web.MockServletContext;
@@ -62,6 +70,7 @@ public abstract class BaseSessionTest {
 		context.setServletContext(servletContext);
 		context.setResolvedMount(createResolvedMount());
 		context.setSession(createSession());
+		context.setHstLinkCreator(createLinkCreator());
 		
 		//Build Sptring component manager
 		MockComponentManager componentManager = new MockComponentManager();
@@ -72,13 +81,46 @@ public abstract class BaseSessionTest {
 	}
 	
 	/**
+	 * Create an instance of {@link HstLinkCreator} returning mocked
+	 * values.
+	 * 
+	 * @return Link creator instance.
+	 */
+	private HstLinkCreator createLinkCreator() {
+		Answer<Object> linkAnswer = new Answer<Object>() {
+			
+			@Override
+			public Object answer(InvocationOnMock invocation) throws Throwable {
+				Class<?> returnType = invocation.getMethod().getReturnType();
+				if (returnType == HstLink.class) {
+					MockHstLink link = new MockHstLink("http://www.example.com");
+					return link;
+				} else if (returnType == List.class) {
+					List<HstLink> links = new ArrayList<HstLink>(5);
+					for (int index = 1; index <= 5; index++) {
+						MockHstLink link = new MockHstLink("http://www.example.com/" + index);
+						links.add(link);
+					}
+					return links;
+				} else {
+					throw new IllegalArgumentException(String.format("Unhandled method: %s", invocation.getMethod().getName()));
+				}
+			}
+		};
+		HstLinkCreator linkCreator = Mockito.mock(HstLinkCreator.class, linkAnswer);
+		return linkCreator;
+	}
+
+	/**
 	 * Create mocks for the resolved mount.
 	 * 
 	 * @return Mock of the resolved mount;
 	 */
 	private ResolvedMount createResolvedMount() {
+		Mount parent = Mockito.mock(Mount.class);
 		Mount mount = Mockito.mock(Mount.class);
-		Mockito.when(mount.getContentPath()).thenReturn("/content");
+		Mockito.when(mount.getContentPath()).thenReturn("/content/documents/website");
+		Mockito.when(mount.getParent()).thenReturn(parent);
 		
 		ResolvedMount resolvedMount = Mockito.mock(ResolvedMount.class);
 		Mockito.when(resolvedMount.getMount()).thenReturn(mount);
@@ -101,5 +143,38 @@ public abstract class BaseSessionTest {
 		WorkflowMockUtils.mockWorkspace(session);
 		
 		return session;
+	}
+	
+	/**
+	 * Enhancement of the {@link org.hippoecm.hst.mock.core.linking.MockHstLink} class.
+	 * 
+	 * @author Martin Dreier <martin@martindreier.de>
+	 *
+	 */
+	public class MockHstLink extends org.hippoecm.hst.mock.core.linking.MockHstLink {
+
+		/**
+		 * URL form of the link.
+		 */
+		private String urlForm;
+
+		/**
+		 * Create a new mock link.
+		 * 
+		 * @param urlForm The resolved URL form of this link.
+		 */
+		public MockHstLink(String urlForm) {
+			super();
+			this.urlForm = urlForm;
+		}
+		
+		/**
+		 * @see org.hippoecm.hst.mock.core.linking.MockHstLink#toUrlForm(org.hippoecm.hst.core.request.HstRequestContext, boolean)
+		 */
+		@Override
+		public String toUrlForm(HstRequestContext requestContext, boolean fullyQualified) {
+			return urlForm;
+		}
+
 	}
 }
