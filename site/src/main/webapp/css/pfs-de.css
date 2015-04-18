@@ -286,6 +286,10 @@ html, body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.pfs-de #website-comments-form textarea {
+	height: 70px;
+}
+
 .pfs-de input[type="button"] {
     background-color: #941616;
     border-color: white;
