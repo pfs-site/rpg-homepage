@@ -1,6 +1,7 @@
 package org.pfs.de.test.utilities.workflow;
 
 import javax.jcr.Node;
+import javax.jcr.Session;
 
 import org.hippoecm.repository.api.Workflow;
 
@@ -13,5 +14,5 @@ import org.hippoecm.repository.api.Workflow;
  */
 public interface WorkflowProducer<T extends Workflow> {
 	
-	public T createWorkflow(Node node);
+	public T createWorkflow(Node node, Session session);
 }

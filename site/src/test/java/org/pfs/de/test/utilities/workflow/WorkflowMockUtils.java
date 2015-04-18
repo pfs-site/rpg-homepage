@@ -49,7 +49,7 @@ public class WorkflowMockUtils {
 				} else {
 					throw new ClassCastException(String.format("Second argument is unexpected class %s, expecting Node or Document", invocation.getArguments()[1].getClass().getName()));
 				}
-				return WorkflowProducerFactory.getProducer(workflowCategory).createWorkflow(node);
+				return WorkflowProducerFactory.getProducer(workflowCategory).createWorkflow(node, session);
 			}
 			
 		};

@@ -27,6 +27,10 @@ public class WorkflowProducerFactory {
 	 */
 	private static Map<String, WorkflowProducer<?>> producers = new HashMap<>();
 	
+	static {
+		registerWorkflowProducer("threepane", new FolderWorkflowProducer());
+	}
+	
 	/**
 	 * Get a producer for a workflow category.
 	 * @param workflowCategory The workflow category.
