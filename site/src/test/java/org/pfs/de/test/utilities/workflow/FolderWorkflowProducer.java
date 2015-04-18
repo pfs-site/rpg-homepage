@@ -21,6 +21,8 @@ import org.mockito.Matchers;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Martin Dreier <martin@martindreier.de>
@@ -28,6 +30,11 @@ import org.mockito.stubbing.Answer;
  */
 public class FolderWorkflowProducer implements WorkflowProducer<FolderWorkflow> {
 
+	/**
+	 * Log instance.
+	 */
+	private static Logger logger = LoggerFactory.getLogger(FolderWorkflowProducer.class);
+	
 	/**
 	 * @see org.pfs.de.test.utilities.workflow.WorkflowProducer#createWorkflow(javax.jcr.Node)
 	 */
@@ -77,7 +84,7 @@ public class FolderWorkflowProducer implements WorkflowProducer<FolderWorkflow> 
 					name = (String) invocation.getArguments()[2];
 				}
 
-				System.out.println(String.format(
+				logger.debug(String.format(
 						"Create node with category %s, template %s, name %s",
 						category, template, name));
 
