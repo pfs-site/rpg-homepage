@@ -246,7 +246,7 @@
       <dependency>
         <groupId>org.onehippo.cms7</groupId>
         <artifactId>hippo-cms-api</artifactId>
-        <version>2.24.03</version>
+        <version>${hippo.cms.version}</version>
       </dependency>
 
     </dependencies>
