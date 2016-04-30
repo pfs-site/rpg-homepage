@@ -28,7 +28,7 @@
         <sv:value>hipposysedit:remodel</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>95068a2a-b266-4b00-86bd-fb7130eb5d72</sv:value>
+        <sv:value>3e7997ce-5dda-40cf-8136-68ae7dae4d97</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hipposysedit:node" sv:type="Boolean">
@@ -90,32 +90,6 @@
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>website:eventenrollment</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="gamemaster">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hipposysedit:field</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:gamemaster</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>website:gamemaster</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>required</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="startdate">
@@ -194,6 +168,32 @@
           <sv:value>required</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="hippo_mirror">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>website:gamemaster</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>hippo:mirror</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
+          <sv:value>required</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="hipposysedit:prototypes">
@@ -208,7 +208,7 @@
         <sv:value>hippo:harddocument</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>6ec8c9cf-dcfb-4cce-9c70-655f72863022</sv:value>
+        <sv:value>43f364c2-aacb-4514-a0fa-4cfacb8b0c00</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hippostd:holder" sv:type="String">
@@ -287,25 +287,11 @@
       </sv:node>
       <sv:node sv:name="website:gamemaster">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>website:gamemaster</sv:value>
+          <sv:value>hippo:mirror</sv:value>
         </sv:property>
-        <sv:property sv:name="website:emailaddress" sv:type="String">
-          <sv:value/>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
         </sv:property>
-        <sv:property sv:name="website:name" sv:type="String">
-          <sv:value/>
-        </sv:property>
-        <sv:node sv:name="website:portrait">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hippogallerypicker:imagelink</sv:value>
-          </sv:property>
-          <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-          </sv:property>
-          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-        </sv:node>
       </sv:node>
     </sv:node>
   </sv:node>
@@ -533,28 +519,6 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="gamemaster">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="caption" sv:type="String">
-          <sv:value>GM</sv:value>
-        </sv:property>
-        <sv:property sv:name="field" sv:type="String">
-          <sv:value>gamemaster</sv:value>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.right.item</sv:value>
-        </sv:property>
-        <sv:node sv:name="cluster.options">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>frontend:pluginconfig</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
       <sv:node sv:name="enrolledPlayers">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
@@ -592,6 +556,28 @@
         </sv:property>
         <sv:property sv:name="wicket.id" sv:type="String">
           <sv:value>${cluster.id}.left.item</sv:value>
+        </sv:property>
+        <sv:node sv:name="cluster.options">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="gamemaster">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="caption" sv:type="String">
+          <sv:value>GM</sv:value>
+        </sv:property>
+        <sv:property sv:name="field" sv:type="String">
+          <sv:value>hippo_mirror</sv:value>
+        </sv:property>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.right.item</sv:value>
         </sv:property>
         <sv:node sv:name="cluster.options">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">

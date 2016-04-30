@@ -39,6 +39,9 @@
 [website:gamemaster] > hippo:compound, hippostd:relaxed
   orderable
 
+[website:gmdocument] > hippostd:relaxed, hippotranslation:translated, website:basedocument
+  orderable
+
 [website:newsdocument] > hippostd:relaxed, website:basedocument
   orderable
 
