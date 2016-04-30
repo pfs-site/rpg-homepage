@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="blogDetail">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="eventDetail">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:component</sv:value>
   </sv:property>
@@ -17,7 +17,7 @@
         <sv:value>hst:components/documentDetail</sv:value>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>blogDetail.main.smallContent</sv:value>
+        <sv:value>eventDetail.main.smallContent</sv:value>
       </sv:property>
       <sv:node sv:name="commentForm">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">

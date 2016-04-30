@@ -130,20 +130,28 @@
       <sv:value>jsp/blogDetail/main/content/smallContent.jsp</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="blogDetail.main.smallContent.commentList">
+  <sv:node sv:name="blogAndEventDetail.main.smallContent.commentList">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:template</sv:value>
     </sv:property>
     <sv:property sv:name="hst:renderpath" sv:type="String">
-      <sv:value>jsp/blogDetail/main/content/smallContent/commentList.jsp</sv:value>
+      <sv:value>jsp/blogAndEventDetail/main/content/smallContent/commentList.jsp</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="blogDetail.main.smallContent.commentForm">
+  <sv:node sv:name="blogAndEventDetail.main.smallContent.commentForm">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:template</sv:value>
     </sv:property>
     <sv:property sv:name="hst:renderpath" sv:type="String">
-      <sv:value>jsp/blogDetail/main/content/smallContent/commentForm.jsp</sv:value>
+      <sv:value>jsp/blogAndEventDetail/main/content/smallContent/commentForm.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="eventDetail.main.smallContent">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/eventDetail/main/content/smallContent.jsp</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
