@@ -14,6 +14,7 @@ import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.pfs.de.beans.BlogDocument;
+import org.pfs.de.beans.EventDocument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,7 +40,7 @@ public class BlogOverview extends BaseComponent {
     try {
      //Read all blog entries
      @SuppressWarnings("unchecked")
-	 HstQuery query = getQueryManager(request).createQuery(scope, BlogDocument.class);
+	 HstQuery query = getQueryManager(request).createQuery(scope, BlogDocument.class, EventDocument.class);
      query.addOrderByDescending("hippostdpubwf:publicationDate");
      HstQueryResult result = query.execute();
      

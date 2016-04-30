@@ -12,11 +12,14 @@ import org.junit.Test;
 import org.pfs.de.test.AbstractComponentTest;
 import static org.easymock.EasyMock.*;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
+import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
+
 import static org.junit.Assert.*;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoFolder;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.pfs.de.beans.BlogDocument;
+import org.pfs.de.beans.EventDocument;
 import org.pfs.de.componentsinfo.PageableListInfo;
 
 /**
@@ -45,7 +48,31 @@ public class BlogOverviewTest extends AbstractComponentTest<BlogOverview> {
         replay(componentUnderTest);
         componentUnderTest.doBeforeRender(mockRequest, mockResponse);
     }
-       
+    
+    /**
+     * Set up a test query with 1 result.
+     * @param scope Request scope.
+     * @return Mocked result.
+     * @throws QueryException
+     */
+    protected HstQueryResult setUpQuery(HippoBean scope) throws QueryException {
+    	return setUpQuery(scope, 1);
+    }
+    
+    /**
+     * Set up a test query with a specified result size.
+     * @param scope Request scope.
+     * @param resultSize Number of results.
+     * @return Mocked result.
+     * @throws QueryException
+     */
+    @SuppressWarnings("unchecked")
+	protected HstQueryResult setUpQuery(HippoBean scope, int resultSize) throws QueryException {
+    	HstQueryResult queryResult = createQueryResultMock(resultSize, new Class[] {BlogDocument.class, EventDocument.class });
+        setUpQuery(scope, new Class[] {BlogDocument.class, EventDocument.class }, queryResult);
+        return queryResult;
+    }
+    
     /**
      * Test that the query result is set to the request.
      * @throws Exception 
@@ -55,8 +82,7 @@ public class BlogOverviewTest extends AbstractComponentTest<BlogOverview> {
         
         //Set up the required objects
         HippoBean scope = new HippoFolder();
-        HstQueryResult queryResult = createQueryResultMock(1, BlogDocument.class);
-        setUpQuery(scope, BlogDocument.class, queryResult);
+        HstQueryResult queryResult = setUpQuery(scope);
         PageableListInfo info = EasyMock.createMock(PageableListInfo.class);
         
         //Record method calls
@@ -85,13 +111,12 @@ public class BlogOverviewTest extends AbstractComponentTest<BlogOverview> {
      * Test paging with multiple pages.
      * @throws Exception 
      */
-    @Test
+	@Test
     public void testPaging() throws Exception {
         
         //Set up the required objects
         HippoBean scope = new HippoFolder();
-        HstQueryResult queryResult = createQueryResultMock(11, BlogDocument.class);
-        setUpQuery(scope, BlogDocument.class, queryResult);
+        setUpQuery(scope, 11);
         PageableListInfo info = EasyMock.createMock(PageableListInfo.class);
         
         //Record method calls
@@ -123,13 +148,12 @@ public class BlogOverviewTest extends AbstractComponentTest<BlogOverview> {
      * Test paging with only a single result page.
      * @throws Exception 
      */
-    @Test
+	@Test
     public void testSinglePage() throws Exception {
         
         //Set up the required objects
         HippoBean scope = new HippoFolder();
-        HstQueryResult queryResult = createQueryResultMock(1, BlogDocument.class);
-        setUpQuery(scope, BlogDocument.class, queryResult);
+        setUpQuery(scope);
         PageableListInfo info = EasyMock.createMock(PageableListInfo.class);
         
         //Record method calls

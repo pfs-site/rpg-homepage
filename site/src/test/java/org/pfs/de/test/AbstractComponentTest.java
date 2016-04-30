@@ -4,15 +4,17 @@
  */
 package org.pfs.de.test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.easymock.EasyMock;
 import static org.easymock.EasyMock.createMockBuilder;
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.replay;
+import static org.junit.Assert.assertTrue;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.easymock.EasyMock;
 import org.easymock.IMockBuilder;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryManager;
@@ -24,10 +26,8 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.mock.content.beans.standard.MockHippoBeanIterator;
 import org.hippoecm.hst.mock.core.component.MockHstRequest;
 import org.hippoecm.hst.mock.core.component.MockHstResponse;
-import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.pfs.de.components.BaseComponent;
-import org.pfs.de.components.BlogOverviewTest;
 import org.pfs.de.componentsinfo.GeneralListInfo;
 
 /**
@@ -81,14 +81,29 @@ public abstract class AbstractComponentTest<T extends BaseComponent> {
      * @return The mocked query.
      */
     protected HstQuery setUpQuery(HippoBean scope, Class<? extends HippoBean> returnType, HstQueryResult result) throws QueryException {
+    	@SuppressWarnings("unchecked")
+		Class<? extends HippoBean>[] returnTypes = (Class<? extends HippoBean>[]) Array.newInstance(returnType.getClass(), 1);
+    	returnTypes[0] = returnType;
+    	return setUpQuery(scope, returnTypes, result);
+    }
+    /**
+     * Set up query. This methods creates mocks for the query manager, query
+     * and results, including expected methods. The query is created as a 
+     * nice mock. Query manager and query are set to replay.
+     * @param scope The scope object to set up the query.
+     * @param returnTypes The query return types. May be <code>null</code>.
+     * @param result The expected query result.
+     * @return The mocked query.
+     */
+    protected HstQuery setUpQuery(HippoBean scope, Class<? extends HippoBean>[] returnTypes, HstQueryResult result) throws QueryException {
         HstQueryManager queryManager = EasyMock.createMock(HstQueryManager.class);
         HstQuery query = EasyMock.createNiceMock(HstQuery.class);
         
         expect(componentUnderTest.getQueryManager(mockRequest)).andStubReturn(queryManager);
-        if (returnType == null) {
+        if (returnTypes == null || returnTypes.length == 0) {
             expect(queryManager.createQuery(scope)).andStubReturn(query);
         } else {
-            expect(queryManager.createQuery(scope, returnType)).andStubReturn(query);
+            expect(queryManager.createQuery(scope, returnTypes)).andStubReturn(query);
         }
         expect(query.execute()).andStubReturn(result);
         
@@ -106,6 +121,21 @@ public abstract class AbstractComponentTest<T extends BaseComponent> {
      * @return The mocked query. It is set to replay.
      */
     protected <R extends HippoBean> HstQueryResult createQueryResultMock(int resultSize, Class<R> resultType, R... specificResults) {
+    	@SuppressWarnings("unchecked")
+		Class<R>[] resultTypes = (Class<R>[]) Array.newInstance(resultType.getClass(), 1);
+    	resultTypes[0] = resultType;
+    	return createQueryResultMock(resultSize, resultTypes, specificResults);
+    }
+    
+    /**
+     * Create a mocked query result.
+     * @param resultSize The size of the expected results.
+     * @param specificResults Specific documents to include in the results.
+     * These documents will be added to the result list first in the order
+     * they are listed in the argument list.
+     * @return The mocked query. It is set to replay.
+     */
+    protected <R extends HippoBean> HstQueryResult createQueryResultMock(int resultSize, Class<R>[] resultTypes, R... specificResults) {
         
         assertTrue("Number of specific documents is higher than expected result size", resultSize >= specificResults.length);
         
@@ -118,7 +148,7 @@ public abstract class AbstractComponentTest<T extends BaseComponent> {
         results.addAll(Arrays.asList(specificResults));
         while (results.size() < resultSize) {
             //Add generic mocked results
-            results.add(EasyMock.createNiceMock(resultType));
+            results.add(EasyMock.createNiceMock(resultTypes[0]));
         }
         HippoBeanIterator mockedIterator = new MockHippoBeanIterator(results);
         
