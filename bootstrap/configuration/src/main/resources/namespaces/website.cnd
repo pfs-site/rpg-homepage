@@ -30,6 +30,15 @@
 [website:commentdocument] > hippostd:relaxed, hippotranslation:translated, website:basedocument
   orderable
 
+[website:eventdocument] > hippostd:relaxed, hippotranslation:translated, website:blogdocument
+  orderable
+
+[website:eventenrollment] > hippo:compound, hippostd:relaxed
+  orderable
+
+[website:gamemaster] > hippo:compound, hippostd:relaxed
+  orderable
+
 [website:newsdocument] > hippostd:relaxed, website:basedocument
   orderable
 
