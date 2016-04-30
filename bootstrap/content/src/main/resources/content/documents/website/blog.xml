@@ -1885,4 +1885,228 @@ est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur&lt;/p&gt;
       </sv:property>
     </sv:node>
   </sv:node>
+  <sv:node sv:name="first-event">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>hippo:translated</sv:value>
+      <sv:value>hippo:hardhandle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>a4348a8c-a6ad-4d16-918e-2856c5362f0b</sv:value>
+    </sv:property>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>First Event</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="first-event">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>website:eventdocument</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>hippo:harddocument</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>1c96e8ef-e258-4104-b367-34334cfac5c0</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>blog/first-event</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:holder" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2016-04-30T12:27:46.221+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2016-04-30T13:34:33.061+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2016-04-30T13:34:35.850+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>cb72d077-556d-4a6e-b18f-e5fa61535c83</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>de</sv:value>
+      </sv:property>
+      <sv:property sv:name="website:adventureName" sv:type="String">
+        <sv:value>7-13 Captive in Crystal</sv:value>
+      </sv:property>
+      <sv:property sv:name="website:author" sv:type="String">
+        <sv:value>Martin</sv:value>
+      </sv:property>
+      <sv:property sv:name="website:enddate" sv:type="Date">
+        <sv:value>2016-04-06T22:00:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="website:location" sv:type="String">
+        <sv:value>Fantasy Kolloseum Heidelberg</sv:value>
+      </sv:property>
+      <sv:property sv:name="website:startdate" sv:type="Date">
+        <sv:value>2016-05-06T18:00:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="website:title" sv:type="String">
+        <sv:value>The First Event</sv:value>
+      </sv:property>
+      <sv:node sv:name="hippotranslation:translations">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippotranslation:translations</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="website:body">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippostd:html</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:content" sv:type="String">
+          <sv:value>&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Recent events have left the Master of Spells Aram Zey unable to fulfill his
+duties, and without his expertise, the Pathfinder Society struggles to resolve
+pressing arcane matters. The Decemvirate has reopened the decade-old case of the
+most qualified replacement: Aram Zey's predecessor and former Master of Spells
+Sorrina Westyr, who disappeared while handling a powerful &lt;em&gt;wayfinder&lt;/em&gt;
+that the Society has since kept closely guarded. It is up to the PCs to track
+down Sorrina Westyr—and bring back whatever remains.&lt;/p&gt;
+
+&lt;p&gt;Content in "Captive in Crystal" also contributes directly to the ongoing
+storyline of the Grand Lodge faction.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Written by Monica Marlowe.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A Pathfinder Society Scenario designed for &lt;strong&gt;levels 5-9&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="website:enrolledPlayers">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>website:eventenrollment</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:characterName" sv:type="String">
+          <sv:value>Kyra</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:playerName" sv:type="String">
+          <sv:value>Jan</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:showAnonymous" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:text" sv:type="String">
+          <sv:value>Pre-Gen</sv:value>
+        </sv:property>
+        <sv:node sv:name="website:portrait">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippogallerypicker:imagelink</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="website:enrolledPlayers">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>website:eventenrollment</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:characterName" sv:type="String">
+          <sv:value>Ralf</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:playerName" sv:type="String">
+          <sv:value>Bob</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:showAnonymous" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:text" sv:type="String">
+          <sv:value>Awesome wizard</sv:value>
+        </sv:property>
+        <sv:node sv:name="website:portrait">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippogallerypicker:imagelink</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="website:enrolledPlayers">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>website:eventenrollment</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:characterName" sv:type="String">
+          <sv:value>Alfen</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:playerName" sv:type="String">
+          <sv:value>Privy</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:showAnonymous" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="website:text" sv:type="String">
+          <sv:value>I'm not telling</sv:value>
+        </sv:property>
+        <sv:node sv:name="website:portrait">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippogallerypicker:imagelink</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="website:image">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>4a5894d9-4edf-47ef-88f1-f91dcd043163</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+      <sv:node sv:name="website:gamemaster">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:mirror</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>1eac0e87-af9d-4d38-a878-5492eac29a1f</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
 </sv:node>
