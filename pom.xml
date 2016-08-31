@@ -252,6 +252,15 @@
     </dependencies>
   </dependencyManagement>
   
+  <dependencies>
+	<dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.18</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  
   <build>
     <defaultGoal>package</defaultGoal>
     <pluginManagement>
@@ -410,12 +419,21 @@
               </configuration>
               <container>
                 <systemProperties>
+				  <!-- Enables the use of a real databse instead of the derby db: -->
+				  <!-- <repo.config>file:${project.basedir}/conf/repository.xml</repo.config> -->
                   <derby.stream.error.file>${project.basedir}/target/derby.log</derby.stream.error.file>
                   <log4j.configuration>file:${project.basedir}/conf/log4j-dev.xml</log4j.configuration>
                   <rebel.log4j-plugin>true</rebel.log4j-plugin>
                   <!-- enables auto export: -->
                   <project.basedir>${project.basedir}</project.basedir>
                 </systemProperties>
+				<dependencies>
+					<dependency>
+					  <groupId>mysql</groupId>
+					  <artifactId>mysql-connector-java</artifactId>
+					  <classpath>extra</classpath>
+					</dependency>
+				</dependencies>
               </container>
             </configuration>
           </plugin>

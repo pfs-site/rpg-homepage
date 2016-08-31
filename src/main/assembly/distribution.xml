@@ -32,6 +32,11 @@
       <outputDirectory>/conf</outputDirectory>
       <destName>context.xml</destName>
     </file>
+	<file>
+      <source>conf/repository.xml</source>
+      <outputDirectory>/conf</outputDirectory>
+      <destName>repository.xml</destName>
+    </file>
   </files>
   <dependencySets>
     <dependencySet>
@@ -43,6 +48,7 @@
         <include>javax.jdo:jdo2-api</include>
         <include>org.apache.geronimo.specs:geronimo-jta_1.1_spec</include>
         <include>javax.mail:mail</include>
+		<include>mysql:mysql-connector-java</include>
       </includes>
     </dependencySet>
     <dependencySet>
